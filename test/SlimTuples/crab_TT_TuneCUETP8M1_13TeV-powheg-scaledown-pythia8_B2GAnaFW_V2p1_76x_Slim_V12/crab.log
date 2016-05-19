@@ -1,0 +1,1337 @@
+DEBUG 2016-05-16 12:42:45,679: 	 Executing command: 'submit'
+DEBUG 2016-05-16 12:42:45,680: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 12:42:45,686: 	 Checking credentials
+DEBUG 2016-05-16 12:42:45,687: 	 Proxy file /tmp/x509up_u45849 not found
+DEBUG 2016-05-16 12:42:45,687: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-05-16 12:42:50,799: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2016-05-16 12:42:50,902: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86400
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:42:51,005: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86400
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:42:51,108: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u45849 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:42:51,109: 	 Proxy created.
+INFO 2016-05-16 12:42:51,109: 	 Will use CRAB configuration file crab_SlimTuple_ttbar_scaledown76x.py
+DEBUG 2016-05-16 12:42:51,109: 	 Loading CRAB configuration file.
+DEBUG 2016-05-16 12:42:51,158: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-05-16 12:42:51,319: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:42:51,319: 	 Checking credentials
+DEBUG 2016-05-16 12:42:51,320: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 12:42:51,320: 	 Getting proxy life time left
+DEBUG 2016-05-16 12:42:51,422: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86399
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:42:51,525: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86399
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:42:51,526: 	 Proxy valid for 23:59:59 hours
+DEBUG 2016-05-16 12:42:51,628: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u45849 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:42:52,891: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 12:42:53,000: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:42:53,000: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 12:42:53,000: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 12:42:54,205: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 384:03:48  (16.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:42:54,207: 	 Myproxy is valid: 1382628
+DEBUG 2016-05-16 12:42:54,207: 	 Command use: submit
+DEBUG 2016-05-16 12:42:54,207: 	 Options use: ['-c', 'crab_SlimTuple_ttbar_scaledown76x.py']
+DEBUG 2016-05-16 12:42:55,413: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 12:42:55,413: 	 Instance is prod
+DEBUG 2016-05-16 12:42:55,413: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 12:42:55,413: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 12:42:55,413: 	 Started submission
+DEBUG 2016-05-16 12:42:55,414: 	 Working on /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-16 12:42:56,865: 	 Loading required information from the environment
+DEBUG 2016-05-16 12:42:56,865: 	 Found CMSSW_7_6_1 for slc6_amd64_gcc493 with base /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1
+DEBUG 2016-05-16 12:42:56,891: 	 UNIQUE NAME: tarUUID 3f97a79d-e4df-42b1-af50-69253538bd0b 
+DEBUG 2016-05-16 12:42:56,892: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.workArea = 'SlimTuples'
+config.General.requestName = 'TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12'
+config.section_('JobType')
+config.JobType.psetName = 'quickntuple.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.inputFiles = ['Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt', 'Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt']
+config.JobType.pyCfgParams = ['type=MC']
+config.section_('Data')
+config.Data.inputDataset = '/TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8/lcorcodi-crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_76X_V2p1-ce108855676c8f127cd37fa14e406ad2/USER'
+config.Data.publication = False
+config.Data.unitsPerJob = 5
+config.Data.ignoreLocality = True
+config.Data.splitting = 'FileBased'
+config.Data.inputDBS = 'phys03'
+config.section_('Site')
+config.Site.storageSite = 'T3_US_FNALLPC'
+
+DEBUG 2016-05-16 12:42:56,892: 	 self.config.JobType.psetName: quickntuple.py
+INFO 2016-05-16 12:42:56,892: 	 Importing CMSSW configuration quickntuple.py
+DEBUG 2016-05-16 12:42:56,892: 	 Additional parameters for the CMSSW configuration are: ['type=MC']
+INFO 2016-05-16 12:42:57,467: 	 Finished importing CMSSW configuration quickntuple.py
+DEBUG 2016-05-16 12:42:57,468: 	 Writing CMSSW configuration to /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/inputs/PSet.py
+DEBUG 2016-05-16 12:42:57,491: 	 The following EDM output files will be collected: ['B2GEDMNtuple_slim.root']
+DEBUG 2016-05-16 12:42:57,491: 	 The following TFile output files will be collected: []
+DEBUG 2016-05-16 12:42:57,491: 	 The following user output files will be collected: []
+DEBUG 2016-05-16 12:42:57,491: 	 Loading required information from the environment
+DEBUG 2016-05-16 12:42:57,491: 	 Found CMSSW_7_6_1 for slc6_amd64_gcc493 with base /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1
+DEBUG 2016-05-16 12:42:57,491: 	 Making tarball in /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/inputs/3f97a79d-e4df-42b1-af50-69253538bd0bdefault.tgz
+DEBUG 2016-05-16 12:42:57,492: 	 Checking directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/lib
+DEBUG 2016-05-16 12:42:57,492: 	 Adding directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/lib to tarball
+DEBUG 2016-05-16 12:42:58,061: 	 Checking directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/biglib
+DEBUG 2016-05-16 12:42:58,061: 	 Adding directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/biglib to tarball
+DEBUG 2016-05-16 12:42:58,064: 	 Checking directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/module
+DEBUG 2016-05-16 12:43:01,746: 	 Adding file Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:43:01,765: 	 Adding file Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:43:01,776: 	 Adding file Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:43:01,778: 	 Adding file Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:43:01,780: 	 Adding file Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:43:01,782: 	 Adding file Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:43:01,805: 	 Uploading archive /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/inputs/3f97a79d-e4df-42b1-af50-69253538bd0bdefault.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-05-16 12:43:03,995: 	 Result uploading input files: 626a91c20f6f5c976c0061e06eba1d33b28131ec3bacdc550a60e7e2662d2913.tar.gz 
+INFO 2016-05-16 12:43:03,995: 	 Sending the request to the server
+DEBUG 2016-05-16 12:43:03,996: 	 Submitting {'maxjobruntime': 1250, 'ignorelocality': 1, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T3_US_FNALLPC', 'algoargs': 5, 'cachefilename': '626a91c20f6f5c976c0061e06eba1d33b28131ec3bacdc550a60e7e2662d2913.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_7_6_1', 'edmoutfiles': ['B2GEDMNtuple_slim.root'], 'userfiles': [], 'primarydataset': '', 'inputdata': '/TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8/lcorcodi-crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_76X_V2p1-ce108855676c8f127cd37fa14e406ad2/USER', 'dryrun': 0, 'workflow': 'crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12', 'adduserfiles': ['Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt', 'Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt'], 'nonprodsw': 0, 'tfileoutfiles': [], 'oneEventMode': 0, 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc493', 'totalunits': 0, 'splitalgo': 'FileBased', 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': ''} 
+DEBUG 2016-05-16 12:43:03,996: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=1&savelogsflag=1&useparent=0&asyncdest=T3_US_FNALLPC&algoargs=5&cachefilename=626a91c20f6f5c976c0061e06eba1d33b28131ec3bacdc550a60e7e2662d2913.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_7_6_1&primarydataset=&inputdata=%2FTT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8%2Flcorcodi-crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_76X_V2p1-ce108855676c8f127cd37fa14e406ad2%2FUSER&dryrun=0&workflow=crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12&nonprodsw=0&oneEventMode=0&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc493&totalunits=0&splitalgo=FileBased&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&adduserfiles=Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt&edmoutfiles=B2GEDMNtuple_slim.root
+DEBUG 2016-05-16 12:43:06,049: 	 Result: {'result': [{'RequestName': '160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12'}]}
+INFO 2016-05-16 12:43:06,060: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2016-05-16 12:43:06,061: 	 Task name: 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 12:43:06,061: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2016-05-16 12:43:06,061: 	 About to return
+INFO 2016-05-16 12:43:06,066: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 12:55:07,341: 	 Executing command: 'status'
+DEBUG 2016-05-16 12:55:07,344: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 12:55:07,453: 	 Checking credentials
+DEBUG 2016-05-16 12:55:07,453: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 12:55:07,453: 	 Getting proxy life time left
+DEBUG 2016-05-16 12:55:07,857: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85663
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:55:08,260: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85662
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:55:08,260: 	 Proxy valid for 23:47:43 hours
+DEBUG 2016-05-16 12:55:08,787: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:55:08,787: 	 Checking credentials
+DEBUG 2016-05-16 12:55:08,787: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 12:55:08,787: 	 Getting proxy life time left
+DEBUG 2016-05-16 12:55:09,190: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85661
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:55:09,594: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85661
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:55:09,594: 	 Proxy valid for 23:47:41 hours
+DEBUG 2016-05-16 12:55:11,439: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 12:55:11,857: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:55:11,857: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 12:55:11,857: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 12:55:12,962: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 383:51:30  (16.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:55:12,963: 	 Myproxy is valid: 1381890
+DEBUG 2016-05-16 12:55:12,963: 	 Command use: status
+DEBUG 2016-05-16 12:55:12,963: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-16 12:55:14,340: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 12:55:14,340: 	 Instance is prod
+DEBUG 2016-05-16 12:55:14,340: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 12:55:14,340: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 12:55:14,340: 	 Looking up detailed status of task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-16 12:55:17,325: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'running': 90}, 'jobs': {'24': {'State': 'running'}, '25': {'State': 'running'}, '26': {'State': 'running'}, '27': {'State': 'running'}, '20': {'State': 'running'}, '21': {'State': 'running'}, '22': {'State': 'running'}, '23': {'State': 'running'}, '28': {'State': 'running'}, '29': {'State': 'running'}, '4': {'State': 'running'}, '8': {'State': 'running'}, '59': {'State': 'running'}, '58': {'State': 'running'}, '55': {'State': 'running'}, '54': {'State': 'running'}, '57': {'State': 'running'}, '56': {'State': 'running'}, '51': {'State': 'running'}, '50': {'State': 'running'}, '53': {'State': 'running'}, '52': {'State': 'running'}, '88': {'State': 'running'}, '89': {'State': 'running'}, '82': {'State': 'running'}, '83': {'State': 'running'}, '80': {'State': 'running'}, '81': {'State': 'running'}, '86': {'State': 'running'}, '87': {'State': 'running'}, '84': {'State': 'running'}, '85': {'State': 'running'}, '3': {'State': 'running'}, '7': {'State': 'running'}, '39': {'State': 'running'}, '38': {'State': 'running'}, '33': {'State': 'running'}, '32': {'State': 'running'}, '31': {'State': 'running'}, '30': {'State': 'running'}, '37': {'State': 'running'}, '36': {'State': 'running'}, '35': {'State': 'running'}, '34': {'State': 'running'}, '60': {'State': 'running'}, '61': {'State': 'running'}, '62': {'State': 'running'}, '63': {'State': 'running'}, '64': {'State': 'running'}, '65': {'State': 'running'}, '66': {'State': 'running'}, '67': {'State': 'running'}, '68': {'State': 'running'}, '69': {'State': 'running'}, '2': {'State': 'running'}, '6': {'State': 'running'}, '90': {'State': 'running'}, '11': {'State': 'running'}, '10': {'State': 'running'}, '13': {'State': 'running'}, '12': {'State': 'running'}, '15': {'State': 'running'}, '14': {'State': 'running'}, '17': {'State': 'running'}, '16': {'State': 'running'}, '19': {'State': 'running'}, '18': {'State': 'running'}, '48': {'State': 'running'}, '49': {'State': 'running'}, '46': {'State': 'running'}, '47': {'State': 'running'}, '44': {'State': 'running'}, '45': {'State': 'running'}, '42': {'State': 'running'}, '43': {'State': 'running'}, '40': {'State': 'running'}, '41': {'State': 'running'}, '1': {'State': 'running'}, '5': {'State': 'running'}, '9': {'State': 'running'}, '77': {'State': 'running'}, '76': {'State': 'running'}, '75': {'State': 'running'}, '74': {'State': 'running'}, '73': {'State': 'running'}, '72': {'State': 'running'}, '71': {'State': 'running'}, '70': {'State': 'running'}, '79': {'State': 'running'}, '78': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['running', 24], ['running', 25], ['running', 26], ['running', 27], ['running', 20], ['running', 21], ['running', 22], ['running', 23], ['running', 28], ['running', 29], ['running', 4], ['running', 8], ['running', 59], ['running', 58], ['running', 55], ['running', 54], ['running', 57], ['running', 56], ['running', 51], ['running', 50], ['running', 53], ['running', 52], ['running', 88], ['running', 89], ['running', 82], ['running', 83], ['running', 80], ['running', 81], ['running', 86], ['running', 87], ['running', 84], ['running', 85], ['running', 3], ['running', 7], ['running', 39], ['running', 38], ['running', 33], ['running', 32], ['running', 31], ['running', 30], ['running', 37], ['running', 36], ['running', 35], ['running', 34], ['running', 60], ['running', 61], ['running', 62], ['running', 63], ['running', 64], ['running', 65], ['running', 66], ['running', 67], ['running', 68], ['running', 69], ['running', 2], ['running', 6], ['running', 90], ['running', 11], ['running', 10], ['running', 13], ['running', 12], ['running', 15], ['running', 14], ['running', 17], ['running', 16], ['running', 19], ['running', 18], ['running', 48], ['running', 49], ['running', 46], ['running', 47], ['running', 44], ['running', 45], ['running', 42], ['running', 43], ['running', 40], ['running', 41], ['running', 1], ['running', 5], ['running', 9], ['running', 77], ['running', 76], ['running', 75], ['running', 74], ['running', 73], ['running', 72], ['running', 71], ['running', 70], ['running', 79], ['running', 78]]}
+INFO 2016-05-16 12:55:17,325: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 12:55:17,325: 	 Task name:			160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 12:55:17,325: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 12:55:17,325: 	 Task status:			SUBMITTED
+INFO 2016-05-16 12:55:17,325: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 12:55:17,325: 	 
+Jobs status:			running       100.0% (90/90)
+INFO 2016-05-16 12:55:17,326: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 12:55:17,329: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 13:05:08,554: 	 Executing command: 'status'
+DEBUG 2016-05-16 13:05:08,554: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 13:05:08,562: 	 Checking credentials
+DEBUG 2016-05-16 13:05:08,563: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 13:05:08,563: 	 Getting proxy life time left
+DEBUG 2016-05-16 13:05:08,665: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85062
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:05:08,769: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85062
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:05:08,769: 	 Proxy valid for 23:37:42 hours
+DEBUG 2016-05-16 13:05:08,883: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:05:08,883: 	 Checking credentials
+DEBUG 2016-05-16 13:05:08,883: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 13:05:08,884: 	 Getting proxy life time left
+DEBUG 2016-05-16 13:05:08,986: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85062
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:05:09,089: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85061
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:05:09,090: 	 Proxy valid for 23:37:42 hours
+DEBUG 2016-05-16 13:05:10,337: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 13:05:10,446: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:05:10,447: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 13:05:10,447: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 13:05:11,652: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 383:41:31  (16.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:05:11,653: 	 Myproxy is valid: 1381291
+DEBUG 2016-05-16 13:05:11,653: 	 Command use: status
+DEBUG 2016-05-16 13:05:11,653: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-16 13:05:12,853: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 13:05:12,853: 	 Instance is prod
+DEBUG 2016-05-16 13:05:12,853: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 13:05:12,853: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 13:05:12,853: 	 Looking up detailed status of task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-16 13:05:17,074: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'running': 90}, 'jobs': {'24': {'State': 'running'}, '25': {'State': 'running'}, '26': {'State': 'running'}, '27': {'State': 'running'}, '20': {'State': 'running'}, '21': {'State': 'running'}, '22': {'State': 'running'}, '23': {'State': 'running'}, '28': {'State': 'running'}, '29': {'State': 'running'}, '4': {'State': 'running'}, '8': {'State': 'running'}, '59': {'State': 'running'}, '58': {'State': 'running'}, '55': {'State': 'running'}, '54': {'State': 'running'}, '57': {'State': 'running'}, '56': {'State': 'running'}, '51': {'State': 'running'}, '50': {'State': 'running'}, '53': {'State': 'running'}, '52': {'State': 'running'}, '88': {'State': 'running'}, '89': {'State': 'running'}, '82': {'State': 'running'}, '83': {'State': 'running'}, '80': {'State': 'running'}, '81': {'State': 'running'}, '86': {'State': 'running'}, '87': {'State': 'running'}, '84': {'State': 'running'}, '85': {'State': 'running'}, '3': {'State': 'running'}, '7': {'State': 'running'}, '39': {'State': 'running'}, '38': {'State': 'running'}, '33': {'State': 'running'}, '32': {'State': 'running'}, '31': {'State': 'running'}, '30': {'State': 'running'}, '37': {'State': 'running'}, '36': {'State': 'running'}, '35': {'State': 'running'}, '34': {'State': 'running'}, '60': {'State': 'running'}, '61': {'State': 'running'}, '62': {'State': 'running'}, '63': {'State': 'running'}, '64': {'State': 'running'}, '65': {'State': 'running'}, '66': {'State': 'running'}, '67': {'State': 'running'}, '68': {'State': 'running'}, '69': {'State': 'running'}, '2': {'State': 'running'}, '6': {'State': 'running'}, '90': {'State': 'running'}, '11': {'State': 'running'}, '10': {'State': 'running'}, '13': {'State': 'running'}, '12': {'State': 'running'}, '15': {'State': 'running'}, '14': {'State': 'running'}, '17': {'State': 'running'}, '16': {'State': 'running'}, '19': {'State': 'running'}, '18': {'State': 'running'}, '48': {'State': 'running'}, '49': {'State': 'running'}, '46': {'State': 'running'}, '47': {'State': 'running'}, '44': {'State': 'running'}, '45': {'State': 'running'}, '42': {'State': 'running'}, '43': {'State': 'running'}, '40': {'State': 'running'}, '41': {'State': 'running'}, '1': {'State': 'running'}, '5': {'State': 'running'}, '9': {'State': 'running'}, '77': {'State': 'running'}, '76': {'State': 'running'}, '75': {'State': 'running'}, '74': {'State': 'running'}, '73': {'State': 'running'}, '72': {'State': 'running'}, '71': {'State': 'running'}, '70': {'State': 'running'}, '79': {'State': 'running'}, '78': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['running', 24], ['running', 25], ['running', 26], ['running', 27], ['running', 20], ['running', 21], ['running', 22], ['running', 23], ['running', 28], ['running', 29], ['running', 4], ['running', 8], ['running', 59], ['running', 58], ['running', 55], ['running', 54], ['running', 57], ['running', 56], ['running', 51], ['running', 50], ['running', 53], ['running', 52], ['running', 88], ['running', 89], ['running', 82], ['running', 83], ['running', 80], ['running', 81], ['running', 86], ['running', 87], ['running', 84], ['running', 85], ['running', 3], ['running', 7], ['running', 39], ['running', 38], ['running', 33], ['running', 32], ['running', 31], ['running', 30], ['running', 37], ['running', 36], ['running', 35], ['running', 34], ['running', 60], ['running', 61], ['running', 62], ['running', 63], ['running', 64], ['running', 65], ['running', 66], ['running', 67], ['running', 68], ['running', 69], ['running', 2], ['running', 6], ['running', 90], ['running', 11], ['running', 10], ['running', 13], ['running', 12], ['running', 15], ['running', 14], ['running', 17], ['running', 16], ['running', 19], ['running', 18], ['running', 48], ['running', 49], ['running', 46], ['running', 47], ['running', 44], ['running', 45], ['running', 42], ['running', 43], ['running', 40], ['running', 41], ['running', 1], ['running', 5], ['running', 9], ['running', 77], ['running', 76], ['running', 75], ['running', 74], ['running', 73], ['running', 72], ['running', 71], ['running', 70], ['running', 79], ['running', 78]]}
+INFO 2016-05-16 13:05:17,074: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 13:05:17,075: 	 Task name:			160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 13:05:17,075: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 13:05:17,075: 	 Task status:			SUBMITTED
+INFO 2016-05-16 13:05:17,075: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 13:05:17,075: 	 
+Jobs status:			running       100.0% (90/90)
+INFO 2016-05-16 13:05:17,075: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 13:05:17,079: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 13:10:03,317: 	 Executing command: 'status'
+DEBUG 2016-05-16 13:10:03,317: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 13:10:03,325: 	 Checking credentials
+DEBUG 2016-05-16 13:10:03,326: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 13:10:03,326: 	 Getting proxy life time left
+DEBUG 2016-05-16 13:10:03,428: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 84767
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:10:03,531: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 84767
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:10:03,532: 	 Proxy valid for 23:32:47 hours
+DEBUG 2016-05-16 13:10:03,646: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:10:03,646: 	 Checking credentials
+DEBUG 2016-05-16 13:10:03,646: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 13:10:03,647: 	 Getting proxy life time left
+DEBUG 2016-05-16 13:10:03,749: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 84767
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:10:03,852: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 84767
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:10:03,853: 	 Proxy valid for 23:32:47 hours
+DEBUG 2016-05-16 13:10:05,070: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 13:10:05,179: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:10:05,179: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 13:10:05,179: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 13:10:06,184: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 383:36:36  (16.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:10:06,185: 	 Myproxy is valid: 1380996
+DEBUG 2016-05-16 13:10:06,185: 	 Command use: status
+DEBUG 2016-05-16 13:10:06,185: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-16 13:10:07,597: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 13:10:07,597: 	 Instance is prod
+DEBUG 2016-05-16 13:10:07,597: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 13:10:07,597: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 13:10:07,597: 	 Looking up detailed status of task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-16 13:10:10,718: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'running': 90}, 'jobs': {'24': {'State': 'running'}, '25': {'State': 'running'}, '26': {'State': 'running'}, '27': {'State': 'running'}, '20': {'State': 'running'}, '21': {'State': 'running'}, '22': {'State': 'running'}, '23': {'State': 'running'}, '28': {'State': 'running'}, '29': {'State': 'running'}, '4': {'State': 'running'}, '8': {'State': 'running'}, '59': {'State': 'running'}, '58': {'State': 'running'}, '55': {'State': 'running'}, '54': {'State': 'running'}, '57': {'State': 'running'}, '56': {'State': 'running'}, '51': {'State': 'running'}, '50': {'State': 'running'}, '53': {'State': 'running'}, '52': {'State': 'running'}, '88': {'State': 'running'}, '89': {'State': 'running'}, '82': {'State': 'running'}, '83': {'State': 'running'}, '80': {'State': 'running'}, '81': {'State': 'running'}, '86': {'State': 'running'}, '87': {'State': 'running'}, '84': {'State': 'running'}, '85': {'State': 'running'}, '3': {'State': 'running'}, '7': {'State': 'running'}, '39': {'State': 'running'}, '38': {'State': 'running'}, '33': {'State': 'running'}, '32': {'State': 'running'}, '31': {'State': 'running'}, '30': {'State': 'running'}, '37': {'State': 'running'}, '36': {'State': 'running'}, '35': {'State': 'running'}, '34': {'State': 'running'}, '60': {'State': 'running'}, '61': {'State': 'running'}, '62': {'State': 'running'}, '63': {'State': 'running'}, '64': {'State': 'running'}, '65': {'State': 'running'}, '66': {'State': 'running'}, '67': {'State': 'running'}, '68': {'State': 'running'}, '69': {'State': 'running'}, '2': {'State': 'running'}, '6': {'State': 'running'}, '90': {'State': 'running'}, '11': {'State': 'running'}, '10': {'State': 'running'}, '13': {'State': 'running'}, '12': {'State': 'running'}, '15': {'State': 'running'}, '14': {'State': 'running'}, '17': {'State': 'running'}, '16': {'State': 'running'}, '19': {'State': 'running'}, '18': {'State': 'running'}, '48': {'State': 'running'}, '49': {'State': 'running'}, '46': {'State': 'running'}, '47': {'State': 'running'}, '44': {'State': 'running'}, '45': {'State': 'running'}, '42': {'State': 'running'}, '43': {'State': 'running'}, '40': {'State': 'running'}, '41': {'State': 'running'}, '1': {'State': 'running'}, '5': {'State': 'running'}, '9': {'State': 'running'}, '77': {'State': 'running'}, '76': {'State': 'running'}, '75': {'State': 'running'}, '74': {'State': 'running'}, '73': {'State': 'running'}, '72': {'State': 'running'}, '71': {'State': 'running'}, '70': {'State': 'running'}, '79': {'State': 'running'}, '78': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['running', 24], ['running', 25], ['running', 26], ['running', 27], ['running', 20], ['running', 21], ['running', 22], ['running', 23], ['running', 28], ['running', 29], ['running', 4], ['running', 8], ['running', 59], ['running', 58], ['running', 55], ['running', 54], ['running', 57], ['running', 56], ['running', 51], ['running', 50], ['running', 53], ['running', 52], ['running', 88], ['running', 89], ['running', 82], ['running', 83], ['running', 80], ['running', 81], ['running', 86], ['running', 87], ['running', 84], ['running', 85], ['running', 3], ['running', 7], ['running', 39], ['running', 38], ['running', 33], ['running', 32], ['running', 31], ['running', 30], ['running', 37], ['running', 36], ['running', 35], ['running', 34], ['running', 60], ['running', 61], ['running', 62], ['running', 63], ['running', 64], ['running', 65], ['running', 66], ['running', 67], ['running', 68], ['running', 69], ['running', 2], ['running', 6], ['running', 90], ['running', 11], ['running', 10], ['running', 13], ['running', 12], ['running', 15], ['running', 14], ['running', 17], ['running', 16], ['running', 19], ['running', 18], ['running', 48], ['running', 49], ['running', 46], ['running', 47], ['running', 44], ['running', 45], ['running', 42], ['running', 43], ['running', 40], ['running', 41], ['running', 1], ['running', 5], ['running', 9], ['running', 77], ['running', 76], ['running', 75], ['running', 74], ['running', 73], ['running', 72], ['running', 71], ['running', 70], ['running', 79], ['running', 78]]}
+INFO 2016-05-16 13:10:10,718: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 13:10:10,718: 	 Task name:			160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 13:10:10,718: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 13:10:10,718: 	 Task status:			SUBMITTED
+INFO 2016-05-16 13:10:10,718: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 13:10:10,719: 	 
+Jobs status:			running       100.0% (90/90)
+INFO 2016-05-16 13:10:10,719: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 13:10:10,723: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 14:03:39,992: 	 Executing command: 'status'
+DEBUG 2016-05-16 14:03:39,993: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 14:03:40,001: 	 Checking credentials
+DEBUG 2016-05-16 14:03:40,001: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:03:40,001: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:03:40,104: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 81550
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:03:40,206: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 81550
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:03:40,207: 	 Proxy valid for 22:39:10 hours
+DEBUG 2016-05-16 14:03:40,321: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:03:40,321: 	 Checking credentials
+DEBUG 2016-05-16 14:03:40,321: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:03:40,321: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:03:40,424: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 81550
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:03:40,527: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 81550
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:03:40,527: 	 Proxy valid for 22:39:10 hours
+DEBUG 2016-05-16 14:03:41,617: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 14:03:41,726: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:03:41,726: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 14:03:41,726: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 14:03:42,430: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 382:43:00  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:03:42,431: 	 Myproxy is valid: 1377780
+DEBUG 2016-05-16 14:03:42,431: 	 Command use: status
+DEBUG 2016-05-16 14:03:42,432: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-16 14:03:43,658: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 14:03:43,658: 	 Instance is prod
+DEBUG 2016-05-16 14:03:43,658: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 14:03:43,658: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 14:03:43,658: 	 Looking up detailed status of task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-16 14:03:46,773: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'running': 20, 'transferring': 43, 'finished': 27}, 'jobs': {'24': {'State': 'transferring'}, '25': {'State': 'transferring'}, '26': {'State': 'transferring'}, '27': {'State': 'transferring'}, '20': {'State': 'running'}, '21': {'State': 'finished'}, '22': {'State': 'running'}, '23': {'State': 'running'}, '28': {'State': 'transferring'}, '29': {'State': 'transferring'}, '4': {'State': 'transferring'}, '8': {'State': 'transferring'}, '59': {'State': 'finished'}, '58': {'State': 'finished'}, '55': {'State': 'running'}, '54': {'State': 'running'}, '57': {'State': 'transferring'}, '56': {'State': 'finished'}, '51': {'State': 'transferring'}, '50': {'State': 'transferring'}, '53': {'State': 'transferring'}, '52': {'State': 'running'}, '88': {'State': 'transferring'}, '89': {'State': 'running'}, '82': {'State': 'running'}, '83': {'State': 'transferring'}, '80': {'State': 'transferring'}, '81': {'State': 'running'}, '86': {'State': 'running'}, '87': {'State': 'transferring'}, '84': {'State': 'running'}, '85': {'State': 'transferring'}, '3': {'State': 'finished'}, '7': {'State': 'running'}, '39': {'State': 'transferring'}, '38': {'State': 'transferring'}, '33': {'State': 'transferring'}, '32': {'State': 'finished'}, '31': {'State': 'transferring'}, '30': {'State': 'transferring'}, '37': {'State': 'transferring'}, '36': {'State': 'transferring'}, '35': {'State': 'transferring'}, '34': {'State': 'transferring'}, '60': {'State': 'finished'}, '61': {'State': 'finished'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'finished'}, '65': {'State': 'finished'}, '66': {'State': 'finished'}, '67': {'State': 'finished'}, '68': {'State': 'finished'}, '69': {'State': 'finished'}, '2': {'State': 'finished'}, '6': {'State': 'transferring'}, '90': {'State': 'transferring'}, '11': {'State': 'running'}, '10': {'State': 'running'}, '13': {'State': 'transferring'}, '12': {'State': 'transferring'}, '15': {'State': 'transferring'}, '14': {'State': 'running'}, '17': {'State': 'transferring'}, '16': {'State': 'transferring'}, '19': {'State': 'transferring'}, '18': {'State': 'transferring'}, '48': {'State': 'transferring'}, '49': {'State': 'running'}, '46': {'State': 'transferring'}, '47': {'State': 'finished'}, '44': {'State': 'transferring'}, '45': {'State': 'running'}, '42': {'State': 'finished'}, '43': {'State': 'finished'}, '40': {'State': 'transferring'}, '41': {'State': 'transferring'}, '1': {'State': 'transferring'}, '5': {'State': 'finished'}, '9': {'State': 'finished'}, '77': {'State': 'transferring'}, '76': {'State': 'transferring'}, '75': {'State': 'running'}, '74': {'State': 'finished'}, '73': {'State': 'finished'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'finished'}, '79': {'State': 'running'}, '78': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8/knash-crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['transferring', 24], ['transferring', 25], ['transferring', 26], ['transferring', 27], ['running', 20], ['finished', 21], ['running', 22], ['running', 23], ['transferring', 28], ['transferring', 29], ['transferring', 4], ['transferring', 8], ['finished', 59], ['finished', 58], ['running', 55], ['running', 54], ['transferring', 57], ['finished', 56], ['transferring', 51], ['transferring', 50], ['transferring', 53], ['running', 52], ['transferring', 88], ['running', 89], ['running', 82], ['transferring', 83], ['transferring', 80], ['running', 81], ['running', 86], ['transferring', 87], ['running', 84], ['transferring', 85], ['finished', 3], ['running', 7], ['transferring', 39], ['transferring', 38], ['transferring', 33], ['finished', 32], ['transferring', 31], ['transferring', 30], ['transferring', 37], ['transferring', 36], ['transferring', 35], ['transferring', 34], ['finished', 60], ['finished', 61], ['finished', 62], ['finished', 63], ['finished', 64], ['finished', 65], ['finished', 66], ['finished', 67], ['finished', 68], ['finished', 69], ['finished', 2], ['transferring', 6], ['transferring', 90], ['running', 11], ['running', 10], ['transferring', 13], ['transferring', 12], ['transferring', 15], ['running', 14], ['transferring', 17], ['transferring', 16], ['transferring', 19], ['transferring', 18], ['transferring', 48], ['running', 49], ['transferring', 46], ['finished', 47], ['transferring', 44], ['running', 45], ['finished', 42], ['finished', 43], ['transferring', 40], ['transferring', 41], ['transferring', 1], ['finished', 5], ['finished', 9], ['transferring', 77], ['transferring', 76], ['running', 75], ['finished', 74], ['finished', 73], ['finished', 72], ['finished', 71], ['finished', 70], ['running', 79], ['running', 78]]}
+INFO 2016-05-16 14:03:46,773: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 14:03:46,773: 	 Task name:			160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 14:03:46,773: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 14:03:46,773: 	 Task status:			SUBMITTED
+INFO 2016-05-16 14:03:46,773: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 14:03:46,774: 	 
+Jobs status:			finished       30.0% (27/90)
+INFO 2016-05-16 14:03:46,774: 	 				running        22.2% (20/90)
+INFO 2016-05-16 14:03:46,774: 	 				transferring   47.8% (43/90)
+INFO 2016-05-16 14:03:46,774: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 14:03:46,778: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 14:50:01,400: 	 Executing command: 'status'
+DEBUG 2016-05-16 14:50:01,401: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 14:50:01,420: 	 Checking credentials
+DEBUG 2016-05-16 14:50:01,420: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:50:01,420: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:50:01,523: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 80660
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:50:01,626: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 80660
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:50:01,627: 	 Proxy valid for 22:24:20 hours
+DEBUG 2016-05-16 14:50:01,759: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:50:01,759: 	 Checking credentials
+DEBUG 2016-05-16 14:50:01,759: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:50:01,759: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:50:01,862: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 80660
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:50:01,965: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 80660
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:50:01,965: 	 Proxy valid for 22:24:20 hours
+DEBUG 2016-05-16 14:50:03,150: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 14:50:03,256: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:50:03,257: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 14:50:03,257: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 14:50:04,461: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 381:56:38  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:50:04,463: 	 Myproxy is valid: 1374998
+DEBUG 2016-05-16 14:50:04,463: 	 Command use: status
+DEBUG 2016-05-16 14:50:04,463: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-16 14:50:05,664: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 14:50:05,664: 	 Instance is prod
+DEBUG 2016-05-16 14:50:05,664: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 14:50:05,664: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 14:50:05,664: 	 Looking up detailed status of task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-16 14:50:08,885: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'finished': 79, 'transferring': 3, 'running': 8}, 'jobs': {'24': {'State': 'finished'}, '25': {'State': 'finished'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'finished'}, '21': {'State': 'finished'}, '22': {'State': 'running'}, '23': {'State': 'running'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '59': {'State': 'finished'}, '58': {'State': 'finished'}, '55': {'State': 'running'}, '54': {'State': 'finished'}, '57': {'State': 'finished'}, '56': {'State': 'finished'}, '51': {'State': 'finished'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'finished'}, '88': {'State': 'finished'}, '89': {'State': 'running'}, '82': {'State': 'running'}, '83': {'State': 'finished'}, '80': {'State': 'finished'}, '81': {'State': 'finished'}, '86': {'State': 'transferring'}, '87': {'State': 'finished'}, '84': {'State': 'running'}, '85': {'State': 'finished'}, '3': {'State': 'finished'}, '7': {'State': 'running'}, '39': {'State': 'finished'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'finished'}, '61': {'State': 'finished'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'finished'}, '65': {'State': 'finished'}, '66': {'State': 'finished'}, '67': {'State': 'finished'}, '68': {'State': 'finished'}, '69': {'State': 'finished'}, '2': {'State': 'finished'}, '6': {'State': 'finished'}, '90': {'State': 'finished'}, '11': {'State': 'transferring'}, '10': {'State': 'finished'}, '13': {'State': 'finished'}, '12': {'State': 'finished'}, '15': {'State': 'finished'}, '14': {'State': 'finished'}, '17': {'State': 'finished'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'finished'}, '48': {'State': 'finished'}, '49': {'State': 'transferring'}, '46': {'State': 'finished'}, '47': {'State': 'finished'}, '44': {'State': 'finished'}, '45': {'State': 'finished'}, '42': {'State': 'finished'}, '43': {'State': 'finished'}, '40': {'State': 'finished'}, '41': {'State': 'finished'}, '1': {'State': 'finished'}, '5': {'State': 'finished'}, '9': {'State': 'finished'}, '77': {'State': 'finished'}, '76': {'State': 'finished'}, '75': {'State': 'running'}, '74': {'State': 'finished'}, '73': {'State': 'finished'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'finished'}, '79': {'State': 'finished'}, '78': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8/knash-crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 24], ['finished', 25], ['finished', 26], ['finished', 27], ['finished', 20], ['finished', 21], ['running', 22], ['running', 23], ['finished', 28], ['finished', 29], ['finished', 4], ['finished', 8], ['finished', 59], ['finished', 58], ['running', 55], ['finished', 54], ['finished', 57], ['finished', 56], ['finished', 51], ['finished', 50], ['finished', 53], ['finished', 52], ['finished', 88], ['running', 89], ['running', 82], ['finished', 83], ['finished', 80], ['finished', 81], ['transferring', 86], ['finished', 87], ['running', 84], ['finished', 85], ['finished', 3], ['running', 7], ['finished', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['finished', 60], ['finished', 61], ['finished', 62], ['finished', 63], ['finished', 64], ['finished', 65], ['finished', 66], ['finished', 67], ['finished', 68], ['finished', 69], ['finished', 2], ['finished', 6], ['finished', 90], ['transferring', 11], ['finished', 10], ['finished', 13], ['finished', 12], ['finished', 15], ['finished', 14], ['finished', 17], ['finished', 16], ['finished', 19], ['finished', 18], ['finished', 48], ['transferring', 49], ['finished', 46], ['finished', 47], ['finished', 44], ['finished', 45], ['finished', 42], ['finished', 43], ['finished', 40], ['finished', 41], ['finished', 1], ['finished', 5], ['finished', 9], ['finished', 77], ['finished', 76], ['running', 75], ['finished', 74], ['finished', 73], ['finished', 72], ['finished', 71], ['finished', 70], ['finished', 79], ['finished', 78]]}
+INFO 2016-05-16 14:50:08,885: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 14:50:08,886: 	 Task name:			160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 14:50:08,886: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 14:50:08,886: 	 Task status:			SUBMITTED
+INFO 2016-05-16 14:50:08,886: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 14:50:08,886: 	 
+Jobs status:			finished       87.8% (79/90)
+INFO 2016-05-16 14:50:08,886: 	 				running         8.9% ( 8/90)
+INFO 2016-05-16 14:50:08,887: 	 				transferring    3.3% ( 3/90)
+INFO 2016-05-16 14:50:08,887: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 14:50:08,890: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 14:56:18,504: 	 Executing command: 'status'
+DEBUG 2016-05-16 14:56:18,505: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 14:56:18,523: 	 Checking credentials
+DEBUG 2016-05-16 14:56:18,523: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:56:18,523: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:56:18,626: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 80283
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:18,729: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 80283
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:18,729: 	 Proxy valid for 22:18:03 hours
+DEBUG 2016-05-16 14:56:18,842: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:18,843: 	 Checking credentials
+DEBUG 2016-05-16 14:56:18,843: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:56:18,843: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:56:18,945: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 80283
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:19,048: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 80283
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:19,049: 	 Proxy valid for 22:18:03 hours
+DEBUG 2016-05-16 14:56:20,297: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 14:56:20,406: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:20,406: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 14:56:20,406: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 14:56:21,311: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 381:50:21  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:21,312: 	 Myproxy is valid: 1374621
+DEBUG 2016-05-16 14:56:21,312: 	 Command use: status
+DEBUG 2016-05-16 14:56:21,313: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-16 14:56:22,542: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 14:56:22,542: 	 Instance is prod
+DEBUG 2016-05-16 14:56:22,542: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 14:56:22,542: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 14:56:22,542: 	 Looking up detailed status of task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-16 14:56:24,758: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'finished': 81, 'transferring': 1, 'running': 8}, 'jobs': {'24': {'State': 'finished'}, '25': {'State': 'finished'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'finished'}, '21': {'State': 'finished'}, '22': {'State': 'running'}, '23': {'State': 'running'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '59': {'State': 'finished'}, '58': {'State': 'finished'}, '55': {'State': 'running'}, '54': {'State': 'finished'}, '57': {'State': 'finished'}, '56': {'State': 'finished'}, '51': {'State': 'finished'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'finished'}, '88': {'State': 'finished'}, '89': {'State': 'running'}, '82': {'State': 'running'}, '83': {'State': 'finished'}, '80': {'State': 'finished'}, '81': {'State': 'finished'}, '86': {'State': 'finished'}, '87': {'State': 'finished'}, '84': {'State': 'running'}, '85': {'State': 'finished'}, '3': {'State': 'finished'}, '7': {'State': 'running'}, '39': {'State': 'finished'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'finished'}, '61': {'State': 'finished'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'finished'}, '65': {'State': 'finished'}, '66': {'State': 'finished'}, '67': {'State': 'finished'}, '68': {'State': 'finished'}, '69': {'State': 'finished'}, '2': {'State': 'finished'}, '6': {'State': 'finished'}, '90': {'State': 'finished'}, '11': {'State': 'transferring'}, '10': {'State': 'finished'}, '13': {'State': 'finished'}, '12': {'State': 'finished'}, '15': {'State': 'finished'}, '14': {'State': 'finished'}, '17': {'State': 'finished'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'finished'}, '48': {'State': 'finished'}, '49': {'State': 'finished'}, '46': {'State': 'finished'}, '47': {'State': 'finished'}, '44': {'State': 'finished'}, '45': {'State': 'finished'}, '42': {'State': 'finished'}, '43': {'State': 'finished'}, '40': {'State': 'finished'}, '41': {'State': 'finished'}, '1': {'State': 'finished'}, '5': {'State': 'finished'}, '9': {'State': 'finished'}, '77': {'State': 'finished'}, '76': {'State': 'finished'}, '75': {'State': 'running'}, '74': {'State': 'finished'}, '73': {'State': 'finished'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'finished'}, '79': {'State': 'finished'}, '78': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8/knash-crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 24], ['finished', 25], ['finished', 26], ['finished', 27], ['finished', 20], ['finished', 21], ['running', 22], ['running', 23], ['finished', 28], ['finished', 29], ['finished', 4], ['finished', 8], ['finished', 59], ['finished', 58], ['running', 55], ['finished', 54], ['finished', 57], ['finished', 56], ['finished', 51], ['finished', 50], ['finished', 53], ['finished', 52], ['finished', 88], ['running', 89], ['running', 82], ['finished', 83], ['finished', 80], ['finished', 81], ['finished', 86], ['finished', 87], ['running', 84], ['finished', 85], ['finished', 3], ['running', 7], ['finished', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['finished', 60], ['finished', 61], ['finished', 62], ['finished', 63], ['finished', 64], ['finished', 65], ['finished', 66], ['finished', 67], ['finished', 68], ['finished', 69], ['finished', 2], ['finished', 6], ['finished', 90], ['transferring', 11], ['finished', 10], ['finished', 13], ['finished', 12], ['finished', 15], ['finished', 14], ['finished', 17], ['finished', 16], ['finished', 19], ['finished', 18], ['finished', 48], ['finished', 49], ['finished', 46], ['finished', 47], ['finished', 44], ['finished', 45], ['finished', 42], ['finished', 43], ['finished', 40], ['finished', 41], ['finished', 1], ['finished', 5], ['finished', 9], ['finished', 77], ['finished', 76], ['running', 75], ['finished', 74], ['finished', 73], ['finished', 72], ['finished', 71], ['finished', 70], ['finished', 79], ['finished', 78]]}
+INFO 2016-05-16 14:56:24,758: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 14:56:24,759: 	 Task name:			160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 14:56:24,759: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 14:56:24,759: 	 Task status:			SUBMITTED
+INFO 2016-05-16 14:56:24,759: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 14:56:24,759: 	 
+Jobs status:			finished       90.0% (81/90)
+INFO 2016-05-16 14:56:24,759: 	 				running         8.9% ( 8/90)
+INFO 2016-05-16 14:56:24,759: 	 				transferring    1.1% ( 1/90)
+INFO 2016-05-16 14:56:24,760: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 14:56:24,764: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 14:56:25,727: 	 Executing command: 'resubmit'
+DEBUG 2016-05-16 14:56:25,728: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 14:56:25,737: 	 Checking credentials
+DEBUG 2016-05-16 14:56:25,737: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:56:25,737: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:56:25,840: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 80276
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:25,943: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 80276
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:25,943: 	 Proxy valid for 22:17:56 hours
+DEBUG 2016-05-16 14:56:26,056: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:26,056: 	 Checking credentials
+DEBUG 2016-05-16 14:56:26,056: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:56:26,056: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:56:26,159: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 80275
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:26,262: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 80275
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:26,262: 	 Proxy valid for 22:17:55 hours
+DEBUG 2016-05-16 14:56:27,508: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 14:56:27,617: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:27,617: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 14:56:27,617: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 14:56:28,622: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 381:50:14  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:56:28,623: 	 Myproxy is valid: 1374614
+DEBUG 2016-05-16 14:56:28,623: 	 Command use: resubmit
+DEBUG 2016-05-16 14:56:28,623: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-16 14:56:29,844: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 14:56:29,844: 	 Instance is prod
+DEBUG 2016-05-16 14:56:29,844: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 14:56:29,844: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 14:56:29,844: 	 Requesting resubmission of failed jobs in task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 14:56:29,844: 	 Sending resubmit request to the server.
+DEBUG 2016-05-16 14:56:29,844: 	 Submitting {'publication': 0, 'force': 0, 'subresource': 'resubmit', 'workflow': '160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12'} 
+DEBUG 2016-05-16 14:56:29,844: 	 Encoded resubmit request: publication=0&force=0&subresource=resubmit&workflow=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 14:56:32,747: 	 The server answered with an error.
+INFO 2016-05-16 14:56:32,747: 	 Server answered with: Execution error
+INFO 2016-05-16 14:56:32,747: 	 Reason is: There are no jobs to resubmit. Only jobs in status ['failed'] can be resubmitted. Jobs in status ['finished'] can also be resubmitted, but only if the jobid is specified and the force option is set.
+INFO 2016-05-16 14:56:32,747: 	 Error Id: d0c0648b1eaef90854411b92be6e6d6f
+DEBUG 2016-05-16 14:56:32,747: 	 ERROR: Internal Server Error (500):  '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>500 Internal Server Error</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>500 Internal Server Error</h2>
+        <p>Execution error</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+    <span>Powered by <a href="http://www.cherrypy.org">CherryPy 3.2.2</a></span>
+    </div>
+    </body>
+</html>
+'
+DEBUG 2016-05-16 14:56:32,747: 	 Command failed with URI: https://cmsweb.cern.ch/crabserver/prod/workflow
+DEBUG 2016-05-16 14:56:32,747: 	      Input data: publication=0&force=0&subresource=resubmit&workflow=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-16 14:56:32,747: 	      Request headers: {'Content-Length': '726', 'X-Error-Http': '500', 'X-Rest-Time': '1721363.068 us', 'Server': 'CherryPy/3.2.2', 'Connection': 'close', 'X-Error-Detail': 'Execution error', 'CMS-Server-Time': 'D=1730269 t=1463428590960787', 'X-Rest-Status': '403', 'Date': 'Mon, 16 May 2016 19:56:30 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': "There are no jobs to resubmit. Only jobs in status ['failed'] can be resubmitted. Jobs in status ['finished'] can also be resubmitted, but only if the jobid is specified and the force option is set.", 'X-Error-Id': 'd0c0648b1eaef90854411b92be6e6d6f'}
+ERROR 2016-05-16 14:56:32,747: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 148, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 59, in __call__
+    dictresult, status, reason = server.post(self.uri, data = configreq_encoded)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/RESTInteractions.py", line 85, in post
+    return self.makeRequest(uri = uri, data = data, verb = 'POST')
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/RESTInteractions.py", line 129, in makeRequest
+    capath=caCertPath)#, verbose=True)# for debug
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/WMCore/Services/pycurl_manager.py", line 209, in request
+    raise exc
+HTTPException: url=https://cmsweb.cern.ch/crabserver/prod/workflow, code=500, reason=Internal Server Error, headers={'Content-Length': '726', 'X-Error-Http': '500', 'X-Rest-Time': '1721363.068 us', 'Server': 'CherryPy/3.2.2', 'Connection': 'close', 'X-Error-Detail': 'Execution error', 'CMS-Server-Time': 'D=1730269 t=1463428590960787', 'X-Rest-Status': '403', 'Date': 'Mon, 16 May 2016 19:56:30 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': "There are no jobs to resubmit. Only jobs in status ['failed'] can be resubmitted. Jobs in status ['finished'] can also be resubmitted, but only if the jobid is specified and the force option is set.", 'X-Error-Id': 'd0c0648b1eaef90854411b92be6e6d6f'}
+INFO 2016-05-16 14:56:32,753: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 15:51:26,603: 	 Executing command: 'status'
+DEBUG 2016-05-16 15:51:26,604: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 15:51:26,611: 	 Checking credentials
+DEBUG 2016-05-16 15:51:26,612: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 15:51:26,612: 	 Getting proxy life time left
+DEBUG 2016-05-16 15:51:26,714: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 76975
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:26,817: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 76975
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:26,818: 	 Proxy valid for 21:22:55 hours
+DEBUG 2016-05-16 15:51:26,930: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:26,931: 	 Checking credentials
+DEBUG 2016-05-16 15:51:26,931: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 15:51:26,931: 	 Getting proxy life time left
+DEBUG 2016-05-16 15:51:27,034: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 76975
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:27,136: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 76974
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:27,137: 	 Proxy valid for 21:22:55 hours
+DEBUG 2016-05-16 15:51:28,358: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 15:51:28,479: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:28,479: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 15:51:28,479: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 15:51:29,484: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 380:55:13  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:29,485: 	 Myproxy is valid: 1371313
+DEBUG 2016-05-16 15:51:29,485: 	 Command use: status
+DEBUG 2016-05-16 15:51:29,486: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-16 15:51:30,681: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 15:51:30,681: 	 Instance is prod
+DEBUG 2016-05-16 15:51:30,681: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 15:51:30,681: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 15:51:30,681: 	 Looking up detailed status of task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-16 15:51:34,071: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'finished': 83, 'transferring': 1, 'running': 6}, 'jobs': {'24': {'State': 'finished'}, '25': {'State': 'finished'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'finished'}, '21': {'State': 'finished'}, '22': {'State': 'running'}, '23': {'State': 'running'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '59': {'State': 'finished'}, '58': {'State': 'finished'}, '55': {'State': 'finished'}, '54': {'State': 'finished'}, '57': {'State': 'finished'}, '56': {'State': 'finished'}, '51': {'State': 'finished'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'finished'}, '88': {'State': 'finished'}, '89': {'State': 'running'}, '82': {'State': 'transferring'}, '83': {'State': 'finished'}, '80': {'State': 'finished'}, '81': {'State': 'finished'}, '86': {'State': 'finished'}, '87': {'State': 'finished'}, '84': {'State': 'running'}, '85': {'State': 'finished'}, '3': {'State': 'finished'}, '7': {'State': 'running'}, '39': {'State': 'finished'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'finished'}, '61': {'State': 'finished'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'finished'}, '65': {'State': 'finished'}, '66': {'State': 'finished'}, '67': {'State': 'finished'}, '68': {'State': 'finished'}, '69': {'State': 'finished'}, '2': {'State': 'finished'}, '6': {'State': 'finished'}, '90': {'State': 'finished'}, '11': {'State': 'finished'}, '10': {'State': 'finished'}, '13': {'State': 'finished'}, '12': {'State': 'finished'}, '15': {'State': 'finished'}, '14': {'State': 'finished'}, '17': {'State': 'finished'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'finished'}, '48': {'State': 'finished'}, '49': {'State': 'finished'}, '46': {'State': 'finished'}, '47': {'State': 'finished'}, '44': {'State': 'finished'}, '45': {'State': 'finished'}, '42': {'State': 'finished'}, '43': {'State': 'finished'}, '40': {'State': 'finished'}, '41': {'State': 'finished'}, '1': {'State': 'finished'}, '5': {'State': 'finished'}, '9': {'State': 'finished'}, '77': {'State': 'finished'}, '76': {'State': 'finished'}, '75': {'State': 'running'}, '74': {'State': 'finished'}, '73': {'State': 'finished'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'finished'}, '79': {'State': 'finished'}, '78': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8/knash-crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 24], ['finished', 25], ['finished', 26], ['finished', 27], ['finished', 20], ['finished', 21], ['running', 22], ['running', 23], ['finished', 28], ['finished', 29], ['finished', 4], ['finished', 8], ['finished', 59], ['finished', 58], ['finished', 55], ['finished', 54], ['finished', 57], ['finished', 56], ['finished', 51], ['finished', 50], ['finished', 53], ['finished', 52], ['finished', 88], ['running', 89], ['transferring', 82], ['finished', 83], ['finished', 80], ['finished', 81], ['finished', 86], ['finished', 87], ['running', 84], ['finished', 85], ['finished', 3], ['running', 7], ['finished', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['finished', 60], ['finished', 61], ['finished', 62], ['finished', 63], ['finished', 64], ['finished', 65], ['finished', 66], ['finished', 67], ['finished', 68], ['finished', 69], ['finished', 2], ['finished', 6], ['finished', 90], ['finished', 11], ['finished', 10], ['finished', 13], ['finished', 12], ['finished', 15], ['finished', 14], ['finished', 17], ['finished', 16], ['finished', 19], ['finished', 18], ['finished', 48], ['finished', 49], ['finished', 46], ['finished', 47], ['finished', 44], ['finished', 45], ['finished', 42], ['finished', 43], ['finished', 40], ['finished', 41], ['finished', 1], ['finished', 5], ['finished', 9], ['finished', 77], ['finished', 76], ['running', 75], ['finished', 74], ['finished', 73], ['finished', 72], ['finished', 71], ['finished', 70], ['finished', 79], ['finished', 78]]}
+INFO 2016-05-16 15:51:34,071: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 15:51:34,071: 	 Task name:			160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 15:51:34,072: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 15:51:34,072: 	 Task status:			SUBMITTED
+INFO 2016-05-16 15:51:34,072: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 15:51:34,072: 	 
+Jobs status:			finished       92.2% (83/90)
+INFO 2016-05-16 15:51:34,072: 	 				running         6.7% ( 6/90)
+INFO 2016-05-16 15:51:34,072: 	 				transferring    1.1% ( 1/90)
+INFO 2016-05-16 15:51:34,073: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 15:51:34,076: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 15:51:34,934: 	 Executing command: 'resubmit'
+DEBUG 2016-05-16 15:51:34,935: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 15:51:34,943: 	 Checking credentials
+DEBUG 2016-05-16 15:51:34,944: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 15:51:34,944: 	 Getting proxy life time left
+DEBUG 2016-05-16 15:51:35,046: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 76966
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:35,149: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 76966
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:35,150: 	 Proxy valid for 21:22:46 hours
+DEBUG 2016-05-16 15:51:35,262: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:35,262: 	 Checking credentials
+DEBUG 2016-05-16 15:51:35,263: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 15:51:35,263: 	 Getting proxy life time left
+DEBUG 2016-05-16 15:51:35,365: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 76966
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:35,468: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 76966
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:35,469: 	 Proxy valid for 21:22:46 hours
+DEBUG 2016-05-16 15:51:36,714: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 15:51:36,823: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:36,823: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 15:51:36,823: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 15:51:37,828: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 380:55:05  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:51:37,829: 	 Myproxy is valid: 1371305
+DEBUG 2016-05-16 15:51:37,829: 	 Command use: resubmit
+DEBUG 2016-05-16 15:51:37,829: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-16 15:51:39,075: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 15:51:39,075: 	 Instance is prod
+DEBUG 2016-05-16 15:51:39,075: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 15:51:39,075: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 15:51:39,075: 	 Requesting resubmission of failed jobs in task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 15:51:39,075: 	 Sending resubmit request to the server.
+DEBUG 2016-05-16 15:51:39,075: 	 Submitting {'publication': 0, 'force': 0, 'subresource': 'resubmit', 'workflow': '160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12'} 
+DEBUG 2016-05-16 15:51:39,075: 	 Encoded resubmit request: publication=0&force=0&subresource=resubmit&workflow=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-16 15:51:43,177: 	 The server answered with an error.
+INFO 2016-05-16 15:51:43,177: 	 Server answered with: Execution error
+INFO 2016-05-16 15:51:43,177: 	 Reason is: There are no jobs to resubmit. Only jobs in status ['failed'] can be resubmitted. Jobs in status ['finished'] can also be resubmitted, but only if the jobid is specified and the force option is set.
+INFO 2016-05-16 15:51:43,177: 	 Error Id: 9046e6cf22449e1771013e7ade5593b1
+DEBUG 2016-05-16 15:51:43,177: 	 ERROR: Internal Server Error (500):  '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>500 Internal Server Error</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>500 Internal Server Error</h2>
+        <p>Execution error</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+    <span>Powered by <a href="http://www.cherrypy.org">CherryPy 3.2.2</a></span>
+    </div>
+    </body>
+</html>
+'
+DEBUG 2016-05-16 15:51:43,177: 	 Command failed with URI: https://cmsweb.cern.ch/crabserver/prod/workflow
+DEBUG 2016-05-16 15:51:43,177: 	      Input data: publication=0&force=0&subresource=resubmit&workflow=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-16 15:51:43,177: 	      Request headers: {'Content-Length': '726', 'X-Error-Http': '500', 'X-Rest-Time': '2903537.989 us', 'Server': 'CherryPy/3.2.2', 'Connection': 'close', 'X-Error-Detail': 'Execution error', 'CMS-Server-Time': 'D=2911016 t=1463431900209333', 'X-Rest-Status': '403', 'Date': 'Mon, 16 May 2016 20:51:40 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': "There are no jobs to resubmit. Only jobs in status ['failed'] can be resubmitted. Jobs in status ['finished'] can also be resubmitted, but only if the jobid is specified and the force option is set.", 'X-Error-Id': '9046e6cf22449e1771013e7ade5593b1'}
+ERROR 2016-05-16 15:51:43,178: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 148, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 59, in __call__
+    dictresult, status, reason = server.post(self.uri, data = configreq_encoded)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/RESTInteractions.py", line 85, in post
+    return self.makeRequest(uri = uri, data = data, verb = 'POST')
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/RESTInteractions.py", line 129, in makeRequest
+    capath=caCertPath)#, verbose=True)# for debug
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/WMCore/Services/pycurl_manager.py", line 209, in request
+    raise exc
+HTTPException: url=https://cmsweb.cern.ch/crabserver/prod/workflow, code=500, reason=Internal Server Error, headers={'Content-Length': '726', 'X-Error-Http': '500', 'X-Rest-Time': '2903537.989 us', 'Server': 'CherryPy/3.2.2', 'Connection': 'close', 'X-Error-Detail': 'Execution error', 'CMS-Server-Time': 'D=2911016 t=1463431900209333', 'X-Rest-Status': '403', 'Date': 'Mon, 16 May 2016 20:51:40 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': "There are no jobs to resubmit. Only jobs in status ['failed'] can be resubmitted. Jobs in status ['finished'] can also be resubmitted, but only if the jobid is specified and the force option is set.", 'X-Error-Id': '9046e6cf22449e1771013e7ade5593b1'}
+INFO 2016-05-16 15:51:43,184: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-17 06:38:38,145: 	 Executing command: 'status'
+DEBUG 2016-05-17 06:38:38,146: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-17 06:38:38,153: 	 Checking credentials
+DEBUG 2016-05-17 06:38:38,153: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 06:38:38,153: 	 Getting proxy life time left
+DEBUG 2016-05-17 06:38:38,256: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86315
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:38:38,359: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86315
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:38:38,359: 	 Proxy valid for 23:58:35 hours
+DEBUG 2016-05-17 06:38:38,518: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:38:38,518: 	 Checking credentials
+DEBUG 2016-05-17 06:38:38,518: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 06:38:38,519: 	 Getting proxy life time left
+DEBUG 2016-05-17 06:38:38,622: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86315
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:38:38,725: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86315
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:38:38,725: 	 Proxy valid for 23:58:35 hours
+DEBUG 2016-05-17 06:38:39,555: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-17 06:38:39,663: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:38:39,663: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-17 06:38:39,663: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-17 06:38:40,367: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 366:08:02  (15.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:38:40,369: 	 Myproxy is valid: 1318082
+DEBUG 2016-05-17 06:38:40,369: 	 Command use: status
+DEBUG 2016-05-17 06:38:40,369: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-17 06:38:41,578: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-17 06:38:41,578: 	 Instance is prod
+DEBUG 2016-05-17 06:38:41,578: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-17 06:38:41,578: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-17 06:38:41,578: 	 Looking up detailed status of task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-17 06:38:46,464: 	 {'status': 'COMPLETED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'finished': 90}, 'jobs': {'24': {'State': 'finished'}, '25': {'State': 'finished'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'finished'}, '21': {'State': 'finished'}, '22': {'State': 'finished'}, '23': {'State': 'finished'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '59': {'State': 'finished'}, '58': {'State': 'finished'}, '55': {'State': 'finished'}, '54': {'State': 'finished'}, '57': {'State': 'finished'}, '56': {'State': 'finished'}, '51': {'State': 'finished'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'finished'}, '88': {'State': 'finished'}, '89': {'State': 'finished'}, '82': {'State': 'finished'}, '83': {'State': 'finished'}, '80': {'State': 'finished'}, '81': {'State': 'finished'}, '86': {'State': 'finished'}, '87': {'State': 'finished'}, '84': {'State': 'finished'}, '85': {'State': 'finished'}, '3': {'State': 'finished'}, '7': {'State': 'finished'}, '39': {'State': 'finished'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'finished'}, '61': {'State': 'finished'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'finished'}, '65': {'State': 'finished'}, '66': {'State': 'finished'}, '67': {'State': 'finished'}, '68': {'State': 'finished'}, '69': {'State': 'finished'}, '2': {'State': 'finished'}, '6': {'State': 'finished'}, '90': {'State': 'finished'}, '11': {'State': 'finished'}, '10': {'State': 'finished'}, '13': {'State': 'finished'}, '12': {'State': 'finished'}, '15': {'State': 'finished'}, '14': {'State': 'finished'}, '17': {'State': 'finished'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'finished'}, '48': {'State': 'finished'}, '49': {'State': 'finished'}, '46': {'State': 'finished'}, '47': {'State': 'finished'}, '44': {'State': 'finished'}, '45': {'State': 'finished'}, '42': {'State': 'finished'}, '43': {'State': 'finished'}, '40': {'State': 'finished'}, '41': {'State': 'finished'}, '1': {'State': 'finished'}, '5': {'State': 'finished'}, '9': {'State': 'finished'}, '77': {'State': 'finished'}, '76': {'State': 'finished'}, '75': {'State': 'finished'}, '74': {'State': 'finished'}, '73': {'State': 'finished'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'finished'}, '79': {'State': 'finished'}, '78': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8/knash-crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 24], ['finished', 25], ['finished', 26], ['finished', 27], ['finished', 20], ['finished', 21], ['finished', 22], ['finished', 23], ['finished', 28], ['finished', 29], ['finished', 4], ['finished', 8], ['finished', 59], ['finished', 58], ['finished', 55], ['finished', 54], ['finished', 57], ['finished', 56], ['finished', 51], ['finished', 50], ['finished', 53], ['finished', 52], ['finished', 88], ['finished', 89], ['finished', 82], ['finished', 83], ['finished', 80], ['finished', 81], ['finished', 86], ['finished', 87], ['finished', 84], ['finished', 85], ['finished', 3], ['finished', 7], ['finished', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['finished', 60], ['finished', 61], ['finished', 62], ['finished', 63], ['finished', 64], ['finished', 65], ['finished', 66], ['finished', 67], ['finished', 68], ['finished', 69], ['finished', 2], ['finished', 6], ['finished', 90], ['finished', 11], ['finished', 10], ['finished', 13], ['finished', 12], ['finished', 15], ['finished', 14], ['finished', 17], ['finished', 16], ['finished', 19], ['finished', 18], ['finished', 48], ['finished', 49], ['finished', 46], ['finished', 47], ['finished', 44], ['finished', 45], ['finished', 42], ['finished', 43], ['finished', 40], ['finished', 41], ['finished', 1], ['finished', 5], ['finished', 9], ['finished', 77], ['finished', 76], ['finished', 75], ['finished', 74], ['finished', 73], ['finished', 72], ['finished', 71], ['finished', 70], ['finished', 79], ['finished', 78]]}
+INFO 2016-05-17 06:38:46,464: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-17 06:38:46,465: 	 Task name:			160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-17 06:38:46,465: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-17 06:38:46,465: 	 Task status:			COMPLETED
+INFO 2016-05-17 06:38:46,465: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-17 06:38:46,465: 	 
+Jobs status:			finished      100.0% (90/90)
+INFO 2016-05-17 06:38:46,465: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-17 06:38:46,486: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-17 06:46:00,300: 	 Executing command: 'status'
+DEBUG 2016-05-17 06:46:00,301: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-17 06:46:00,308: 	 Checking credentials
+DEBUG 2016-05-17 06:46:00,309: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 06:46:00,309: 	 Getting proxy life time left
+DEBUG 2016-05-17 06:46:00,412: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85873
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:46:00,515: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85873
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:46:00,515: 	 Proxy valid for 23:51:13 hours
+DEBUG 2016-05-17 06:46:00,628: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:46:00,628: 	 Checking credentials
+DEBUG 2016-05-17 06:46:00,628: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 06:46:00,628: 	 Getting proxy life time left
+DEBUG 2016-05-17 06:46:00,731: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85873
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:46:00,834: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85873
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:46:00,834: 	 Proxy valid for 23:51:13 hours
+DEBUG 2016-05-17 06:46:01,727: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-17 06:46:01,835: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:46:01,836: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-17 06:46:01,836: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-17 06:46:02,539: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 366:00:40  (15.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:46:02,541: 	 Myproxy is valid: 1317640
+DEBUG 2016-05-17 06:46:02,541: 	 Command use: status
+DEBUG 2016-05-17 06:46:02,541: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-17 06:46:03,415: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-17 06:46:03,415: 	 Instance is prod
+DEBUG 2016-05-17 06:46:03,415: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-17 06:46:03,415: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-17 06:46:03,415: 	 Looking up detailed status of task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-17 06:46:04,317: 	 {'status': 'COMPLETED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'finished': 90}, 'jobs': {'24': {'State': 'finished'}, '25': {'State': 'finished'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'finished'}, '21': {'State': 'finished'}, '22': {'State': 'finished'}, '23': {'State': 'finished'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '59': {'State': 'finished'}, '58': {'State': 'finished'}, '55': {'State': 'finished'}, '54': {'State': 'finished'}, '57': {'State': 'finished'}, '56': {'State': 'finished'}, '51': {'State': 'finished'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'finished'}, '88': {'State': 'finished'}, '89': {'State': 'finished'}, '82': {'State': 'finished'}, '83': {'State': 'finished'}, '80': {'State': 'finished'}, '81': {'State': 'finished'}, '86': {'State': 'finished'}, '87': {'State': 'finished'}, '84': {'State': 'finished'}, '85': {'State': 'finished'}, '3': {'State': 'finished'}, '7': {'State': 'finished'}, '39': {'State': 'finished'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'finished'}, '61': {'State': 'finished'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'finished'}, '65': {'State': 'finished'}, '66': {'State': 'finished'}, '67': {'State': 'finished'}, '68': {'State': 'finished'}, '69': {'State': 'finished'}, '2': {'State': 'finished'}, '6': {'State': 'finished'}, '90': {'State': 'finished'}, '11': {'State': 'finished'}, '10': {'State': 'finished'}, '13': {'State': 'finished'}, '12': {'State': 'finished'}, '15': {'State': 'finished'}, '14': {'State': 'finished'}, '17': {'State': 'finished'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'finished'}, '48': {'State': 'finished'}, '49': {'State': 'finished'}, '46': {'State': 'finished'}, '47': {'State': 'finished'}, '44': {'State': 'finished'}, '45': {'State': 'finished'}, '42': {'State': 'finished'}, '43': {'State': 'finished'}, '40': {'State': 'finished'}, '41': {'State': 'finished'}, '1': {'State': 'finished'}, '5': {'State': 'finished'}, '9': {'State': 'finished'}, '77': {'State': 'finished'}, '76': {'State': 'finished'}, '75': {'State': 'finished'}, '74': {'State': 'finished'}, '73': {'State': 'finished'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'finished'}, '79': {'State': 'finished'}, '78': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8/knash-crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 24], ['finished', 25], ['finished', 26], ['finished', 27], ['finished', 20], ['finished', 21], ['finished', 22], ['finished', 23], ['finished', 28], ['finished', 29], ['finished', 4], ['finished', 8], ['finished', 59], ['finished', 58], ['finished', 55], ['finished', 54], ['finished', 57], ['finished', 56], ['finished', 51], ['finished', 50], ['finished', 53], ['finished', 52], ['finished', 88], ['finished', 89], ['finished', 82], ['finished', 83], ['finished', 80], ['finished', 81], ['finished', 86], ['finished', 87], ['finished', 84], ['finished', 85], ['finished', 3], ['finished', 7], ['finished', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['finished', 60], ['finished', 61], ['finished', 62], ['finished', 63], ['finished', 64], ['finished', 65], ['finished', 66], ['finished', 67], ['finished', 68], ['finished', 69], ['finished', 2], ['finished', 6], ['finished', 90], ['finished', 11], ['finished', 10], ['finished', 13], ['finished', 12], ['finished', 15], ['finished', 14], ['finished', 17], ['finished', 16], ['finished', 19], ['finished', 18], ['finished', 48], ['finished', 49], ['finished', 46], ['finished', 47], ['finished', 44], ['finished', 45], ['finished', 42], ['finished', 43], ['finished', 40], ['finished', 41], ['finished', 1], ['finished', 5], ['finished', 9], ['finished', 77], ['finished', 76], ['finished', 75], ['finished', 74], ['finished', 73], ['finished', 72], ['finished', 71], ['finished', 70], ['finished', 79], ['finished', 78]]}
+INFO 2016-05-17 06:46:04,317: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-17 06:46:04,317: 	 Task name:			160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-17 06:46:04,318: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-17 06:46:04,318: 	 Task status:			COMPLETED
+INFO 2016-05-17 06:46:04,318: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-17 06:46:04,318: 	 
+Jobs status:			finished      100.0% (90/90)
+INFO 2016-05-17 06:46:04,318: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-17 06:46:04,323: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-17 10:12:43,856: 	 Executing command: 'status'
+DEBUG 2016-05-17 10:12:43,856: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-17 10:12:43,864: 	 Checking credentials
+DEBUG 2016-05-17 10:12:43,864: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 10:12:43,864: 	 Getting proxy life time left
+DEBUG 2016-05-17 10:12:43,967: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86229
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:12:44,070: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86228
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:12:44,070: 	 Proxy valid for 23:57:09 hours
+DEBUG 2016-05-17 10:12:44,234: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:12:44,235: 	 Checking credentials
+DEBUG 2016-05-17 10:12:44,235: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 10:12:44,235: 	 Getting proxy life time left
+DEBUG 2016-05-17 10:12:44,338: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86228
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:12:44,441: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86228
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:12:44,441: 	 Proxy valid for 23:57:08 hours
+DEBUG 2016-05-17 10:12:45,670: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-17 10:12:45,780: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:12:45,780: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-17 10:12:45,780: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-17 10:12:46,484: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 362:33:56  (15.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:12:46,486: 	 Myproxy is valid: 1305236
+DEBUG 2016-05-17 10:12:46,486: 	 Command use: status
+DEBUG 2016-05-17 10:12:46,486: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-17 10:12:47,699: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-17 10:12:47,699: 	 Instance is prod
+DEBUG 2016-05-17 10:12:47,699: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-17 10:12:47,699: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-17 10:12:47,699: 	 Looking up detailed status of task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-17 10:12:48,984: 	 {'status': 'COMPLETED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'finished': 90}, 'jobs': {'24': {'State': 'finished'}, '25': {'State': 'finished'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'finished'}, '21': {'State': 'finished'}, '22': {'State': 'finished'}, '23': {'State': 'finished'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '59': {'State': 'finished'}, '58': {'State': 'finished'}, '55': {'State': 'finished'}, '54': {'State': 'finished'}, '57': {'State': 'finished'}, '56': {'State': 'finished'}, '51': {'State': 'finished'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'finished'}, '88': {'State': 'finished'}, '89': {'State': 'finished'}, '82': {'State': 'finished'}, '83': {'State': 'finished'}, '80': {'State': 'finished'}, '81': {'State': 'finished'}, '86': {'State': 'finished'}, '87': {'State': 'finished'}, '84': {'State': 'finished'}, '85': {'State': 'finished'}, '3': {'State': 'finished'}, '7': {'State': 'finished'}, '39': {'State': 'finished'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'finished'}, '61': {'State': 'finished'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'finished'}, '65': {'State': 'finished'}, '66': {'State': 'finished'}, '67': {'State': 'finished'}, '68': {'State': 'finished'}, '69': {'State': 'finished'}, '2': {'State': 'finished'}, '6': {'State': 'finished'}, '90': {'State': 'finished'}, '11': {'State': 'finished'}, '10': {'State': 'finished'}, '13': {'State': 'finished'}, '12': {'State': 'finished'}, '15': {'State': 'finished'}, '14': {'State': 'finished'}, '17': {'State': 'finished'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'finished'}, '48': {'State': 'finished'}, '49': {'State': 'finished'}, '46': {'State': 'finished'}, '47': {'State': 'finished'}, '44': {'State': 'finished'}, '45': {'State': 'finished'}, '42': {'State': 'finished'}, '43': {'State': 'finished'}, '40': {'State': 'finished'}, '41': {'State': 'finished'}, '1': {'State': 'finished'}, '5': {'State': 'finished'}, '9': {'State': 'finished'}, '77': {'State': 'finished'}, '76': {'State': 'finished'}, '75': {'State': 'finished'}, '74': {'State': 'finished'}, '73': {'State': 'finished'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'finished'}, '79': {'State': 'finished'}, '78': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8/knash-crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 24], ['finished', 25], ['finished', 26], ['finished', 27], ['finished', 20], ['finished', 21], ['finished', 22], ['finished', 23], ['finished', 28], ['finished', 29], ['finished', 4], ['finished', 8], ['finished', 59], ['finished', 58], ['finished', 55], ['finished', 54], ['finished', 57], ['finished', 56], ['finished', 51], ['finished', 50], ['finished', 53], ['finished', 52], ['finished', 88], ['finished', 89], ['finished', 82], ['finished', 83], ['finished', 80], ['finished', 81], ['finished', 86], ['finished', 87], ['finished', 84], ['finished', 85], ['finished', 3], ['finished', 7], ['finished', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['finished', 60], ['finished', 61], ['finished', 62], ['finished', 63], ['finished', 64], ['finished', 65], ['finished', 66], ['finished', 67], ['finished', 68], ['finished', 69], ['finished', 2], ['finished', 6], ['finished', 90], ['finished', 11], ['finished', 10], ['finished', 13], ['finished', 12], ['finished', 15], ['finished', 14], ['finished', 17], ['finished', 16], ['finished', 19], ['finished', 18], ['finished', 48], ['finished', 49], ['finished', 46], ['finished', 47], ['finished', 44], ['finished', 45], ['finished', 42], ['finished', 43], ['finished', 40], ['finished', 41], ['finished', 1], ['finished', 5], ['finished', 9], ['finished', 77], ['finished', 76], ['finished', 75], ['finished', 74], ['finished', 73], ['finished', 72], ['finished', 71], ['finished', 70], ['finished', 79], ['finished', 78]]}
+INFO 2016-05-17 10:12:48,984: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-17 10:12:48,984: 	 Task name:			160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-17 10:12:48,984: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-17 10:12:48,984: 	 Task status:			COMPLETED
+INFO 2016-05-17 10:12:48,984: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-17 10:12:48,985: 	 
+Jobs status:			finished      100.0% (90/90)
+INFO 2016-05-17 10:12:48,985: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-17 10:12:48,988: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log
+DEBUG 2016-05-17 16:08:54,492: 	 Executing command: 'status'
+DEBUG 2016-05-17 16:08:54,493: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-17 16:08:54,510: 	 Checking credentials
+DEBUG 2016-05-17 16:08:54,511: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 16:08:54,511: 	 Getting proxy life time left
+DEBUG 2016-05-17 16:08:54,614: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 52099
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 16:08:54,717: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 52099
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 16:08:54,717: 	 Proxy valid for 14:28:19 hours
+DEBUG 2016-05-17 16:08:54,830: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 16:08:54,830: 	 Checking credentials
+DEBUG 2016-05-17 16:08:54,830: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 16:08:54,831: 	 Getting proxy life time left
+DEBUG 2016-05-17 16:08:54,933: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 52099
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 16:08:55,036: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 52099
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 16:08:55,037: 	 Proxy valid for 14:28:19 hours
+DEBUG 2016-05-17 16:08:56,243: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-17 16:08:56,349: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 16:08:56,349: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-17 16:08:56,349: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-17 16:08:57,454: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 356:37:45  (14.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 16:08:57,455: 	 Myproxy is valid: 1283865
+DEBUG 2016-05-17 16:08:57,558: 	 Executing : 
+ command : openssl x509 -noout -in ~/.globus/usercert.pem -dates
+ output : notBefore=Apr 11 16:26:05 2016 GMT
+notAfter=May 16 16:26:05 2017 GMT
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 16:08:57,607: 	 Delegating a myproxy for 720:00 hours
+DEBUG 2016-05-17 16:08:57,607: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+ERROR 2016-05-17 16:28:57,644: 	 Timeout in export GT_PROXY_MODE=rfc ; myproxy-init -d -n -s myproxy.cern.ch -x -R '/DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch' -x -Z '/DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch' -l '597e41c8619c412dc3972973fe016b938d9f71ef' -t 168:00 -c 720:00 execution.
+ERROR 2016-05-17 16:28:57,645: 	 Problems delegating My-proxy. need more than 2 values to unpack
+ERROR 2016-05-17 16:28:57,645: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 336, in __init__
+    self.handleProxy(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 416, in handleProxy
+    self.proxy.createNewMyProxy(timeleftthreshold = 60 * 60 * 24 * RENEW_MYPROXY_THRESHOLD, nokey = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 340, in createNewMyProxy
+    raise ProxyCreationException("Problems delegating My-proxy. %s" % msg)
+ProxyCreationException: Problems delegating My-proxy. need more than 2 values to unpack
+DEBUG 2016-05-18 07:28:15,571: 	 Executing command: 'status'
+DEBUG 2016-05-18 07:28:15,571: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-18 07:28:15,579: 	 Checking credentials
+DEBUG 2016-05-18 07:28:15,579: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-18 07:28:15,579: 	 Getting proxy life time left
+DEBUG 2016-05-18 07:28:15,682: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86299
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:28:15,785: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86299
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:28:15,785: 	 Proxy valid for 23:58:19 hours
+DEBUG 2016-05-18 07:28:15,975: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:28:15,975: 	 Checking credentials
+DEBUG 2016-05-18 07:28:15,975: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-18 07:28:15,975: 	 Getting proxy life time left
+DEBUG 2016-05-18 07:28:16,078: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86298
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:28:16,181: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86298
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:28:16,182: 	 Proxy valid for 23:58:18 hours
+DEBUG 2016-05-18 07:28:17,072: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-18 07:28:17,181: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:28:17,181: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-18 07:28:17,181: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-18 07:28:17,885: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 719:58:26  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:28:17,886: 	 Myproxy is valid: 2591906
+DEBUG 2016-05-18 07:28:17,886: 	 Command use: status
+DEBUG 2016-05-18 07:28:17,887: 	 Options use: ['crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12']
+DEBUG 2016-05-18 07:28:18,750: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-18 07:28:18,750: 	 Instance is prod
+DEBUG 2016-05-18 07:28:18,750: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-18 07:28:18,750: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-18 07:28:18,751: 	 Looking up detailed status of task 160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+DEBUG 2016-05-18 07:28:19,758: 	 {'status': 'COMPLETED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'finished': 90}, 'jobs': {'24': {'State': 'finished'}, '25': {'State': 'finished'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'finished'}, '21': {'State': 'finished'}, '22': {'State': 'finished'}, '23': {'State': 'finished'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '59': {'State': 'finished'}, '58': {'State': 'finished'}, '55': {'State': 'finished'}, '54': {'State': 'finished'}, '57': {'State': 'finished'}, '56': {'State': 'finished'}, '51': {'State': 'finished'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'finished'}, '88': {'State': 'finished'}, '89': {'State': 'finished'}, '82': {'State': 'finished'}, '83': {'State': 'finished'}, '80': {'State': 'finished'}, '81': {'State': 'finished'}, '86': {'State': 'finished'}, '87': {'State': 'finished'}, '84': {'State': 'finished'}, '85': {'State': 'finished'}, '3': {'State': 'finished'}, '7': {'State': 'finished'}, '39': {'State': 'finished'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'finished'}, '61': {'State': 'finished'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'finished'}, '65': {'State': 'finished'}, '66': {'State': 'finished'}, '67': {'State': 'finished'}, '68': {'State': 'finished'}, '69': {'State': 'finished'}, '2': {'State': 'finished'}, '6': {'State': 'finished'}, '90': {'State': 'finished'}, '11': {'State': 'finished'}, '10': {'State': 'finished'}, '13': {'State': 'finished'}, '12': {'State': 'finished'}, '15': {'State': 'finished'}, '14': {'State': 'finished'}, '17': {'State': 'finished'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'finished'}, '48': {'State': 'finished'}, '49': {'State': 'finished'}, '46': {'State': 'finished'}, '47': {'State': 'finished'}, '44': {'State': 'finished'}, '45': {'State': 'finished'}, '42': {'State': 'finished'}, '43': {'State': 'finished'}, '40': {'State': 'finished'}, '41': {'State': 'finished'}, '1': {'State': 'finished'}, '5': {'State': 'finished'}, '9': {'State': 'finished'}, '77': {'State': 'finished'}, '76': {'State': 'finished'}, '75': {'State': 'finished'}, '74': {'State': 'finished'}, '73': {'State': 'finished'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'finished'}, '79': {'State': 'finished'}, '78': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8/knash-crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 24], ['finished', 25], ['finished', 26], ['finished', 27], ['finished', 20], ['finished', 21], ['finished', 22], ['finished', 23], ['finished', 28], ['finished', 29], ['finished', 4], ['finished', 8], ['finished', 59], ['finished', 58], ['finished', 55], ['finished', 54], ['finished', 57], ['finished', 56], ['finished', 51], ['finished', 50], ['finished', 53], ['finished', 52], ['finished', 88], ['finished', 89], ['finished', 82], ['finished', 83], ['finished', 80], ['finished', 81], ['finished', 86], ['finished', 87], ['finished', 84], ['finished', 85], ['finished', 3], ['finished', 7], ['finished', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['finished', 60], ['finished', 61], ['finished', 62], ['finished', 63], ['finished', 64], ['finished', 65], ['finished', 66], ['finished', 67], ['finished', 68], ['finished', 69], ['finished', 2], ['finished', 6], ['finished', 90], ['finished', 11], ['finished', 10], ['finished', 13], ['finished', 12], ['finished', 15], ['finished', 14], ['finished', 17], ['finished', 16], ['finished', 19], ['finished', 18], ['finished', 48], ['finished', 49], ['finished', 46], ['finished', 47], ['finished', 44], ['finished', 45], ['finished', 42], ['finished', 43], ['finished', 40], ['finished', 41], ['finished', 1], ['finished', 5], ['finished', 9], ['finished', 77], ['finished', 76], ['finished', 75], ['finished', 74], ['finished', 73], ['finished', 72], ['finished', 71], ['finished', 70], ['finished', 79], ['finished', 78]]}
+INFO 2016-05-18 07:28:19,758: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-18 07:28:19,758: 	 Task name:			160516_174305:knash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-18 07:28:19,758: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-18 07:28:19,758: 	 Task status:			COMPLETED
+INFO 2016-05-18 07:28:19,758: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174305%3Aknash_crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12
+INFO 2016-05-18 07:28:19,758: 	 
+Jobs status:			finished      100.0% (90/90)
+INFO 2016-05-18 07:28:19,758: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-18 07:28:19,781: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-scaledown-pythia8_B2GAnaFW_V2p1_76x_Slim_V12/crab.log

@@ -1,0 +1,1832 @@
+DEBUG 2016-01-11 10:21:33,862: 	 Executing command: 'getoutput'
+DEBUG 2016-01-11 10:21:33,863: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-11 14:27:26,864: 	 Executing command: 'status'
+DEBUG 2016-01-11 14:27:26,865: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-01-11 14:27:26,867: 	 Error: crab.log is not a valid CRAB project directory.
+ERROR 2016-01-11 14:27:26,867: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 559, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab.log is not a valid CRAB project directory.
+DEBUG 2016-01-11 14:31:13,692: 	 Executing command: 'status'
+DEBUG 2016-01-11 14:31:13,693: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-01-11 14:31:13,695: 	 Error: crabbystats.csh is not a valid CRAB project directory.
+ERROR 2016-01-11 14:31:13,695: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 559, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crabbystats.csh is not a valid CRAB project directory.
+DEBUG 2016-01-11 14:47:32,169: 	 Executing command: 'status'
+DEBUG 2016-01-11 14:47:32,170: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-01-11 14:47:32,172: 	 Error: crab.log is not a valid CRAB project directory.
+ERROR 2016-01-11 14:47:32,172: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 559, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab.log is not a valid CRAB project directory.
+DEBUG 2016-01-12 07:33:30,384: 	 Executing command: 'status'
+DEBUG 2016-01-12 07:33:30,386: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-01-12 07:33:30,392: 	 Error: 'crab status' command accepts at most 1 argument (a path to a CRAB project directory), 3 given.
+ERROR 2016-01-12 07:33:30,392: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 545, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: 'crab status' command accepts at most 1 argument (a path to a CRAB project directory), 3 given.
+DEBUG 2016-01-12 07:38:39,103: 	 Executing command: 'getlog'
+DEBUG 2016-01-12 07:38:39,103: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-01-12 07:38:39,105: 	 Error: 'crab getlog' command accepts at most 1 argument (a path to a CRAB project directory), 2 given.
+ERROR 2016-01-12 07:38:39,105: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/getlog.py", line 79, in validateOptions
+    getcommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/getcommand.py", line 197, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 545, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: 'crab getlog' command accepts at most 1 argument (a path to a CRAB project directory), 2 given.
+DEBUG 2016-01-12 12:38:00,790: 	 Executing command: 'status'
+DEBUG 2016-01-12 12:38:00,791: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-12 12:38:00,807: 	 Checking credentials
+DEBUG 2016-01-12 12:38:00,808: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-12 12:38:00,808: 	 Getting proxy life time left
+DEBUG 2016-01-12 12:38:00,911: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85121
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-12 12:38:01,014: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85121
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-12 12:38:01,014: 	 Proxy valid for 23:38:41 hours
+ERROR 2016-01-12 12:38:01,015: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_WPrime13TeV_RH_1300_B2GAnaFW_V8p4_Slim_V4
+ERROR 2016-01-12 12:38:01,015: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_WPrime13TeV_RH_1300_B2GAnaFW_V8p4_Slim_V4
+DEBUG 2016-01-12 12:58:13,813: 	 Executing command: 'status'
+DEBUG 2016-01-12 12:58:13,813: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-12 12:58:13,821: 	 Checking credentials
+DEBUG 2016-01-12 12:58:13,821: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-12 12:58:13,821: 	 Getting proxy life time left
+DEBUG 2016-01-12 12:58:13,924: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 83908
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-12 12:58:14,027: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 83908
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-12 12:58:14,027: 	 Proxy valid for 23:18:28 hours
+ERROR 2016-01-12 12:58:14,028: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V4
+ERROR 2016-01-12 12:58:14,029: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V4
+DEBUG 2016-01-12 13:04:56,992: 	 Executing command: 'status'
+DEBUG 2016-01-12 13:04:56,993: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-12 13:04:57,001: 	 Checking credentials
+DEBUG 2016-01-12 13:04:57,001: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-12 13:04:57,001: 	 Getting proxy life time left
+DEBUG 2016-01-12 13:04:57,104: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 83504
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-12 13:04:57,207: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 83504
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-12 13:04:57,207: 	 Proxy valid for 23:11:44 hours
+ERROR 2016-01-12 13:04:57,208: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V4
+ERROR 2016-01-12 13:04:57,208: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V4
+DEBUG 2016-01-12 13:23:59,728: 	 Executing command: 'status'
+DEBUG 2016-01-12 13:23:59,729: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-12 13:23:59,747: 	 Checking credentials
+DEBUG 2016-01-12 13:23:59,748: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-12 13:23:59,748: 	 Getting proxy life time left
+DEBUG 2016-01-12 13:23:59,851: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 82362
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-12 13:23:59,954: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 82362
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-12 13:23:59,954: 	 Proxy valid for 22:52:42 hours
+ERROR 2016-01-12 13:23:59,955: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V4
+ERROR 2016-01-12 13:23:59,955: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V4
+DEBUG 2016-01-12 13:24:00,629: 	 Executing command: 'kill'
+DEBUG 2016-01-12 13:24:00,630: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-12 13:24:00,637: 	 Checking credentials
+DEBUG 2016-01-12 13:24:00,637: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-12 13:24:00,637: 	 Getting proxy life time left
+DEBUG 2016-01-12 13:24:00,740: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 82361
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-12 13:24:00,843: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 82361
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-12 13:24:00,844: 	 Proxy valid for 22:52:41 hours
+ERROR 2016-01-12 13:24:00,844: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V4
+ERROR 2016-01-12 13:24:00,844: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V4
+DEBUG 2016-01-12 20:50:30,948: 	 Executing command: 'status'
+DEBUG 2016-01-12 20:50:30,949: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-12 20:50:30,967: 	 Checking credentials
+DEBUG 2016-01-12 20:50:30,967: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-12 20:50:30,967: 	 Getting proxy life time left
+DEBUG 2016-01-12 20:50:31,070: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 55570
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-12 20:50:31,173: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 55570
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-12 20:50:31,173: 	 Proxy valid for 15:26:10 hours
+ERROR 2016-01-12 20:50:31,208: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_ST_t-channel_4f_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_V8p4_Slim_V6
+ERROR 2016-01-12 20:50:31,209: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_ST_t-channel_4f_leptonDecays_13TeV-amcatnlo-pythia8_TuneCUETP8M1_V8p4_Slim_V6
+DEBUG 2016-01-13 09:37:02,572: 	 Executing command: 'status'
+DEBUG 2016-01-13 09:37:02,573: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-13 09:37:02,580: 	 Checking credentials
+DEBUG 2016-01-13 09:37:02,581: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-13 09:37:02,581: 	 Getting proxy life time left
+DEBUG 2016-01-13 09:37:02,683: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 79981
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-13 09:37:02,786: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 79981
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-13 09:37:02,787: 	 Proxy valid for 22:13:01 hours
+ERROR 2016-01-13 09:37:02,790: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V6
+ERROR 2016-01-13 09:37:02,790: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V6
+DEBUG 2016-01-13 09:37:03,497: 	 Executing command: 'resubmit'
+DEBUG 2016-01-13 09:37:03,497: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-13 09:37:03,505: 	 Checking credentials
+DEBUG 2016-01-13 09:37:03,505: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-13 09:37:03,505: 	 Getting proxy life time left
+DEBUG 2016-01-13 09:37:03,608: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 79980
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-13 09:37:03,711: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 79980
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-13 09:37:03,711: 	 Proxy valid for 22:13:00 hours
+ERROR 2016-01-13 09:37:03,712: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V6
+ERROR 2016-01-13 09:37:03,712: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/resubmit.py", line 26, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V6
+DEBUG 2016-01-13 09:53:40,139: 	 Executing command: 'status'
+DEBUG 2016-01-13 09:53:40,140: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-13 09:53:40,148: 	 Checking credentials
+DEBUG 2016-01-13 09:53:40,148: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-13 09:53:40,148: 	 Getting proxy life time left
+DEBUG 2016-01-13 09:53:40,251: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 78983
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-13 09:53:40,354: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 78983
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-13 09:53:40,354: 	 Proxy valid for 21:56:23 hours
+ERROR 2016-01-13 09:53:40,355: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V6
+ERROR 2016-01-13 09:53:40,355: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V6
+DEBUG 2016-01-13 12:59:30,358: 	 Executing command: 'status'
+DEBUG 2016-01-13 12:59:30,358: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-13 12:59:30,367: 	 Checking credentials
+DEBUG 2016-01-13 12:59:30,367: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-13 12:59:30,367: 	 Getting proxy life time left
+DEBUG 2016-01-13 12:59:30,470: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 67833
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-13 12:59:30,573: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 67833
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-13 12:59:30,573: 	 Proxy valid for 18:50:33 hours
+ERROR 2016-01-13 12:59:30,574: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V6
+ERROR 2016-01-13 12:59:30,574: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V6
+DEBUG 2016-01-13 14:09:10,243: 	 Executing command: 'status'
+DEBUG 2016-01-13 14:09:10,244: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-13 14:09:10,252: 	 Checking credentials
+DEBUG 2016-01-13 14:09:10,252: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-13 14:09:10,252: 	 Getting proxy life time left
+DEBUG 2016-01-13 14:09:10,355: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 25601
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-13 14:09:10,458: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 25601
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-13 14:09:10,458: 	 Proxy valid for 07:06:41 hours
+ERROR 2016-01-13 14:09:10,459: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V6
+ERROR 2016-01-13 14:09:10,459: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V6
+DEBUG 2016-01-13 14:28:58,577: 	 Executing command: 'status'
+DEBUG 2016-01-13 14:28:58,578: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-13 14:28:58,586: 	 Checking credentials
+DEBUG 2016-01-13 14:28:58,586: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-13 14:28:58,586: 	 Getting proxy life time left
+DEBUG 2016-01-13 14:28:58,689: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 24413
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-13 14:28:58,792: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 24413
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-13 14:28:58,792: 	 Proxy valid for 06:46:53 hours
+ERROR 2016-01-13 14:28:58,793: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V6
+ERROR 2016-01-13 14:28:58,793: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V6
+DEBUG 2016-01-14 07:25:56,198: 	 Executing command: 'status'
+DEBUG 2016-01-14 07:25:56,199: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-14 07:25:56,204: 	 Checking credentials
+DEBUG 2016-01-14 07:25:56,204: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-14 07:25:56,204: 	 Getting proxy life time left
+DEBUG 2016-01-14 07:25:56,306: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86387
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-14 07:25:56,408: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86387
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-14 07:25:56,408: 	 Proxy valid for 23:59:47 hours
+ERROR 2016-01-14 07:25:56,425: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V7
+ERROR 2016-01-14 07:25:56,425: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V7
+DEBUG 2016-01-14 10:10:10,774: 	 Executing command: 'status'
+DEBUG 2016-01-14 10:10:10,776: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-14 10:10:10,801: 	 Checking credentials
+DEBUG 2016-01-14 10:10:10,801: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-14 10:10:10,801: 	 Getting proxy life time left
+DEBUG 2016-01-14 10:10:10,904: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 39108
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-14 10:10:11,007: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 39107
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-14 10:10:11,007: 	 Proxy valid for 10:51:48 hours
+ERROR 2016-01-14 10:10:11,008: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V7
+ERROR 2016-01-14 10:10:11,008: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 445, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V7
+DEBUG 2016-01-14 10:34:34,405: 	 Executing command: 'status'
+DEBUG 2016-01-14 10:34:34,406: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-14 10:34:34,414: 	 Checking credentials
+DEBUG 2016-01-14 10:34:34,424: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-01-14 10:34:34,424: 	 Getting proxy life time left
+DEBUG 2016-01-14 10:34:34,526: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-14 10:34:34,526: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-01-14 10:34:34,526: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-01-14 10:34:41,739: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 3
+DEBUG 2016-01-14 10:34:41,843: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-01-14 10:34:41,945: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u45849 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+ERROR 2016-01-14 10:34:41,945: 	 Problems creating proxy.
+ERROR 2016-01-14 10:34:41,945: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 289, in __init__
+    self.proxyCreated = self.proxy.createNewVomsProxySimple(timeLeftThreshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/CredentialInteractions.py", line 152, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy.")
+ProxyCreationException: Problems creating proxy.
+DEBUG 2016-01-14 10:35:33,882: 	 Executing command: 'status'
+DEBUG 2016-01-14 10:35:33,882: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-01-14 10:35:33,884: 	 Error: crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V is not a valid CRAB project directory.
+ERROR 2016-01-14 10:35:33,884: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 559, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V is not a valid CRAB project directory.
+DEBUG 2016-01-15 15:21:49,021: 	 Executing command: 'status'
+DEBUG 2016-01-15 15:21:49,021: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-01-15 15:21:49,023: 	 Error: crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_Slim_V is not a valid CRAB project directory.
+ERROR 2016-01-15 15:21:49,023: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 559, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_Slim_V is not a valid CRAB project directory.
+DEBUG 2016-01-15 15:34:06,651: 	 Executing command: 'status'
+DEBUG 2016-01-15 15:34:06,652: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-01-15 15:34:06,654: 	 Error: crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_Slim_V is not a valid CRAB project directory.
+ERROR 2016-01-15 15:34:06,654: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 559, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_Slim_V is not a valid CRAB project directory.
+DEBUG 2016-01-15 15:43:28,569: 	 Executing command: 'status'
+DEBUG 2016-01-15 15:43:28,569: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-01-15 15:43:28,571: 	 Error: crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_Slim_V is not a valid CRAB project directory.
+ERROR 2016-01-15 15:43:28,571: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 559, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_Slim_V is not a valid CRAB project directory.
+DEBUG 2016-01-15 15:43:58,905: 	 Executing command: 'status'
+DEBUG 2016-01-15 15:43:58,905: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-01-15 15:43:58,906: 	 Error: crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_Slim_V is not a valid CRAB project directory.
+ERROR 2016-01-15 15:43:58,906: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 159, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/bin/crab", line 145, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1512/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 559, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_Slim_V is not a valid CRAB project directory.
+DEBUG 2016-01-16 12:59:16,334: 	 Executing command: 'status'
+DEBUG 2016-01-16 12:59:16,335: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-19 12:40:57,764: 	 Executing command: 'status'
+DEBUG 2016-01-19 12:40:57,764: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-01-28 13:11:10,162: 	 Executing command: 'status'
+DEBUG 2016-01-28 13:11:10,162: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-11 17:12:20,939: 	 Executing command: 'status'
+DEBUG 2016-04-11 17:12:20,940: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-11 17:12:20,945: 	 Checking credentials
+DEBUG 2016-04-11 17:12:20,945: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-11 17:12:20,945: 	 Getting proxy life time left
+DEBUG 2016-04-11 17:12:21,047: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 66123
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-11 17:12:21,150: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 66122
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-11 17:12:21,150: 	 Proxy valid for 18:22:03 hours
+ERROR 2016-04-11 17:12:21,152: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+ERROR 2016-04-11 17:12:21,152: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 446, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+DEBUG 2016-04-11 17:12:21,529: 	 Executing command: 'status'
+DEBUG 2016-04-11 17:12:21,529: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-11 17:12:21,534: 	 Checking credentials
+DEBUG 2016-04-11 17:12:21,534: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-11 17:12:21,534: 	 Getting proxy life time left
+DEBUG 2016-04-11 17:12:21,636: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 66122
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-11 17:12:21,739: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 66122
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-11 17:12:21,739: 	 Proxy valid for 18:22:02 hours
+ERROR 2016-04-11 17:12:21,740: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+ERROR 2016-04-11 17:12:21,740: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 446, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+DEBUG 2016-04-11 17:15:22,140: 	 Executing command: 'status'
+DEBUG 2016-04-11 17:15:22,140: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-11 17:15:22,146: 	 Checking credentials
+DEBUG 2016-04-11 17:15:22,146: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-11 17:15:22,146: 	 Getting proxy life time left
+DEBUG 2016-04-11 17:15:22,248: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 65941
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-11 17:15:22,351: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 65941
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-11 17:15:22,351: 	 Proxy valid for 18:19:01 hours
+ERROR 2016-04-11 17:15:22,352: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_WPrime13TeV_RH_2000_B2GAnaFW_V8p4_Slim_V10
+ERROR 2016-04-11 17:15:22,352: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 446, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_WPrime13TeV_RH_2000_B2GAnaFW_V8p4_Slim_V10
+DEBUG 2016-04-12 07:34:22,814: 	 Executing command: 'status'
+DEBUG 2016-04-12 07:34:22,815: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-12 07:34:22,822: 	 Checking credentials
+DEBUG 2016-04-12 07:34:22,822: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-12 07:34:22,823: 	 Getting proxy life time left
+DEBUG 2016-04-12 07:34:22,925: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86329
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 07:34:23,028: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86329
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 07:34:23,028: 	 Proxy valid for 23:58:49 hours
+ERROR 2016-04-12 07:34:23,039: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+ERROR 2016-04-12 07:34:23,039: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 446, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+DEBUG 2016-04-12 07:34:23,542: 	 Executing command: 'resubmit'
+DEBUG 2016-04-12 07:34:23,542: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-12 07:34:23,550: 	 Checking credentials
+DEBUG 2016-04-12 07:34:23,550: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-12 07:34:23,550: 	 Getting proxy life time left
+DEBUG 2016-04-12 07:34:23,653: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86328
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 07:34:23,755: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86328
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 07:34:23,756: 	 Proxy valid for 23:58:48 hours
+ERROR 2016-04-12 07:34:23,756: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+ERROR 2016-04-12 07:34:23,756: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 26, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 446, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+DEBUG 2016-04-12 07:34:24,056: 	 Executing command: 'status'
+DEBUG 2016-04-12 07:34:24,056: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-12 07:34:24,063: 	 Checking credentials
+DEBUG 2016-04-12 07:34:24,063: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-12 07:34:24,063: 	 Getting proxy life time left
+DEBUG 2016-04-12 07:34:24,166: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86327
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 07:34:24,269: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86327
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 07:34:24,269: 	 Proxy valid for 23:58:47 hours
+ERROR 2016-04-12 07:34:24,436: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+ERROR 2016-04-12 07:34:24,437: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 446, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+DEBUG 2016-04-12 07:34:24,898: 	 Executing command: 'resubmit'
+DEBUG 2016-04-12 07:34:24,898: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-12 07:34:24,906: 	 Checking credentials
+DEBUG 2016-04-12 07:34:24,906: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-12 07:34:24,906: 	 Getting proxy life time left
+DEBUG 2016-04-12 07:34:25,008: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86327
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 07:34:25,111: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86326
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 07:34:25,111: 	 Proxy valid for 23:58:47 hours
+ERROR 2016-04-12 07:34:25,112: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+ERROR 2016-04-12 07:34:25,112: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 26, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 446, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+DEBUG 2016-04-12 07:38:24,259: 	 Executing command: 'status'
+DEBUG 2016-04-12 07:38:24,260: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-12 07:38:24,270: 	 Checking credentials
+DEBUG 2016-04-12 07:38:24,270: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-12 07:38:24,270: 	 Getting proxy life time left
+DEBUG 2016-04-12 07:38:24,373: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86087
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 07:38:24,476: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86087
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 07:38:24,476: 	 Proxy valid for 23:54:47 hours
+ERROR 2016-04-12 07:38:24,488: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_WPrime13TeV_RH_2000_B2GAnaFW_V8p4_Slim_V10
+ERROR 2016-04-12 07:38:24,488: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 446, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_WPrime13TeV_RH_2000_B2GAnaFW_V8p4_Slim_V10
+DEBUG 2016-04-12 07:38:24,953: 	 Executing command: 'resubmit'
+DEBUG 2016-04-12 07:38:24,953: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-12 07:38:24,961: 	 Checking credentials
+DEBUG 2016-04-12 07:38:24,961: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-12 07:38:24,961: 	 Getting proxy life time left
+DEBUG 2016-04-12 07:38:25,064: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86086
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 07:38:25,167: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86086
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 07:38:25,167: 	 Proxy valid for 23:54:46 hours
+ERROR 2016-04-12 07:38:25,167: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_WPrime13TeV_RH_2000_B2GAnaFW_V8p4_Slim_V10
+ERROR 2016-04-12 07:38:25,167: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 26, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 446, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_WPrime13TeV_RH_2000_B2GAnaFW_V8p4_Slim_V10
+DEBUG 2016-04-12 11:16:37,816: 	 Executing command: 'status'
+DEBUG 2016-04-12 11:16:37,816: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-12 11:16:37,849: 	 Checking credentials
+DEBUG 2016-04-12 11:16:37,849: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-12 11:16:37,850: 	 Getting proxy life time left
+DEBUG 2016-04-12 11:16:37,952: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 72994
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 11:16:38,054: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 72994
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 11:16:38,054: 	 Proxy valid for 20:16:34 hours
+ERROR 2016-04-12 11:16:38,055: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+ERROR 2016-04-12 11:16:38,055: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 446, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+DEBUG 2016-04-12 11:16:40,399: 	 Executing command: 'status'
+DEBUG 2016-04-12 11:16:40,399: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-12 11:16:40,404: 	 Checking credentials
+DEBUG 2016-04-12 11:16:40,404: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-12 11:16:40,404: 	 Getting proxy life time left
+DEBUG 2016-04-12 11:16:40,506: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 72991
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 11:16:40,608: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 72991
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 11:16:40,608: 	 Proxy valid for 20:16:31 hours
+ERROR 2016-04-12 11:16:40,608: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+ERROR 2016-04-12 11:16:40,608: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 446, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V10
+DEBUG 2016-04-12 11:18:25,143: 	 Executing command: 'status'
+DEBUG 2016-04-12 11:18:25,144: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-12 11:18:25,149: 	 Checking credentials
+DEBUG 2016-04-12 11:18:25,149: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-12 11:18:25,149: 	 Getting proxy life time left
+DEBUG 2016-04-12 11:18:25,251: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 72886
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 11:18:25,353: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 72886
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-12 11:18:25,353: 	 Proxy valid for 20:14:46 hours
+ERROR 2016-04-12 11:18:25,354: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_WPrime13TeV_RH_2000_B2GAnaFW_V8p4_Slim_V10
+ERROR 2016-04-12 11:18:25,354: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 428, in loadLocalCache
+    self.cachedinfo, self.logfile = loadCache(self.requestarea, self.logger)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/ClientUtilities.py", line 446, in loadCache
+    raise CachefileNotFoundException(msg)
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_7_4_15/src/Analysis/B2GAnaFW/test/SlimTuples/crab_WPrime13TeV_RH_2000_B2GAnaFW_V8p4_Slim_V10
+DEBUG 2016-04-12 11:31:40,890: 	 Executing command: 'status'
+DEBUG 2016-04-12 11:31:40,891: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-04-12 11:31:40,892: 	 Error: crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V is not a valid CRAB project directory.
+ERROR 2016-04-12 11:31:40,893: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 559, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V is not a valid CRAB project directory.
+DEBUG 2016-04-12 11:59:30,274: 	 Executing command: 'status'
+DEBUG 2016-04-12 11:59:30,274: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-04-12 11:59:30,276: 	 Error: crab_QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V is not a valid CRAB project directory.
+ERROR 2016-04-12 11:59:30,276: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 559, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V is not a valid CRAB project directory.
+DEBUG 2016-04-12 12:42:20,237: 	 Executing command: 'status'
+DEBUG 2016-04-12 12:42:20,238: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-04-12 12:42:20,239: 	 Error: crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V is not a valid CRAB project directory.
+ERROR 2016-04-12 12:42:20,239: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 559, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V is not a valid CRAB project directory.
+DEBUG 2016-04-12 13:48:47,538: 	 Executing command: 'status'
+DEBUG 2016-04-12 13:48:47,539: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-04-12 13:48:47,540: 	 Error: crab_QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V is not a valid CRAB project directory.
+ERROR 2016-04-12 13:48:47,540: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 745, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1603.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 559, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_QCD_HT2000toInf_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V8p4_Slim_V is not a valid CRAB project directory.
+DEBUG 2016-04-21 07:00:44,678: 	 Executing command: 'status'
+DEBUG 2016-04-21 07:00:44,694: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-21 07:00:44,738: 	 Checking credentials
+DEBUG 2016-04-21 07:00:44,739: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-21 07:00:44,739: 	 Getting proxy life time left
+DEBUG 2016-04-21 07:00:45,042: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-21 07:00:45,042: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-04-21 07:00:45,043: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+ERROR 2016-04-21 07:00:45,815: 	 Keyboard Interrupted
+DEBUG 2016-04-21 07:00:46,568: 	 Executing command: 'resubmit'
+DEBUG 2016-04-21 07:00:46,568: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-21 07:00:46,581: 	 Checking credentials
+DEBUG 2016-04-21 07:00:46,581: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-21 07:00:46,582: 	 Getting proxy life time left
+DEBUG 2016-04-21 07:00:46,685: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-21 07:00:46,685: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-04-21 07:00:46,685: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+ERROR 2016-04-21 07:00:47,656: 	 Keyboard Interrupted
+DEBUG 2016-04-21 07:00:48,327: 	 Executing command: 'status'
+DEBUG 2016-04-21 07:00:48,327: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-21 07:00:48,334: 	 Checking credentials
+DEBUG 2016-04-21 07:00:48,334: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-21 07:00:48,334: 	 Getting proxy life time left
+DEBUG 2016-04-21 07:00:48,437: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-21 07:00:48,437: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-04-21 07:00:48,437: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-04-21 07:00:50,043: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 3
+DEBUG 2016-04-21 07:00:50,146: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-21 07:00:50,249: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u45849 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+ERROR 2016-04-21 07:00:50,250: 	 Problems creating proxy.
+ERROR 2016-04-21 07:00:50,250: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 289, in __init__
+    self.proxyCreated = self.proxy.createNewVomsProxySimple(timeLeftThreshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 152, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy.")
+ProxyCreationException: Problems creating proxy.
+DEBUG 2016-04-21 07:00:50,986: 	 Executing command: 'resubmit'
+DEBUG 2016-04-21 07:00:50,986: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-21 07:00:50,994: 	 Checking credentials
+DEBUG 2016-04-21 07:00:50,994: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-21 07:00:50,994: 	 Getting proxy life time left
+DEBUG 2016-04-21 07:00:51,097: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-21 07:00:51,097: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-04-21 07:00:51,097: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-04-21 07:00:52,904: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 3
+DEBUG 2016-04-21 07:00:53,007: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-21 07:00:53,110: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u45849 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+ERROR 2016-04-21 07:00:53,111: 	 Problems creating proxy.
+ERROR 2016-04-21 07:00:53,111: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 26, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 289, in __init__
+    self.proxyCreated = self.proxy.createNewVomsProxySimple(timeLeftThreshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 152, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy.")
+ProxyCreationException: Problems creating proxy.
+DEBUG 2016-04-21 07:00:53,792: 	 Executing command: 'status'
+DEBUG 2016-04-21 07:00:53,792: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-21 07:00:53,799: 	 Checking credentials
+DEBUG 2016-04-21 07:00:53,799: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-21 07:00:53,799: 	 Getting proxy life time left
+DEBUG 2016-04-21 07:00:53,902: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-21 07:00:53,902: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-04-21 07:00:53,902: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-04-21 07:00:56,510: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 3
+DEBUG 2016-04-21 07:00:56,613: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-21 07:00:56,716: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u45849 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+ERROR 2016-04-21 07:00:56,717: 	 Problems creating proxy.
+ERROR 2016-04-21 07:00:56,717: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 289, in __init__
+    self.proxyCreated = self.proxy.createNewVomsProxySimple(timeLeftThreshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 152, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy.")
+ProxyCreationException: Problems creating proxy.
+DEBUG 2016-04-21 07:04:12,328: 	 Executing command: 'status'
+DEBUG 2016-04-21 07:04:12,329: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-21 07:04:12,337: 	 Checking credentials
+DEBUG 2016-04-21 07:04:12,337: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-21 07:04:12,337: 	 Getting proxy life time left
+DEBUG 2016-04-21 07:04:12,440: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86210
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-21 07:04:12,543: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86210
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-21 07:04:12,543: 	 Proxy valid for 23:56:50 hours
+ERROR 2016-04-21 07:04:12,732: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-21 07:04:12,732: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-21 07:04:13,424: 	 Executing command: 'resubmit'
+DEBUG 2016-04-21 07:04:13,424: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-21 07:04:13,432: 	 Checking credentials
+DEBUG 2016-04-21 07:04:13,433: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-21 07:04:13,433: 	 Getting proxy life time left
+DEBUG 2016-04-21 07:04:13,536: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86209
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-21 07:04:13,638: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86209
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-21 07:04:13,639: 	 Proxy valid for 23:56:49 hours
+ERROR 2016-04-21 07:04:13,639: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-21 07:04:13,639: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 26, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-21 08:24:22,077: 	 Executing command: 'status'
+DEBUG 2016-04-21 08:24:22,079: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-04-21 08:24:22,086: 	 Error: 'crab status' command accepts at most 1 argument (a path to a CRAB project directory), 2 given.
+ERROR 2016-04-21 08:24:22,086: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 749, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 549, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: 'crab status' command accepts at most 1 argument (a path to a CRAB project directory), 2 given.
+DEBUG 2016-04-21 08:24:31,474: 	 Executing command: 'status'
+DEBUG 2016-04-21 08:24:31,475: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-21 08:24:39,538: 	 Executing command: 'status'
+DEBUG 2016-04-21 08:24:39,540: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-22 08:20:24,621: 	 Executing command: 'status'
+DEBUG 2016-04-22 08:20:24,622: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-22 08:20:24,627: 	 Checking credentials
+DEBUG 2016-04-22 08:20:24,627: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-22 08:20:24,627: 	 Getting proxy life time left
+DEBUG 2016-04-22 08:20:24,729: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 23618
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-22 08:20:24,831: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 23618
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-22 08:20:24,832: 	 Proxy valid for 06:33:38 hours
+ERROR 2016-04-22 08:20:24,839: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-22 08:20:24,840: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-22 08:22:00,229: 	 Executing command: 'status'
+DEBUG 2016-04-22 08:22:00,230: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-22 08:22:00,244: 	 Checking credentials
+DEBUG 2016-04-22 08:22:00,244: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-22 08:22:00,244: 	 Getting proxy life time left
+DEBUG 2016-04-22 08:22:00,346: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 23522
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-22 08:22:00,448: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 23522
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-22 08:22:00,448: 	 Proxy valid for 06:32:02 hours
+ERROR 2016-04-22 08:22:00,448: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-22 08:22:00,449: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-22 12:55:34,207: 	 Executing command: 'status'
+DEBUG 2016-04-22 12:55:34,208: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-22 12:55:34,213: 	 Checking credentials
+DEBUG 2016-04-22 12:55:34,213: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-22 12:55:34,213: 	 Getting proxy life time left
+DEBUG 2016-04-22 12:55:34,315: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 7108
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-22 12:55:34,417: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 7108
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-22 12:55:34,417: 	 Proxy valid for 01:58:28 hours
+ERROR 2016-04-22 12:55:34,418: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-22 12:55:34,418: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-25 09:25:41,656: 	 Executing command: 'status'
+DEBUG 2016-04-25 09:25:41,657: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-25 09:25:41,665: 	 Checking credentials
+DEBUG 2016-04-25 09:25:41,665: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-25 09:25:41,665: 	 Getting proxy life time left
+DEBUG 2016-04-25 09:25:41,768: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86291
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 09:25:41,871: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86291
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 09:25:41,872: 	 Proxy valid for 23:58:11 hours
+ERROR 2016-04-25 09:25:42,301: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-25 09:25:42,301: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-25 10:07:51,174: 	 Executing command: 'status'
+DEBUG 2016-04-25 10:07:51,174: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-25 10:07:51,182: 	 Checking credentials
+DEBUG 2016-04-25 10:07:51,183: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-25 10:07:51,183: 	 Getting proxy life time left
+DEBUG 2016-04-25 10:07:51,286: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 83761
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 10:07:51,389: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 83761
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 10:07:51,389: 	 Proxy valid for 23:16:01 hours
+ERROR 2016-04-25 10:07:51,390: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-25 10:07:51,390: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-25 10:07:51,863: 	 Executing command: 'resubmit'
+DEBUG 2016-04-25 10:07:51,864: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-25 10:07:51,872: 	 Checking credentials
+DEBUG 2016-04-25 10:07:51,872: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-25 10:07:51,872: 	 Getting proxy life time left
+DEBUG 2016-04-25 10:07:51,975: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 83761
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 10:07:52,078: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 83760
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 10:07:52,078: 	 Proxy valid for 23:16:01 hours
+ERROR 2016-04-25 10:07:52,079: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-25 10:07:52,079: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 26, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-25 12:33:01,782: 	 Executing command: 'status'
+DEBUG 2016-04-25 12:33:01,783: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-25 12:33:01,791: 	 Checking credentials
+DEBUG 2016-04-25 12:33:01,791: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-25 12:33:01,791: 	 Getting proxy life time left
+DEBUG 2016-04-25 12:33:01,894: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 75051
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 12:33:01,998: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 75051
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 12:33:01,998: 	 Proxy valid for 20:50:51 hours
+ERROR 2016-04-25 12:33:01,999: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-25 12:33:01,999: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-25 12:33:02,494: 	 Executing command: 'resubmit'
+DEBUG 2016-04-25 12:33:02,494: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-25 12:33:02,502: 	 Checking credentials
+DEBUG 2016-04-25 12:33:02,502: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-25 12:33:02,502: 	 Getting proxy life time left
+DEBUG 2016-04-25 12:33:02,605: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 75050
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 12:33:02,709: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 75050
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 12:33:02,709: 	 Proxy valid for 20:50:50 hours
+ERROR 2016-04-25 12:33:02,710: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-25 12:33:02,710: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 26, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-25 15:13:20,528: 	 Executing command: 'status'
+DEBUG 2016-04-25 15:13:20,529: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-25 15:13:20,537: 	 Checking credentials
+DEBUG 2016-04-25 15:13:20,537: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-25 15:13:20,537: 	 Getting proxy life time left
+DEBUG 2016-04-25 15:13:20,640: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86181
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 15:13:20,743: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86181
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 15:13:20,743: 	 Proxy valid for 23:56:21 hours
+ERROR 2016-04-25 15:13:20,744: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-25 15:13:20,744: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-25 15:13:21,494: 	 Executing command: 'resubmit'
+DEBUG 2016-04-25 15:13:21,494: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-25 15:13:21,502: 	 Checking credentials
+DEBUG 2016-04-25 15:13:21,503: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-25 15:13:21,503: 	 Getting proxy life time left
+DEBUG 2016-04-25 15:13:21,606: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86180
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 15:13:21,709: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86180
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-25 15:13:21,709: 	 Proxy valid for 23:56:20 hours
+ERROR 2016-04-25 15:13:21,709: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-25 15:13:21,710: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 26, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-26 09:50:04,659: 	 Executing command: 'status'
+DEBUG 2016-04-26 09:50:04,659: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-26 09:50:04,674: 	 Checking credentials
+DEBUG 2016-04-26 09:50:04,674: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-26 09:50:04,674: 	 Getting proxy life time left
+DEBUG 2016-04-26 09:50:04,777: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86200
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 09:50:04,880: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86200
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 09:50:04,880: 	 Proxy valid for 23:56:40 hours
+ERROR 2016-04-26 09:50:04,892: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-26 09:50:04,893: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-26 09:50:05,615: 	 Executing command: 'resubmit'
+DEBUG 2016-04-26 09:50:05,615: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-26 09:50:05,624: 	 Checking credentials
+DEBUG 2016-04-26 09:50:05,624: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-26 09:50:05,624: 	 Getting proxy life time left
+DEBUG 2016-04-26 09:50:05,727: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86199
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 09:50:05,830: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86199
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 09:50:05,830: 	 Proxy valid for 23:56:39 hours
+ERROR 2016-04-26 09:50:05,831: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-26 09:50:05,831: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 26, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-26 10:22:07,855: 	 Executing command: 'status'
+DEBUG 2016-04-26 10:22:07,856: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-26 10:22:07,864: 	 Checking credentials
+DEBUG 2016-04-26 10:22:07,864: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-26 10:22:07,864: 	 Getting proxy life time left
+DEBUG 2016-04-26 10:22:07,967: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 84277
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 10:22:08,070: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 84276
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 10:22:08,070: 	 Proxy valid for 23:24:37 hours
+ERROR 2016-04-26 10:22:08,071: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-26 10:22:08,071: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-26 10:25:05,085: 	 Executing command: 'status'
+DEBUG 2016-04-26 10:25:05,086: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-04-26 10:25:05,088: 	 Error: SlimTuples/crab_QCD_HT1000to1500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11 is not a valid CRAB project directory.
+ERROR 2016-04-26 10:25:05,088: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 749, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 563, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: SlimTuples/crab_QCD_HT1000to1500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11 is not a valid CRAB project directory.
+DEBUG 2016-04-26 10:25:21,956: 	 Executing command: 'resubmit'
+DEBUG 2016-04-26 10:25:21,957: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-04-26 10:25:21,958: 	 Error: SlimTuples/crab_QCD_HT1000to1500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11 is not a valid CRAB project directory.
+ERROR 2016-04-26 10:25:21,959: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 26, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 176, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 563, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: SlimTuples/crab_QCD_HT1000to1500_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11 is not a valid CRAB project directory.
+DEBUG 2016-04-26 10:30:23,386: 	 Executing command: 'status'
+DEBUG 2016-04-26 10:30:23,387: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-26 10:30:23,405: 	 Checking credentials
+DEBUG 2016-04-26 10:30:23,405: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-26 10:30:23,405: 	 Getting proxy life time left
+DEBUG 2016-04-26 10:30:23,508: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 83781
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 10:30:23,611: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 83781
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 10:30:23,612: 	 Proxy valid for 23:16:21 hours
+ERROR 2016-04-26 10:30:23,612: 	 Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+ERROR 2016-04-26 10:30:23,612: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 318, in __init__
+    self.loadLocalCache(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1604/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 447, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-05-17 10:31:54,688: 	 Executing command: 'status'
+DEBUG 2016-05-17 10:31:54,688: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-05-17 10:31:54,690: 	 Error: rab_JetHT_Run2015D-16Dec2015_B2GAnaFW_V1p3_76x_Slim_V12_v1 is not a valid CRAB project directory.
+ERROR 2016-05-17 10:31:54,691: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 254, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/Commands/status.py", line 749, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 563, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: rab_JetHT_Run2015D-16Dec2015_B2GAnaFW_V1p3_76x_Slim_V12_v1 is not a valid CRAB project directory.

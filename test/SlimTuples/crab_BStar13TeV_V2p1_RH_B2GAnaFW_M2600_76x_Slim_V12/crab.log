@@ -1,0 +1,1322 @@
+DEBUG 2016-05-16 12:46:18,253: 	 Executing command: 'submit'
+DEBUG 2016-05-16 12:46:18,254: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 12:46:18,261: 	 Checking credentials
+DEBUG 2016-05-16 12:46:18,261: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 12:46:18,262: 	 Getting proxy life time left
+DEBUG 2016-05-16 12:46:18,364: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86192
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:46:18,467: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86192
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:46:18,468: 	 Proxy valid for 23:56:32 hours
+INFO 2016-05-16 12:46:18,468: 	 Will use CRAB configuration file crab3_BSTAR_M2600_R.py
+DEBUG 2016-05-16 12:46:18,468: 	 Loading CRAB configuration file.
+DEBUG 2016-05-16 12:46:18,540: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-05-16 12:46:18,905: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:46:18,905: 	 Checking credentials
+DEBUG 2016-05-16 12:46:18,906: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 12:46:18,906: 	 Getting proxy life time left
+DEBUG 2016-05-16 12:46:19,008: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86192
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:46:19,111: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86191
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:46:19,112: 	 Proxy valid for 23:56:32 hours
+DEBUG 2016-05-16 12:46:19,214: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u45849 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:46:26,373: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 12:46:26,482: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:46:26,482: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 12:46:26,482: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 12:46:27,187: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 384:00:15  (16.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:46:27,188: 	 Myproxy is valid: 1382415
+DEBUG 2016-05-16 12:46:27,188: 	 Command use: submit
+DEBUG 2016-05-16 12:46:27,188: 	 Options use: ['-c', 'crab3_BSTAR_M2600_R.py']
+DEBUG 2016-05-16 12:46:29,003: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 12:46:29,003: 	 Instance is prod
+DEBUG 2016-05-16 12:46:29,003: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 12:46:29,003: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 12:46:29,003: 	 Started submission
+DEBUG 2016-05-16 12:46:29,004: 	 Working on /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-16 12:46:30,238: 	 Loading required information from the environment
+DEBUG 2016-05-16 12:46:30,238: 	 Found CMSSW_7_6_1 for slc6_amd64_gcc493 with base /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1
+DEBUG 2016-05-16 12:46:30,278: 	 UNIQUE NAME: tarUUID e9b6848b-a66f-4fce-9cd0-4198b75f1f8a 
+DEBUG 2016-05-16 12:46:30,278: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.workArea = 'SlimTuples'
+config.General.requestName = 'BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12'
+config.section_('JobType')
+config.JobType.psetName = 'quickntuple.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.inputFiles = ['Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt', 'Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt']
+config.JobType.pyCfgParams = ['type=MC']
+config.section_('Data')
+config.Data.inputDataset = '/BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/lcorcodi-crab_BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8_B2GAnaFW_76X_V2p1-ce108855676c8f127cd37fa14e406ad2/USER'
+config.Data.publication = False
+config.Data.unitsPerJob = 1
+config.Data.ignoreLocality = True
+config.Data.splitting = 'FileBased'
+config.Data.inputDBS = 'phys03'
+config.section_('Site')
+config.Site.storageSite = 'T3_US_FNALLPC'
+
+DEBUG 2016-05-16 12:46:30,278: 	 self.config.JobType.psetName: quickntuple.py
+INFO 2016-05-16 12:46:30,278: 	 Importing CMSSW configuration quickntuple.py
+DEBUG 2016-05-16 12:46:30,279: 	 Additional parameters for the CMSSW configuration are: ['type=MC']
+INFO 2016-05-16 12:46:30,391: 	 Finished importing CMSSW configuration quickntuple.py
+DEBUG 2016-05-16 12:46:30,391: 	 Writing CMSSW configuration to /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/inputs/PSet.py
+DEBUG 2016-05-16 12:46:30,442: 	 The following EDM output files will be collected: ['B2GEDMNtuple_slim.root']
+DEBUG 2016-05-16 12:46:30,442: 	 The following TFile output files will be collected: []
+DEBUG 2016-05-16 12:46:30,442: 	 The following user output files will be collected: []
+DEBUG 2016-05-16 12:46:30,442: 	 Loading required information from the environment
+DEBUG 2016-05-16 12:46:30,442: 	 Found CMSSW_7_6_1 for slc6_amd64_gcc493 with base /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1
+DEBUG 2016-05-16 12:46:30,442: 	 Making tarball in /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/inputs/e9b6848b-a66f-4fce-9cd0-4198b75f1f8adefault.tgz
+DEBUG 2016-05-16 12:46:30,445: 	 Checking directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/lib
+DEBUG 2016-05-16 12:46:30,445: 	 Adding directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/lib to tarball
+DEBUG 2016-05-16 12:46:30,738: 	 Checking directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/biglib
+DEBUG 2016-05-16 12:46:30,738: 	 Adding directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/biglib to tarball
+DEBUG 2016-05-16 12:46:30,740: 	 Checking directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/module
+DEBUG 2016-05-16 12:46:30,801: 	 Adding file Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:46:30,806: 	 Adding file Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:46:30,808: 	 Adding file Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:46:30,809: 	 Adding file Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:46:30,811: 	 Adding file Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:46:30,812: 	 Adding file Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:46:30,833: 	 Uploading archive /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/inputs/e9b6848b-a66f-4fce-9cd0-4198b75f1f8adefault.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-05-16 12:46:33,105: 	 Result uploading input files: 626a91c20f6f5c976c0061e06eba1d33b28131ec3bacdc550a60e7e2662d2913.tar.gz 
+INFO 2016-05-16 12:46:33,105: 	 Sending the request to the server
+DEBUG 2016-05-16 12:46:33,105: 	 Submitting {'maxjobruntime': 1250, 'ignorelocality': 1, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T3_US_FNALLPC', 'algoargs': 1, 'cachefilename': '626a91c20f6f5c976c0061e06eba1d33b28131ec3bacdc550a60e7e2662d2913.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_7_6_1', 'edmoutfiles': ['B2GEDMNtuple_slim.root'], 'userfiles': [], 'primarydataset': '', 'inputdata': '/BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/lcorcodi-crab_BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8_B2GAnaFW_76X_V2p1-ce108855676c8f127cd37fa14e406ad2/USER', 'dryrun': 0, 'workflow': 'crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12', 'adduserfiles': ['Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt', 'Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt'], 'nonprodsw': 0, 'tfileoutfiles': [], 'oneEventMode': 0, 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc493', 'totalunits': 0, 'splitalgo': 'FileBased', 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': ''} 
+DEBUG 2016-05-16 12:46:33,106: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=1&savelogsflag=1&useparent=0&asyncdest=T3_US_FNALLPC&algoargs=1&cachefilename=626a91c20f6f5c976c0061e06eba1d33b28131ec3bacdc550a60e7e2662d2913.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_7_6_1&primarydataset=&inputdata=%2FBstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8%2Flcorcodi-crab_BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8_B2GAnaFW_76X_V2p1-ce108855676c8f127cd37fa14e406ad2%2FUSER&dryrun=0&workflow=crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12&nonprodsw=0&oneEventMode=0&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc493&totalunits=0&splitalgo=FileBased&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&adduserfiles=Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt&edmoutfiles=B2GEDMNtuple_slim.root
+DEBUG 2016-05-16 12:46:34,926: 	 Result: {'result': [{'RequestName': '160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12'}]}
+INFO 2016-05-16 12:46:34,939: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2016-05-16 12:46:34,939: 	 Task name: 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 12:46:34,939: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2016-05-16 12:46:34,939: 	 About to return
+INFO 2016-05-16 12:46:34,944: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 12:53:21,696: 	 Executing command: 'status'
+DEBUG 2016-05-16 12:53:21,697: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 12:53:21,715: 	 Checking credentials
+DEBUG 2016-05-16 12:53:21,716: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 12:53:21,716: 	 Getting proxy life time left
+DEBUG 2016-05-16 12:53:21,819: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85769
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:53:21,922: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85769
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:53:21,922: 	 Proxy valid for 23:49:29 hours
+DEBUG 2016-05-16 12:53:22,055: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:53:22,056: 	 Checking credentials
+DEBUG 2016-05-16 12:53:22,056: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 12:53:22,056: 	 Getting proxy life time left
+DEBUG 2016-05-16 12:53:22,159: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85768
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:53:22,262: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85768
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:53:22,262: 	 Proxy valid for 23:49:28 hours
+DEBUG 2016-05-16 12:53:23,466: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 12:53:23,573: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:53:23,573: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 12:53:23,573: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 12:53:24,477: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 383:53:18  (16.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:53:24,478: 	 Myproxy is valid: 1381998
+DEBUG 2016-05-16 12:53:24,479: 	 Command use: status
+DEBUG 2016-05-16 12:53:24,479: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-16 12:53:25,699: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 12:53:25,699: 	 Instance is prod
+DEBUG 2016-05-16 12:53:25,699: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 12:53:25,699: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 12:53:25,699: 	 Looking up detailed status of task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-16 12:53:29,337: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'running': 7}, 'jobs': {'1': {'State': 'running'}, '3': {'State': 'running'}, '2': {'State': 'running'}, '5': {'State': 'running'}, '4': {'State': 'running'}, '7': {'State': 'running'}, '6': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['running', 1], ['running', 3], ['running', 2], ['running', 5], ['running', 4], ['running', 7], ['running', 6]]}
+INFO 2016-05-16 12:53:29,337: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 12:53:29,337: 	 Task name:			160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 12:53:29,337: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 12:53:29,337: 	 Task status:			SUBMITTED
+INFO 2016-05-16 12:53:29,337: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 12:53:29,338: 	 
+Jobs status:			running       100.0% (7/7)
+INFO 2016-05-16 12:53:29,338: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 12:53:29,341: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 13:03:48,188: 	 Executing command: 'status'
+DEBUG 2016-05-16 13:03:48,189: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 13:03:48,205: 	 Checking credentials
+DEBUG 2016-05-16 13:03:48,205: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 13:03:48,205: 	 Getting proxy life time left
+DEBUG 2016-05-16 13:03:48,308: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85142
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:03:48,411: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85142
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:03:48,412: 	 Proxy valid for 23:39:02 hours
+DEBUG 2016-05-16 13:03:48,525: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:03:48,525: 	 Checking credentials
+DEBUG 2016-05-16 13:03:48,525: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 13:03:48,525: 	 Getting proxy life time left
+DEBUG 2016-05-16 13:03:48,628: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85142
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:03:48,731: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85142
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:03:48,732: 	 Proxy valid for 23:39:02 hours
+DEBUG 2016-05-16 13:03:49,928: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 13:03:50,034: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:03:50,034: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 13:03:50,034: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 13:03:51,139: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 383:42:51  (16.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:03:51,140: 	 Myproxy is valid: 1381371
+DEBUG 2016-05-16 13:03:51,140: 	 Command use: status
+DEBUG 2016-05-16 13:03:51,140: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-16 13:03:52,360: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 13:03:52,360: 	 Instance is prod
+DEBUG 2016-05-16 13:03:52,360: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 13:03:52,361: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 13:03:52,361: 	 Looking up detailed status of task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-16 13:03:54,247: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'running': 7}, 'jobs': {'1': {'State': 'running'}, '3': {'State': 'running'}, '2': {'State': 'running'}, '5': {'State': 'running'}, '4': {'State': 'running'}, '7': {'State': 'running'}, '6': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['running', 1], ['running', 3], ['running', 2], ['running', 5], ['running', 4], ['running', 7], ['running', 6]]}
+INFO 2016-05-16 13:03:54,247: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 13:03:54,247: 	 Task name:			160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 13:03:54,247: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 13:03:54,247: 	 Task status:			SUBMITTED
+INFO 2016-05-16 13:03:54,247: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 13:03:54,248: 	 
+Jobs status:			running       100.0% (7/7)
+INFO 2016-05-16 13:03:54,248: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 13:03:54,251: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 13:08:39,604: 	 Executing command: 'status'
+DEBUG 2016-05-16 13:08:39,606: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 13:08:39,624: 	 Checking credentials
+DEBUG 2016-05-16 13:08:39,624: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 13:08:39,624: 	 Getting proxy life time left
+DEBUG 2016-05-16 13:08:39,727: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 84851
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:08:39,830: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 84851
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:08:39,830: 	 Proxy valid for 23:34:11 hours
+DEBUG 2016-05-16 13:08:39,943: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:08:39,944: 	 Checking credentials
+DEBUG 2016-05-16 13:08:39,944: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 13:08:39,944: 	 Getting proxy life time left
+DEBUG 2016-05-16 13:08:40,047: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 84851
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:08:40,150: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 84850
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:08:40,150: 	 Proxy valid for 23:34:11 hours
+DEBUG 2016-05-16 13:08:41,408: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 13:08:41,516: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:08:41,517: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 13:08:41,517: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 13:08:42,421: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 383:38:00  (16.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 13:08:42,423: 	 Myproxy is valid: 1381080
+DEBUG 2016-05-16 13:08:42,423: 	 Command use: status
+DEBUG 2016-05-16 13:08:42,423: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-16 13:08:43,722: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 13:08:43,722: 	 Instance is prod
+DEBUG 2016-05-16 13:08:43,722: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 13:08:43,722: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 13:08:43,722: 	 Looking up detailed status of task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-16 13:08:46,605: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'running': 7}, 'jobs': {'1': {'State': 'running'}, '3': {'State': 'running'}, '2': {'State': 'running'}, '5': {'State': 'running'}, '4': {'State': 'running'}, '7': {'State': 'running'}, '6': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': None, 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['running', 1], ['running', 3], ['running', 2], ['running', 5], ['running', 4], ['running', 7], ['running', 6]]}
+INFO 2016-05-16 13:08:46,605: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 13:08:46,605: 	 Task name:			160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 13:08:46,605: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 13:08:46,605: 	 Task status:			SUBMITTED
+INFO 2016-05-16 13:08:46,605: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 13:08:46,606: 	 
+Jobs status:			running       100.0% (7/7)
+INFO 2016-05-16 13:08:46,606: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 13:08:46,609: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 14:02:12,777: 	 Executing command: 'status'
+DEBUG 2016-05-16 14:02:12,777: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 14:02:12,785: 	 Checking credentials
+DEBUG 2016-05-16 14:02:12,785: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:02:12,785: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:02:12,888: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 81638
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:02:12,991: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 81638
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:02:12,991: 	 Proxy valid for 22:40:38 hours
+DEBUG 2016-05-16 14:02:13,104: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:02:13,105: 	 Checking credentials
+DEBUG 2016-05-16 14:02:13,105: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:02:13,105: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:02:13,208: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 81637
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:02:13,311: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 81637
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:02:13,311: 	 Proxy valid for 22:40:37 hours
+DEBUG 2016-05-16 14:02:14,547: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 14:02:14,689: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:02:14,689: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 14:02:14,689: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 14:02:15,393: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 382:44:27  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:02:15,395: 	 Myproxy is valid: 1377867
+DEBUG 2016-05-16 14:02:15,395: 	 Command use: status
+DEBUG 2016-05-16 14:02:15,395: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-16 14:02:16,602: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 14:02:16,602: 	 Instance is prod
+DEBUG 2016-05-16 14:02:16,602: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 14:02:16,602: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 14:02:16,602: 	 Looking up detailed status of task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-16 14:02:18,850: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'running': 4, 'finished': 3}, 'jobs': {'1': {'State': 'running'}, '3': {'State': 'finished'}, '2': {'State': 'finished'}, '5': {'State': 'finished'}, '4': {'State': 'running'}, '7': {'State': 'running'}, '6': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/knash-crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['running', 1], ['finished', 3], ['finished', 2], ['finished', 5], ['running', 4], ['running', 7], ['running', 6]]}
+INFO 2016-05-16 14:02:18,850: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 14:02:18,850: 	 Task name:			160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 14:02:18,850: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 14:02:18,850: 	 Task status:			SUBMITTED
+INFO 2016-05-16 14:02:18,850: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 14:02:18,851: 	 
+Jobs status:			finished       42.9% (3/7)
+INFO 2016-05-16 14:02:18,851: 	 				running        57.1% (4/7)
+INFO 2016-05-16 14:02:18,851: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 14:02:18,854: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 14:48:36,633: 	 Executing command: 'status'
+DEBUG 2016-05-16 14:48:36,633: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 14:48:36,641: 	 Checking credentials
+DEBUG 2016-05-16 14:48:36,641: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:48:36,641: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:48:36,744: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 80745
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:48:36,847: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 80745
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:48:36,847: 	 Proxy valid for 22:25:45 hours
+DEBUG 2016-05-16 14:48:36,965: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:48:36,965: 	 Checking credentials
+DEBUG 2016-05-16 14:48:36,965: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:48:36,965: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:48:37,068: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 80744
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:48:37,171: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 80744
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:48:37,171: 	 Proxy valid for 22:25:44 hours
+DEBUG 2016-05-16 14:48:38,370: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 14:48:38,479: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:48:38,479: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 14:48:38,479: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 14:48:39,184: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 381:58:03  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:48:39,185: 	 Myproxy is valid: 1375083
+DEBUG 2016-05-16 14:48:39,185: 	 Command use: status
+DEBUG 2016-05-16 14:48:39,185: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-16 14:48:40,402: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 14:48:40,402: 	 Instance is prod
+DEBUG 2016-05-16 14:48:40,402: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 14:48:40,402: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 14:48:40,402: 	 Looking up detailed status of task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-16 14:48:42,925: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'running': 3, 'finished': 4}, 'jobs': {'1': {'State': 'running'}, '3': {'State': 'finished'}, '2': {'State': 'finished'}, '5': {'State': 'finished'}, '4': {'State': 'running'}, '7': {'State': 'finished'}, '6': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/knash-crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['running', 1], ['finished', 3], ['finished', 2], ['finished', 5], ['running', 4], ['finished', 7], ['running', 6]]}
+INFO 2016-05-16 14:48:42,925: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 14:48:42,925: 	 Task name:			160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 14:48:42,925: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 14:48:42,925: 	 Task status:			SUBMITTED
+INFO 2016-05-16 14:48:42,925: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 14:48:42,925: 	 
+Jobs status:			finished       57.1% (4/7)
+INFO 2016-05-16 14:48:42,925: 	 				running        42.9% (3/7)
+INFO 2016-05-16 14:48:42,926: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 14:48:42,929: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 14:53:35,877: 	 Executing command: 'status'
+DEBUG 2016-05-16 14:53:35,877: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 14:53:35,886: 	 Checking credentials
+DEBUG 2016-05-16 14:53:35,886: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:53:35,886: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:53:35,988: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 80446
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:36,091: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 80445
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:36,092: 	 Proxy valid for 22:20:46 hours
+DEBUG 2016-05-16 14:53:36,205: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:36,206: 	 Checking credentials
+DEBUG 2016-05-16 14:53:36,206: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:53:36,206: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:53:36,309: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 80445
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:36,412: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 80445
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:36,412: 	 Proxy valid for 22:20:45 hours
+DEBUG 2016-05-16 14:53:37,695: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 14:53:37,804: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:37,804: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 14:53:37,804: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 14:53:38,809: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 381:53:04  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:38,810: 	 Myproxy is valid: 1374784
+DEBUG 2016-05-16 14:53:38,810: 	 Command use: status
+DEBUG 2016-05-16 14:53:38,810: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-16 14:53:40,069: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 14:53:40,070: 	 Instance is prod
+DEBUG 2016-05-16 14:53:40,070: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 14:53:40,070: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 14:53:40,070: 	 Looking up detailed status of task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-16 14:53:43,277: 	 {'status': 'SUBMITTED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'running': 2, 'transferring': 1, 'finished': 4}, 'jobs': {'1': {'State': 'running'}, '3': {'State': 'finished'}, '2': {'State': 'finished'}, '5': {'State': 'finished'}, '4': {'State': 'running'}, '7': {'State': 'finished'}, '6': {'State': 'transferring'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/knash-crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['running', 1], ['finished', 3], ['finished', 2], ['finished', 5], ['running', 4], ['finished', 7], ['transferring', 6]]}
+INFO 2016-05-16 14:53:43,277: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 14:53:43,277: 	 Task name:			160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 14:53:43,277: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 14:53:43,277: 	 Task status:			SUBMITTED
+INFO 2016-05-16 14:53:43,278: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 14:53:43,278: 	 
+Jobs status:			finished       57.1% (4/7)
+INFO 2016-05-16 14:53:43,278: 	 				running        28.6% (2/7)
+INFO 2016-05-16 14:53:43,278: 	 				transferring   14.3% (1/7)
+INFO 2016-05-16 14:53:43,278: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 14:53:43,282: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 14:53:44,017: 	 Executing command: 'resubmit'
+DEBUG 2016-05-16 14:53:44,018: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 14:53:44,026: 	 Checking credentials
+DEBUG 2016-05-16 14:53:44,026: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:53:44,026: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:53:44,129: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 80437
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:44,232: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 80437
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:44,232: 	 Proxy valid for 22:20:37 hours
+DEBUG 2016-05-16 14:53:44,345: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:44,346: 	 Checking credentials
+DEBUG 2016-05-16 14:53:44,346: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 14:53:44,346: 	 Getting proxy life time left
+DEBUG 2016-05-16 14:53:44,448: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 80437
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:44,551: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 80437
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:44,552: 	 Proxy valid for 22:20:37 hours
+DEBUG 2016-05-16 14:53:45,771: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 14:53:45,880: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:45,880: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 14:53:45,880: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 14:53:46,584: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 381:52:56  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 14:53:46,585: 	 Myproxy is valid: 1374776
+DEBUG 2016-05-16 14:53:46,586: 	 Command use: resubmit
+DEBUG 2016-05-16 14:53:46,586: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-16 14:53:47,839: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 14:53:47,839: 	 Instance is prod
+DEBUG 2016-05-16 14:53:47,839: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 14:53:47,839: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 14:53:47,839: 	 Requesting resubmission of failed jobs in task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 14:53:47,839: 	 Sending resubmit request to the server.
+DEBUG 2016-05-16 14:53:47,839: 	 Submitting {'publication': 0, 'force': 0, 'subresource': 'resubmit', 'workflow': '160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12'} 
+DEBUG 2016-05-16 14:53:47,839: 	 Encoded resubmit request: publication=0&force=0&subresource=resubmit&workflow=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 14:53:51,424: 	 The server answered with an error.
+INFO 2016-05-16 14:53:51,424: 	 Server answered with: Execution error
+INFO 2016-05-16 14:53:51,424: 	 Reason is: There are no jobs to resubmit. Only jobs in status ['failed'] can be resubmitted. Jobs in status ['finished'] can also be resubmitted, but only if the jobid is specified and the force option is set.
+INFO 2016-05-16 14:53:51,425: 	 Error Id: e58e07d18ca675f66c9a91c97d10446a
+DEBUG 2016-05-16 14:53:51,425: 	 ERROR: Internal Server Error (500):  '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>500 Internal Server Error</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>500 Internal Server Error</h2>
+        <p>Execution error</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+    <span>Powered by <a href="http://www.cherrypy.org">CherryPy 3.2.2</a></span>
+    </div>
+    </body>
+</html>
+'
+DEBUG 2016-05-16 14:53:51,425: 	 Command failed with URI: https://cmsweb.cern.ch/crabserver/prod/workflow
+DEBUG 2016-05-16 14:53:51,425: 	      Input data: publication=0&force=0&subresource=resubmit&workflow=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-16 14:53:51,425: 	      Request headers: {'Content-Length': '726', 'X-Error-Http': '500', 'X-Rest-Time': '2405818.939 us', 'Server': 'CherryPy/3.2.2', 'Connection': 'close', 'X-Error-Detail': 'Execution error', 'CMS-Server-Time': 'D=2412303 t=1463428428956643', 'X-Rest-Status': '403', 'Date': 'Mon, 16 May 2016 19:53:48 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': "There are no jobs to resubmit. Only jobs in status ['failed'] can be resubmitted. Jobs in status ['finished'] can also be resubmitted, but only if the jobid is specified and the force option is set.", 'X-Error-Id': 'e58e07d18ca675f66c9a91c97d10446a'}
+ERROR 2016-05-16 14:53:51,425: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 148, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 59, in __call__
+    dictresult, status, reason = server.post(self.uri, data = configreq_encoded)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/RESTInteractions.py", line 85, in post
+    return self.makeRequest(uri = uri, data = data, verb = 'POST')
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/RESTInteractions.py", line 129, in makeRequest
+    capath=caCertPath)#, verbose=True)# for debug
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/WMCore/Services/pycurl_manager.py", line 209, in request
+    raise exc
+HTTPException: url=https://cmsweb.cern.ch/crabserver/prod/workflow, code=500, reason=Internal Server Error, headers={'Content-Length': '726', 'X-Error-Http': '500', 'X-Rest-Time': '2405818.939 us', 'Server': 'CherryPy/3.2.2', 'Connection': 'close', 'X-Error-Detail': 'Execution error', 'CMS-Server-Time': 'D=2412303 t=1463428428956643', 'X-Rest-Status': '403', 'Date': 'Mon, 16 May 2016 19:53:48 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': "There are no jobs to resubmit. Only jobs in status ['failed'] can be resubmitted. Jobs in status ['finished'] can also be resubmitted, but only if the jobid is specified and the force option is set.", 'X-Error-Id': 'e58e07d18ca675f66c9a91c97d10446a'}
+INFO 2016-05-16 14:53:51,431: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 15:48:49,135: 	 Executing command: 'status'
+DEBUG 2016-05-16 15:48:49,137: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 15:48:49,145: 	 Checking credentials
+DEBUG 2016-05-16 15:48:49,145: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 15:48:49,145: 	 Getting proxy life time left
+DEBUG 2016-05-16 15:48:49,248: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 77132
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:49,351: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 77132
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:49,352: 	 Proxy valid for 21:25:32 hours
+DEBUG 2016-05-16 15:48:49,464: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:49,465: 	 Checking credentials
+DEBUG 2016-05-16 15:48:49,465: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 15:48:49,465: 	 Getting proxy life time left
+DEBUG 2016-05-16 15:48:49,568: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 77132
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:49,671: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 77132
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:49,671: 	 Proxy valid for 21:25:32 hours
+DEBUG 2016-05-16 15:48:50,871: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 15:48:50,980: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:50,980: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 15:48:50,980: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 15:48:51,684: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 380:57:51  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:51,686: 	 Myproxy is valid: 1371471
+DEBUG 2016-05-16 15:48:51,686: 	 Command use: status
+DEBUG 2016-05-16 15:48:51,686: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-16 15:48:52,904: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 15:48:52,904: 	 Instance is prod
+DEBUG 2016-05-16 15:48:52,904: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 15:48:52,904: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 15:48:52,904: 	 Looking up detailed status of task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-16 15:48:54,317: 	 {'status': 'COMPLETED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'finished': 7}, 'jobs': {'1': {'State': 'finished'}, '3': {'State': 'finished'}, '2': {'State': 'finished'}, '5': {'State': 'finished'}, '4': {'State': 'finished'}, '7': {'State': 'finished'}, '6': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/knash-crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 1], ['finished', 3], ['finished', 2], ['finished', 5], ['finished', 4], ['finished', 7], ['finished', 6]]}
+INFO 2016-05-16 15:48:54,317: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 15:48:54,317: 	 Task name:			160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 15:48:54,317: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-16 15:48:54,317: 	 Task status:			COMPLETED
+INFO 2016-05-16 15:48:54,317: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 15:48:54,318: 	 
+Jobs status:			finished      100.0% (7/7)
+INFO 2016-05-16 15:48:54,318: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-16 15:48:54,321: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-16 15:48:55,049: 	 Executing command: 'resubmit'
+DEBUG 2016-05-16 15:48:55,052: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 15:48:55,060: 	 Checking credentials
+DEBUG 2016-05-16 15:48:55,061: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 15:48:55,061: 	 Getting proxy life time left
+DEBUG 2016-05-16 15:48:55,164: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 77126
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:55,267: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 77126
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:55,267: 	 Proxy valid for 21:25:26 hours
+DEBUG 2016-05-16 15:48:55,379: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:55,380: 	 Checking credentials
+DEBUG 2016-05-16 15:48:55,380: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 15:48:55,380: 	 Getting proxy life time left
+DEBUG 2016-05-16 15:48:55,483: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 77126
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:55,586: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 77126
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:55,586: 	 Proxy valid for 21:25:26 hours
+DEBUG 2016-05-16 15:48:56,808: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 15:48:56,917: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:56,917: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 15:48:56,917: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 15:48:57,822: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 380:57:45  (15.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 15:48:57,823: 	 Myproxy is valid: 1371465
+DEBUG 2016-05-16 15:48:57,823: 	 Command use: resubmit
+DEBUG 2016-05-16 15:48:57,823: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-16 15:48:59,038: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 15:48:59,038: 	 Instance is prod
+DEBUG 2016-05-16 15:48:59,039: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 15:48:59,039: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 15:48:59,039: 	 Requesting resubmission of failed jobs in task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 15:48:59,039: 	 Sending resubmit request to the server.
+DEBUG 2016-05-16 15:48:59,039: 	 Submitting {'publication': 0, 'force': 0, 'subresource': 'resubmit', 'workflow': '160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12'} 
+DEBUG 2016-05-16 15:48:59,039: 	 Encoded resubmit request: publication=0&force=0&subresource=resubmit&workflow=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-16 15:49:00,307: 	 The server answered with an error.
+INFO 2016-05-16 15:49:00,308: 	 Server answered with: Execution error
+INFO 2016-05-16 15:49:00,308: 	 Reason is: Task status is COMPLETED. To resubmit jobs from a task in status COMPLETED, specify the job ids and use the force option. To resubmit publications use the publication option.
+INFO 2016-05-16 15:49:00,308: 	 Error Id: f2f6c46327e82b36bd9f7abe1daf2753
+DEBUG 2016-05-16 15:49:00,308: 	 ERROR: Internal Server Error (500):  '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <title>500 Internal Server Error</title>
+    <style type="text/css">
+    #powered_by {
+        margin-top: 20px;
+        border-top: 2px solid black;
+        font-style: italic;
+    }
+
+    #traceback {
+        color: red;
+    }
+    </style>
+</head>
+    <body>
+        <h2>500 Internal Server Error</h2>
+        <p>Execution error</p>
+        <pre id="traceback"></pre>
+    <div id="powered_by">
+    <span>Powered by <a href="http://www.cherrypy.org">CherryPy 3.2.2</a></span>
+    </div>
+    </body>
+</html>
+'
+DEBUG 2016-05-16 15:49:00,308: 	 Command failed with URI: https://cmsweb.cern.ch/crabserver/prod/workflow
+DEBUG 2016-05-16 15:49:00,308: 	      Input data: publication=0&force=0&subresource=resubmit&workflow=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-16 15:49:00,308: 	      Request headers: {'Content-Length': '726', 'X-Error-Http': '500', 'X-Rest-Time': '89302.063 us', 'Server': 'CherryPy/3.2.2', 'Connection': 'close', 'X-Error-Detail': 'Execution error', 'CMS-Server-Time': 'D=95263 t=1463431740156696', 'X-Rest-Status': '403', 'Date': 'Mon, 16 May 2016 20:49:00 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': 'Task status is COMPLETED. To resubmit jobs from a task in status COMPLETED, specify the job ids and use the force option. To resubmit publications use the publication option.', 'X-Error-Id': 'f2f6c46327e82b36bd9f7abe1daf2753'}
+ERROR 2016-05-16 15:49:00,308: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 148, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/Commands/resubmit.py", line 59, in __call__
+    dictresult, status, reason = server.post(self.uri, data = configreq_encoded)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/RESTInteractions.py", line 85, in post
+    return self.makeRequest(uri = uri, data = data, verb = 'POST')
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/RESTInteractions.py", line 129, in makeRequest
+    capath=caCertPath)#, verbose=True)# for debug
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/WMCore/Services/pycurl_manager.py", line 209, in request
+    raise exc
+HTTPException: url=https://cmsweb.cern.ch/crabserver/prod/workflow, code=500, reason=Internal Server Error, headers={'Content-Length': '726', 'X-Error-Http': '500', 'X-Rest-Time': '89302.063 us', 'Server': 'CherryPy/3.2.2', 'Connection': 'close', 'X-Error-Detail': 'Execution error', 'CMS-Server-Time': 'D=95263 t=1463431740156696', 'X-Rest-Status': '403', 'Date': 'Mon, 16 May 2016 20:49:00 GMT', 'Content-Type': 'text/html;charset=utf-8', 'X-Error-Info': 'Task status is COMPLETED. To resubmit jobs from a task in status COMPLETED, specify the job ids and use the force option. To resubmit publications use the publication option.', 'X-Error-Id': 'f2f6c46327e82b36bd9f7abe1daf2753'}
+INFO 2016-05-16 15:49:00,314: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-17 06:37:48,644: 	 Executing command: 'status'
+DEBUG 2016-05-17 06:37:48,645: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-17 06:37:48,652: 	 Checking credentials
+DEBUG 2016-05-17 06:37:48,653: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 06:37:48,653: 	 Getting proxy life time left
+DEBUG 2016-05-17 06:37:48,756: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86365
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:37:48,859: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86365
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:37:48,859: 	 Proxy valid for 23:59:25 hours
+DEBUG 2016-05-17 06:37:49,034: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:37:49,034: 	 Checking credentials
+DEBUG 2016-05-17 06:37:49,035: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 06:37:49,035: 	 Getting proxy life time left
+DEBUG 2016-05-17 06:37:49,137: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86364
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:37:49,241: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86364
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:37:49,241: 	 Proxy valid for 23:59:24 hours
+DEBUG 2016-05-17 06:37:50,086: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-17 06:37:50,195: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:37:50,195: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-17 06:37:50,195: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-17 06:37:50,899: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 366:08:52  (15.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:37:50,900: 	 Myproxy is valid: 1318132
+DEBUG 2016-05-17 06:37:50,900: 	 Command use: status
+DEBUG 2016-05-17 06:37:50,900: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-17 06:37:51,790: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-17 06:37:51,790: 	 Instance is prod
+DEBUG 2016-05-17 06:37:51,790: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-17 06:37:51,790: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-17 06:37:51,791: 	 Looking up detailed status of task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-17 06:37:52,698: 	 {'status': 'COMPLETED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'finished': 7}, 'jobs': {'1': {'State': 'finished'}, '3': {'State': 'finished'}, '2': {'State': 'finished'}, '5': {'State': 'finished'}, '4': {'State': 'finished'}, '7': {'State': 'finished'}, '6': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/knash-crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 1], ['finished', 3], ['finished', 2], ['finished', 5], ['finished', 4], ['finished', 7], ['finished', 6]]}
+INFO 2016-05-17 06:37:52,698: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-17 06:37:52,698: 	 Task name:			160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-17 06:37:52,698: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-17 06:37:52,698: 	 Task status:			COMPLETED
+INFO 2016-05-17 06:37:52,698: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-17 06:37:52,699: 	 
+Jobs status:			finished      100.0% (7/7)
+INFO 2016-05-17 06:37:52,699: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-17 06:37:52,790: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-17 06:44:35,989: 	 Executing command: 'status'
+DEBUG 2016-05-17 06:44:35,990: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-17 06:44:35,996: 	 Checking credentials
+DEBUG 2016-05-17 06:44:35,997: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 06:44:35,997: 	 Getting proxy life time left
+DEBUG 2016-05-17 06:44:36,099: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85957
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:44:36,202: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85957
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:44:36,202: 	 Proxy valid for 23:52:37 hours
+DEBUG 2016-05-17 06:44:36,315: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:44:36,315: 	 Checking credentials
+DEBUG 2016-05-17 06:44:36,315: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 06:44:36,315: 	 Getting proxy life time left
+DEBUG 2016-05-17 06:44:36,418: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 85957
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:44:36,521: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 85957
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:44:36,521: 	 Proxy valid for 23:52:37 hours
+DEBUG 2016-05-17 06:44:37,386: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-17 06:44:37,496: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:44:37,497: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-17 06:44:37,497: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-17 06:44:38,201: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 366:02:04  (15.3 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 06:44:38,202: 	 Myproxy is valid: 1317724
+DEBUG 2016-05-17 06:44:38,202: 	 Command use: status
+DEBUG 2016-05-17 06:44:38,202: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-17 06:44:39,016: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-17 06:44:39,016: 	 Instance is prod
+DEBUG 2016-05-17 06:44:39,016: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-17 06:44:39,016: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-17 06:44:39,016: 	 Looking up detailed status of task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-17 06:44:39,863: 	 {'status': 'COMPLETED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'finished': 7}, 'jobs': {'1': {'State': 'finished'}, '3': {'State': 'finished'}, '2': {'State': 'finished'}, '5': {'State': 'finished'}, '4': {'State': 'finished'}, '7': {'State': 'finished'}, '6': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/knash-crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 1], ['finished', 3], ['finished', 2], ['finished', 5], ['finished', 4], ['finished', 7], ['finished', 6]]}
+INFO 2016-05-17 06:44:39,863: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-17 06:44:39,863: 	 Task name:			160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-17 06:44:39,863: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-17 06:44:39,864: 	 Task status:			COMPLETED
+INFO 2016-05-17 06:44:39,864: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-17 06:44:39,864: 	 
+Jobs status:			finished      100.0% (7/7)
+INFO 2016-05-17 06:44:39,864: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-17 06:44:39,867: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-17 10:11:33,033: 	 Executing command: 'status'
+DEBUG 2016-05-17 10:11:33,033: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-17 10:11:33,041: 	 Checking credentials
+DEBUG 2016-05-17 10:11:33,041: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 10:11:33,041: 	 Getting proxy life time left
+DEBUG 2016-05-17 10:11:33,144: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86299
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:11:33,247: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86299
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:11:33,247: 	 Proxy valid for 23:58:19 hours
+DEBUG 2016-05-17 10:11:33,373: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:11:33,373: 	 Checking credentials
+DEBUG 2016-05-17 10:11:33,373: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 10:11:33,373: 	 Getting proxy life time left
+DEBUG 2016-05-17 10:11:33,476: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86299
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:11:33,579: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86299
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:11:33,579: 	 Proxy valid for 23:58:19 hours
+DEBUG 2016-05-17 10:11:34,827: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-17 10:11:34,936: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:11:34,936: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-17 10:11:34,936: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-17 10:11:35,941: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 362:35:07  (15.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 10:11:35,942: 	 Myproxy is valid: 1305307
+DEBUG 2016-05-17 10:11:35,942: 	 Command use: status
+DEBUG 2016-05-17 10:11:35,942: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-17 10:11:37,185: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-17 10:11:37,185: 	 Instance is prod
+DEBUG 2016-05-17 10:11:37,185: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-17 10:11:37,185: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-17 10:11:37,186: 	 Looking up detailed status of task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-17 10:11:38,407: 	 {'status': 'COMPLETED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'finished': 7}, 'jobs': {'1': {'State': 'finished'}, '3': {'State': 'finished'}, '2': {'State': 'finished'}, '5': {'State': 'finished'}, '4': {'State': 'finished'}, '7': {'State': 'finished'}, '6': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/knash-crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 1], ['finished', 3], ['finished', 2], ['finished', 5], ['finished', 4], ['finished', 7], ['finished', 6]]}
+INFO 2016-05-17 10:11:38,408: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-17 10:11:38,408: 	 Task name:			160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-17 10:11:38,408: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-17 10:11:38,408: 	 Task status:			COMPLETED
+INFO 2016-05-17 10:11:38,408: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-17 10:11:38,408: 	 
+Jobs status:			finished      100.0% (7/7)
+INFO 2016-05-17 10:11:38,408: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-17 10:11:38,412: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log
+DEBUG 2016-05-17 12:46:40,543: 	 Executing command: 'status'
+DEBUG 2016-05-17 12:46:40,544: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-17 12:46:40,551: 	 Checking credentials
+DEBUG 2016-05-17 12:46:40,552: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 12:46:40,552: 	 Getting proxy life time left
+DEBUG 2016-05-17 12:46:40,654: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 64233
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 12:46:40,757: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 64233
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 12:46:40,758: 	 Proxy valid for 17:50:33 hours
+DEBUG 2016-05-17 12:46:40,877: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 12:46:40,877: 	 Checking credentials
+DEBUG 2016-05-17 12:46:40,877: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-17 12:46:40,877: 	 Getting proxy life time left
+DEBUG 2016-05-17 12:46:40,980: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 64233
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 12:46:41,083: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 64232
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 12:46:41,083: 	 Proxy valid for 17:50:33 hours
+DEBUG 2016-05-17 12:46:42,290: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-17 12:46:42,399: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 12:46:42,399: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-17 12:46:42,399: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-17 12:46:43,103: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 359:59:59  (15.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 12:46:43,104: 	 Myproxy is valid: 1295999
+DEBUG 2016-05-17 12:46:43,208: 	 Executing : 
+ command : openssl x509 -noout -in ~/.globus/usercert.pem -dates
+ output : notBefore=Apr 11 16:26:05 2016 GMT
+notAfter=May 16 16:26:05 2017 GMT
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-17 12:46:43,353: 	 Delegating a myproxy for 720:00 hours
+DEBUG 2016-05-17 12:46:43,353: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+ERROR 2016-05-17 13:06:43,412: 	 Timeout in export GT_PROXY_MODE=rfc ; myproxy-init -d -n -s myproxy.cern.ch -x -R '/DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch' -x -Z '/DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch' -l '597e41c8619c412dc3972973fe016b938d9f71ef' -t 168:00 -c 720:00 execution.
+ERROR 2016-05-17 13:06:43,413: 	 Problems delegating My-proxy. need more than 2 values to unpack
+ERROR 2016-05-17 13:06:43,413: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 336, in __init__
+    self.handleProxy(proxyOptsSetPlace)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 416, in handleProxy
+    self.proxy.createNewMyProxy(timeleftthreshold = 60 * 60 * 24 * RENEW_MYPROXY_THRESHOLD, nokey = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1605/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 340, in createNewMyProxy
+    raise ProxyCreationException("Problems delegating My-proxy. %s" % msg)
+ProxyCreationException: Problems delegating My-proxy. need more than 2 values to unpack
+DEBUG 2016-05-18 07:27:18,838: 	 Executing command: 'status'
+DEBUG 2016-05-18 07:27:18,839: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-18 07:27:18,846: 	 Checking credentials
+DEBUG 2016-05-18 07:27:18,847: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-18 07:27:18,847: 	 Getting proxy life time left
+DEBUG 2016-05-18 07:27:18,950: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86356
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:27:19,052: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86355
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:27:19,053: 	 Proxy valid for 23:59:16 hours
+DEBUG 2016-05-18 07:27:19,189: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:27:19,189: 	 Checking credentials
+DEBUG 2016-05-18 07:27:19,189: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-18 07:27:19,190: 	 Getting proxy life time left
+DEBUG 2016-05-18 07:27:19,293: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86355
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:27:19,396: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86355
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:27:19,396: 	 Proxy valid for 23:59:15 hours
+DEBUG 2016-05-18 07:27:20,236: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-18 07:27:20,345: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:27:20,345: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-18 07:27:20,345: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-18 07:27:21,350: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 719:59:22  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-18 07:27:21,351: 	 Myproxy is valid: 2591962
+DEBUG 2016-05-18 07:27:21,351: 	 Command use: status
+DEBUG 2016-05-18 07:27:21,351: 	 Options use: ['crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12']
+DEBUG 2016-05-18 07:27:22,207: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-18 07:27:22,208: 	 Instance is prod
+DEBUG 2016-05-18 07:27:22,208: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-18 07:27:22,208: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-18 07:27:22,208: 	 Looking up detailed status of task 160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+DEBUG 2016-05-18 07:27:23,100: 	 {'status': 'COMPLETED', 'schedd': 'crab3test-2@vocms095.cern.ch', 'jobsPerStatus': {'finished': 7}, 'jobs': {'1': {'State': 'finished'}, '3': {'State': 'finished'}, '2': {'State': 'finished'}, '5': {'State': 'finished'}, '4': {'State': 'finished'}, '7': {'State': 'finished'}, '6': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/BstarToTW_M-2600_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/knash-crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 1], ['finished', 3], ['finished', 2], ['finished', 5], ['finished', 4], ['finished', 7], ['finished', 6]]}
+INFO 2016-05-18 07:27:23,100: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-18 07:27:23,100: 	 Task name:			160516_174634:knash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-18 07:27:23,100: 	 Grid scheduler:			crab3test-2@vocms095.cern.ch
+INFO 2016-05-18 07:27:23,100: 	 Task status:			COMPLETED
+INFO 2016-05-18 07:27:23,100: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160516_174634%3Aknash_crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12
+INFO 2016-05-18 07:27:23,100: 	 
+Jobs status:			finished      100.0% (7/7)
+INFO 2016-05-18 07:27:23,100: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-05-18 07:27:23,120: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_BStar13TeV_V2p1_RH_B2GAnaFW_M2600_76x_Slim_V12/crab.log

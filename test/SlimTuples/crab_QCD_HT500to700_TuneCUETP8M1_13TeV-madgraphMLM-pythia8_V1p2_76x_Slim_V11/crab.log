@@ -1,0 +1,212 @@
+DEBUG 2016-04-26 10:31:58,864: 	 Executing command: 'submit'
+DEBUG 2016-04-26 10:31:58,865: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-26 10:31:58,882: 	 Checking credentials
+DEBUG 2016-04-26 10:31:58,882: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-26 10:31:58,882: 	 Getting proxy life time left
+DEBUG 2016-04-26 10:31:58,985: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 83686
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 10:31:59,088: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 83685
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 10:31:59,088: 	 Proxy valid for 23:14:46 hours
+INFO 2016-04-26 10:31:59,089: 	 Will use CRAB configuration file crab_SlimTuple_QCDHT50076x.py
+DEBUG 2016-04-26 10:31:59,089: 	 Loading CRAB configuration file.
+DEBUG 2016-04-26 10:31:59,093: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-04-26 10:31:59,207: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 10:31:59,208: 	 Checking credentials
+DEBUG 2016-04-26 10:31:59,208: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-26 10:31:59,208: 	 Getting proxy life time left
+DEBUG 2016-04-26 10:31:59,311: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 83685
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 10:31:59,414: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 83685
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 10:31:59,414: 	 Proxy valid for 23:14:45 hours
+DEBUG 2016-04-26 10:31:59,517: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u45849 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 10:32:00,804: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-04-26 10:32:00,921: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 10:32:00,921: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-04-26 10:32:00,921: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-04-26 10:32:01,625: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 434:23:49  (18.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-26 10:32:01,626: 	 Myproxy is valid: 1563829
+DEBUG 2016-04-26 10:32:01,626: 	 Command use: submit
+DEBUG 2016-04-26 10:32:01,626: 	 Options use: ['crab_SlimTuple_QCDHT50076x.py']
+DEBUG 2016-04-26 10:32:02,861: 	 CRABClient version: 3.3.1604
+DEBUG 2016-04-26 10:32:02,861: 	 Instance is prod
+DEBUG 2016-04-26 10:32:02,861: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-04-26 10:32:02,861: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-04-26 10:32:02,861: 	 Started submission
+DEBUG 2016-04-26 10:32:02,861: 	 Working on /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-26 10:32:04,270: 	 Loading required information from the environment
+DEBUG 2016-04-26 10:32:04,271: 	 Found CMSSW_7_6_1 for slc6_amd64_gcc493 with base /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1
+DEBUG 2016-04-26 10:32:04,280: 	 UNIQUE NAME: tarUUID a4d4c307-67f6-496d-8814-c6289b284ce2 
+DEBUG 2016-04-26 10:32:04,280: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.workArea = 'SlimTuples'
+config.General.requestName = 'QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11'
+config.section_('JobType')
+config.JobType.psetName = 'quickntuple.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.inputFiles = ['Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt', 'Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt']
+config.JobType.pyCfgParams = ['type=MC']
+config.section_('Data')
+config.Data.inputDataset = '/QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/jkarancs-B2GAnaFW_76X_V1p1_RunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1-bf3ef703e3bdb5dcc5320cf3ff6ce74d/USER'
+config.Data.publication = False
+config.Data.unitsPerJob = 3
+config.Data.ignoreLocality = True
+config.Data.splitting = 'FileBased'
+config.Data.inputDBS = 'phys03'
+config.section_('Site')
+config.Site.storageSite = 'T3_US_FNALLPC'
+
+DEBUG 2016-04-26 10:32:04,280: 	 self.config.JobType.psetName: quickntuple.py
+INFO 2016-04-26 10:32:04,281: 	 Importing CMSSW configuration quickntuple.py
+DEBUG 2016-04-26 10:32:04,281: 	 Additional parameters for the CMSSW configuration are: ['type=MC']
+INFO 2016-04-26 10:32:04,365: 	 Finished importing CMSSW configuration quickntuple.py
+DEBUG 2016-04-26 10:32:04,365: 	 Writing CMSSW configuration to /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11/inputs/PSet.py
+DEBUG 2016-04-26 10:32:04,421: 	 The following EDM output files will be collected: ['B2GEDMNtuple_slim.root']
+DEBUG 2016-04-26 10:32:04,421: 	 The following TFile output files will be collected: []
+DEBUG 2016-04-26 10:32:04,421: 	 The following user output files will be collected: []
+DEBUG 2016-04-26 10:32:04,422: 	 Loading required information from the environment
+DEBUG 2016-04-26 10:32:04,422: 	 Found CMSSW_7_6_1 for slc6_amd64_gcc493 with base /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1
+DEBUG 2016-04-26 10:32:04,422: 	 Making tarball in /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11/inputs/a4d4c307-67f6-496d-8814-c6289b284ce2default.tgz
+DEBUG 2016-04-26 10:32:04,422: 	 Checking directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/lib
+DEBUG 2016-04-26 10:32:04,422: 	 Adding directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/lib to tarball
+DEBUG 2016-04-26 10:32:04,718: 	 Checking directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/biglib
+DEBUG 2016-04-26 10:32:04,718: 	 Adding directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/biglib to tarball
+DEBUG 2016-04-26 10:32:04,720: 	 Checking directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/module
+DEBUG 2016-04-26 10:32:04,853: 	 Adding file Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt to tarball
+DEBUG 2016-04-26 10:32:04,858: 	 Adding file Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt to tarball
+DEBUG 2016-04-26 10:32:04,859: 	 Adding file Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt to tarball
+DEBUG 2016-04-26 10:32:04,861: 	 Adding file Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt to tarball
+DEBUG 2016-04-26 10:32:04,863: 	 Adding file Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt to tarball
+DEBUG 2016-04-26 10:32:04,864: 	 Adding file Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt to tarball
+DEBUG 2016-04-26 10:32:04,887: 	 Uploading archive /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11/inputs/a4d4c307-67f6-496d-8814-c6289b284ce2default.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-04-26 10:32:07,562: 	 Result uploading input files: 28a1fae2862fb217c88ba5d4783ce6f4242b6d0e5ec87ecdedaee4c157b214c4.tar.gz 
+INFO 2016-04-26 10:32:07,563: 	 Sending the request to the server
+DEBUG 2016-04-26 10:32:07,563: 	 Submitting {'maxjobruntime': 1250, 'ignorelocality': 1, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T3_US_FNALLPC', 'algoargs': 3, 'cachefilename': '28a1fae2862fb217c88ba5d4783ce6f4242b6d0e5ec87ecdedaee4c157b214c4.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_7_6_1', 'edmoutfiles': ['B2GEDMNtuple_slim.root'], 'userfiles': [], 'primarydataset': '', 'inputdata': '/QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/jkarancs-B2GAnaFW_76X_V1p1_RunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1-bf3ef703e3bdb5dcc5320cf3ff6ce74d/USER', 'dryrun': 0, 'workflow': 'crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11', 'adduserfiles': ['Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt', 'Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt'], 'nonprodsw': 0, 'tfileoutfiles': [], 'oneEventMode': 0, 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc493', 'totalunits': 0, 'splitalgo': 'FileBased', 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': ''} 
+DEBUG 2016-04-26 10:32:07,563: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=1&savelogsflag=1&useparent=0&asyncdest=T3_US_FNALLPC&algoargs=3&cachefilename=28a1fae2862fb217c88ba5d4783ce6f4242b6d0e5ec87ecdedaee4c157b214c4.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_7_6_1&primarydataset=&inputdata=%2FQCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8%2Fjkarancs-B2GAnaFW_76X_V1p1_RunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1-bf3ef703e3bdb5dcc5320cf3ff6ce74d%2FUSER&dryrun=0&workflow=crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11&nonprodsw=0&oneEventMode=0&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc493&totalunits=0&splitalgo=FileBased&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&adduserfiles=Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt&edmoutfiles=B2GEDMNtuple_slim.root
+DEBUG 2016-04-26 10:32:09,585: 	 Result: {'result': [{'RequestName': '160426_153208:knash_crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11'}]}
+INFO 2016-04-26 10:32:09,597: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2016-04-26 10:32:09,597: 	 Task name: 160426_153208:knash_crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+INFO 2016-04-26 10:32:09,597: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2016-04-26 10:32:09,598: 	 About to return
+INFO 2016-04-26 10:32:09,603: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11/crab.log
+DEBUG 2016-04-27 11:20:48,928: 	 Executing command: 'status'
+DEBUG 2016-04-27 11:20:48,930: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-04-27 11:20:48,943: 	 Checking credentials
+DEBUG 2016-04-27 11:20:48,943: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-27 11:20:48,944: 	 Getting proxy life time left
+DEBUG 2016-04-27 11:20:49,046: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86307
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-27 11:20:49,148: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86306
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-27 11:20:49,148: 	 Proxy valid for 23:58:27 hours
+DEBUG 2016-04-27 11:20:49,376: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-27 11:20:49,376: 	 Checking credentials
+DEBUG 2016-04-27 11:20:49,376: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-04-27 11:20:49,376: 	 Getting proxy life time left
+DEBUG 2016-04-27 11:20:49,478: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86306
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-27 11:20:49,580: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86306
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-27 11:20:49,580: 	 Proxy valid for 23:58:26 hours
+DEBUG 2016-04-27 11:20:50,579: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-04-27 11:20:50,685: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-27 11:20:50,686: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-04-27 11:20:50,686: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-04-27 11:20:51,388: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 409:34:59  (17.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-04-27 11:20:51,389: 	 Myproxy is valid: 1474499
+DEBUG 2016-04-27 11:20:51,389: 	 Command use: status
+DEBUG 2016-04-27 11:20:51,389: 	 Options use: ['crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11']
+DEBUG 2016-04-27 11:20:52,448: 	 CRABClient version: 3.3.1604
+DEBUG 2016-04-27 11:20:52,448: 	 Instance is prod
+DEBUG 2016-04-27 11:20:52,448: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-04-27 11:20:52,448: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-04-27 11:20:52,448: 	 Looking up detailed status of task 160426_153208:knash_crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+DEBUG 2016-04-27 11:20:54,266: 	 {'status': 'COMPLETED', 'schedd': 'crab3test-3@vocms096.cern.ch', 'jobsPerStatus': {'finished': 158}, 'jobs': {'133': {'State': 'finished'}, '132': {'State': 'finished'}, '131': {'State': 'finished'}, '130': {'State': 'finished'}, '137': {'State': 'finished'}, '136': {'State': 'finished'}, '135': {'State': 'finished'}, '134': {'State': 'finished'}, '139': {'State': 'finished'}, '138': {'State': 'finished'}, '24': {'State': 'finished'}, '25': {'State': 'finished'}, '26': {'State': 'finished'}, '27': {'State': 'finished'}, '20': {'State': 'finished'}, '21': {'State': 'finished'}, '22': {'State': 'finished'}, '23': {'State': 'finished'}, '28': {'State': 'finished'}, '29': {'State': 'finished'}, '4': {'State': 'finished'}, '8': {'State': 'finished'}, '120': {'State': 'finished'}, '121': {'State': 'finished'}, '122': {'State': 'finished'}, '123': {'State': 'finished'}, '124': {'State': 'finished'}, '125': {'State': 'finished'}, '126': {'State': 'finished'}, '127': {'State': 'finished'}, '128': {'State': 'finished'}, '129': {'State': 'finished'}, '59': {'State': 'finished'}, '58': {'State': 'finished'}, '55': {'State': 'finished'}, '54': {'State': 'finished'}, '57': {'State': 'finished'}, '56': {'State': 'finished'}, '51': {'State': 'finished'}, '50': {'State': 'finished'}, '53': {'State': 'finished'}, '52': {'State': 'finished'}, '115': {'State': 'finished'}, '114': {'State': 'finished'}, '88': {'State': 'finished'}, '89': {'State': 'finished'}, '111': {'State': 'finished'}, '110': {'State': 'finished'}, '113': {'State': 'finished'}, '112': {'State': 'finished'}, '82': {'State': 'finished'}, '83': {'State': 'finished'}, '80': {'State': 'finished'}, '81': {'State': 'finished'}, '119': {'State': 'finished'}, '118': {'State': 'finished'}, '84': {'State': 'finished'}, '85': {'State': 'finished'}, '3': {'State': 'finished'}, '7': {'State': 'finished'}, '108': {'State': 'finished'}, '109': {'State': 'finished'}, '102': {'State': 'finished'}, '103': {'State': 'finished'}, '100': {'State': 'finished'}, '101': {'State': 'finished'}, '106': {'State': 'finished'}, '107': {'State': 'finished'}, '104': {'State': 'finished'}, '105': {'State': 'finished'}, '39': {'State': 'finished'}, '38': {'State': 'finished'}, '33': {'State': 'finished'}, '32': {'State': 'finished'}, '31': {'State': 'finished'}, '30': {'State': 'finished'}, '37': {'State': 'finished'}, '36': {'State': 'finished'}, '35': {'State': 'finished'}, '34': {'State': 'finished'}, '60': {'State': 'finished'}, '61': {'State': 'finished'}, '62': {'State': 'finished'}, '63': {'State': 'finished'}, '64': {'State': 'finished'}, '65': {'State': 'finished'}, '66': {'State': 'finished'}, '67': {'State': 'finished'}, '68': {'State': 'finished'}, '69': {'State': 'finished'}, '2': {'State': 'finished'}, '6': {'State': 'finished'}, '99': {'State': 'finished'}, '98': {'State': 'finished'}, '91': {'State': 'finished'}, '90': {'State': 'finished'}, '93': {'State': 'finished'}, '92': {'State': 'finished'}, '95': {'State': 'finished'}, '94': {'State': 'finished'}, '97': {'State': 'finished'}, '96': {'State': 'finished'}, '11': {'State': 'finished'}, '10': {'State': 'finished'}, '13': {'State': 'finished'}, '12': {'State': 'finished'}, '15': {'State': 'finished'}, '14': {'State': 'finished'}, '17': {'State': 'finished'}, '16': {'State': 'finished'}, '19': {'State': 'finished'}, '18': {'State': 'finished'}, '117': {'State': 'finished'}, '116': {'State': 'finished'}, '151': {'State': 'finished'}, '150': {'State': 'finished'}, '153': {'State': 'finished'}, '152': {'State': 'finished'}, '155': {'State': 'finished'}, '154': {'State': 'finished'}, '157': {'State': 'finished'}, '156': {'State': 'finished'}, '158': {'State': 'finished'}, '48': {'State': 'finished'}, '49': {'State': 'finished'}, '46': {'State': 'finished'}, '86': {'State': 'finished'}, '44': {'State': 'finished'}, '45': {'State': 'finished'}, '42': {'State': 'finished'}, '43': {'State': 'finished'}, '40': {'State': 'finished'}, '87': {'State': 'finished'}, '1': {'State': 'finished'}, '5': {'State': 'finished'}, '9': {'State': 'finished'}, '146': {'State': 'finished'}, '147': {'State': 'finished'}, '144': {'State': 'finished'}, '145': {'State': 'finished'}, '142': {'State': 'finished'}, '143': {'State': 'finished'}, '140': {'State': 'finished'}, '141': {'State': 'finished'}, '148': {'State': 'finished'}, '149': {'State': 'finished'}, '77': {'State': 'finished'}, '76': {'State': 'finished'}, '75': {'State': 'finished'}, '74': {'State': 'finished'}, '73': {'State': 'finished'}, '72': {'State': 'finished'}, '71': {'State': 'finished'}, '70': {'State': 'finished'}, '79': {'State': 'finished'}, '78': {'State': 'finished'}, '41': {'State': 'finished'}, '47': {'State': 'finished'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'publicationFailures': {}, 'outdatasets': ['/QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/knash-crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11-e75e70eb1a6f1b8c5edc195f913b3113/USER'], 'statusFailureMsg': '', 'taskFailureMsg': '', 'failedJobdefs': 0, 'command': 'SUBMIT', 'totalJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb2', 'jobdefErrors': [], 'collector': 'cmsgwms-collector-global.cern.ch,cmssrv221.fnal.gov', 'jobList': [['finished', 133], ['finished', 132], ['finished', 131], ['finished', 130], ['finished', 137], ['finished', 136], ['finished', 135], ['finished', 134], ['finished', 139], ['finished', 138], ['finished', 24], ['finished', 25], ['finished', 26], ['finished', 27], ['finished', 20], ['finished', 21], ['finished', 22], ['finished', 23], ['finished', 28], ['finished', 29], ['finished', 4], ['finished', 8], ['finished', 119], ['finished', 120], ['finished', 121], ['finished', 122], ['finished', 123], ['finished', 124], ['finished', 125], ['finished', 126], ['finished', 127], ['finished', 128], ['finished', 129], ['finished', 118], ['finished', 59], ['finished', 58], ['finished', 55], ['finished', 54], ['finished', 57], ['finished', 56], ['finished', 51], ['finished', 50], ['finished', 53], ['finished', 52], ['finished', 115], ['finished', 114], ['finished', 88], ['finished', 89], ['finished', 111], ['finished', 110], ['finished', 113], ['finished', 112], ['finished', 82], ['finished', 83], ['finished', 80], ['finished', 81], ['finished', 86], ['finished', 87], ['finished', 84], ['finished', 85], ['finished', 3], ['finished', 7], ['finished', 108], ['finished', 109], ['finished', 102], ['finished', 103], ['finished', 100], ['finished', 101], ['finished', 106], ['finished', 107], ['finished', 104], ['finished', 105], ['finished', 39], ['finished', 38], ['finished', 33], ['finished', 32], ['finished', 31], ['finished', 30], ['finished', 37], ['finished', 36], ['finished', 35], ['finished', 34], ['finished', 60], ['finished', 61], ['finished', 62], ['finished', 63], ['finished', 64], ['finished', 65], ['finished', 66], ['finished', 67], ['finished', 68], ['finished', 69], ['finished', 2], ['finished', 6], ['finished', 99], ['finished', 98], ['finished', 91], ['finished', 90], ['finished', 93], ['finished', 92], ['finished', 95], ['finished', 94], ['finished', 97], ['finished', 96], ['finished', 11], ['finished', 10], ['finished', 13], ['finished', 12], ['finished', 15], ['finished', 14], ['finished', 17], ['finished', 16], ['finished', 19], ['finished', 18], ['finished', 117], ['finished', 116], ['finished', 151], ['finished', 150], ['finished', 153], ['finished', 152], ['finished', 155], ['finished', 154], ['finished', 157], ['finished', 156], ['finished', 158], ['finished', 48], ['finished', 49], ['finished', 46], ['finished', 47], ['finished', 44], ['finished', 45], ['finished', 42], ['finished', 43], ['finished', 40], ['finished', 41], ['finished', 1], ['finished', 5], ['finished', 9], ['finished', 146], ['finished', 147], ['finished', 144], ['finished', 145], ['finished', 142], ['finished', 143], ['finished', 140], ['finished', 141], ['finished', 148], ['finished', 149], ['finished', 77], ['finished', 76], ['finished', 75], ['finished', 74], ['finished', 73], ['finished', 72], ['finished', 71], ['finished', 70], ['finished', 79], ['finished', 78]]}
+INFO 2016-04-27 11:20:54,266: 	 CRAB project directory:		/uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+INFO 2016-04-27 11:20:54,266: 	 Task name:			160426_153208:knash_crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+INFO 2016-04-27 11:20:54,266: 	 Grid scheduler:			crab3test-3@vocms096.cern.ch
+INFO 2016-04-27 11:20:54,266: 	 Task status:			COMPLETED
+INFO 2016-04-27 11:20:54,267: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=160426_153208%3Aknash_crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11
+INFO 2016-04-27 11:20:54,267: 	 
+Jobs status:			finished      100.0% (158/158)
+INFO 2016-04-27 11:20:54,267: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2016-04-27 11:20:54,292: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT500to700_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p2_76x_Slim_V11/crab.log

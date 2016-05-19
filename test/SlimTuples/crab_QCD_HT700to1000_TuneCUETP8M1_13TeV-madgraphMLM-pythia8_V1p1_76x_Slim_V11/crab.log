@@ -1,0 +1,134 @@
+DEBUG 2016-05-16 12:44:07,964: 	 Executing command: 'submit'
+DEBUG 2016-05-16 12:44:07,964: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-05-16 12:44:07,972: 	 Checking credentials
+DEBUG 2016-05-16 12:44:07,972: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 12:44:07,972: 	 Getting proxy life time left
+DEBUG 2016-05-16 12:44:08,075: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86322
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:44:08,178: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86322
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:44:08,178: 	 Proxy valid for 23:58:42 hours
+INFO 2016-05-16 12:44:08,178: 	 Will use CRAB configuration file crab_SlimTuple_QCDHT70076x.py
+DEBUG 2016-05-16 12:44:08,179: 	 Loading CRAB configuration file.
+DEBUG 2016-05-16 12:44:08,208: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2016-05-16 12:44:08,341: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:44:08,341: 	 Checking credentials
+DEBUG 2016-05-16 12:44:08,341: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-05-16 12:44:08,341: 	 Getting proxy life time left
+DEBUG 2016-05-16 12:44:08,444: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 86322
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:44:08,547: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -actimeleft
+ output : 86322
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:44:08,547: 	 Proxy valid for 23:58:42 hours
+DEBUG 2016-05-16 12:44:08,650: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u45849 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:44:09,868: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+DEBUG 2016-05-16 12:44:09,977: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:44:09,977: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2016-05-16 12:44:09,977: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash_cmsweb.cern.ch for credential name
+DEBUG 2016-05-16 12:44:10,682: 	 Executing : 
+ command : myproxy-info -l 597e41c8619c412dc3972973fe016b938d9f71ef -s myproxy.cern.ch
+ output : username: 597e41c8619c412dc3972973fe016b938d9f71ef
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=knash/CN=726521/CN=Kevin Connor Nash
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119).cern.ch
+  timeleft: 384:02:32  (16.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2016-05-16 12:44:10,683: 	 Myproxy is valid: 1382552
+DEBUG 2016-05-16 12:44:10,683: 	 Command use: submit
+DEBUG 2016-05-16 12:44:10,683: 	 Options use: ['-c', 'crab_SlimTuple_QCDHT70076x.py']
+DEBUG 2016-05-16 12:44:11,889: 	 CRABClient version: 3.3.1605
+DEBUG 2016-05-16 12:44:11,889: 	 Instance is prod
+DEBUG 2016-05-16 12:44:11,889: 	 Server base url is cmsweb.cern.ch
+DEBUG 2016-05-16 12:44:11,890: 	 Command url /crabserver/prod/workflow
+DEBUG 2016-05-16 12:44:11,890: 	 Started submission
+DEBUG 2016-05-16 12:44:11,890: 	 Working on /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p1_76x_Slim_V11
+DEBUG 2016-05-16 12:44:13,151: 	 Loading required information from the environment
+DEBUG 2016-05-16 12:44:13,152: 	 Found CMSSW_7_6_1 for slc6_amd64_gcc493 with base /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1
+DEBUG 2016-05-16 12:44:13,167: 	 UNIQUE NAME: tarUUID 098c2917-ddb9-4674-a047-f28bb3dc1b1a 
+DEBUG 2016-05-16 12:44:13,168: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.transferLogs = True
+config.General.workArea = 'SlimTuples'
+config.General.requestName = 'QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p1_76x_Slim_V11'
+config.section_('JobType')
+config.JobType.psetName = 'quickntuple.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.inputFiles = ['Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt', 'Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt']
+config.JobType.pyCfgParams = ['type=MC']
+config.section_('Data')
+config.Data.inputDataset = '/QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/jkarancs-B2GAnaFW_76X_V1p1_RunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1-bf3ef703e3bdb5dcc5320cf3ff6ce74d/USER'
+config.Data.publication = False
+config.Data.unitsPerJob = 3
+config.Data.ignoreLocality = True
+config.Data.splitting = 'FileBased'
+config.Data.inputDBS = 'phys03'
+config.section_('Site')
+config.Site.storageSite = 'T3_US_FNALLPC'
+
+DEBUG 2016-05-16 12:44:13,168: 	 self.config.JobType.psetName: quickntuple.py
+INFO 2016-05-16 12:44:13,168: 	 Importing CMSSW configuration quickntuple.py
+DEBUG 2016-05-16 12:44:13,168: 	 Additional parameters for the CMSSW configuration are: ['type=MC']
+INFO 2016-05-16 12:44:13,271: 	 Finished importing CMSSW configuration quickntuple.py
+DEBUG 2016-05-16 12:44:13,271: 	 Writing CMSSW configuration to /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p1_76x_Slim_V11/inputs/PSet.py
+DEBUG 2016-05-16 12:44:13,386: 	 The following EDM output files will be collected: ['B2GEDMNtuple_slim.root']
+DEBUG 2016-05-16 12:44:13,386: 	 The following TFile output files will be collected: []
+DEBUG 2016-05-16 12:44:13,386: 	 The following user output files will be collected: []
+DEBUG 2016-05-16 12:44:13,387: 	 Loading required information from the environment
+DEBUG 2016-05-16 12:44:13,387: 	 Found CMSSW_7_6_1 for slc6_amd64_gcc493 with base /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1
+DEBUG 2016-05-16 12:44:13,387: 	 Making tarball in /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p1_76x_Slim_V11/inputs/098c2917-ddb9-4674-a047-f28bb3dc1b1adefault.tgz
+DEBUG 2016-05-16 12:44:13,475: 	 Checking directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/lib
+DEBUG 2016-05-16 12:44:13,475: 	 Adding directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/lib to tarball
+DEBUG 2016-05-16 12:44:13,766: 	 Checking directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/biglib
+DEBUG 2016-05-16 12:44:13,766: 	 Adding directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/biglib to tarball
+DEBUG 2016-05-16 12:44:13,768: 	 Checking directory /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/module
+DEBUG 2016-05-16 12:44:13,814: 	 Adding file Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:44:13,819: 	 Adding file Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:44:13,821: 	 Adding file Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:44:13,822: 	 Adding file Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:44:13,824: 	 Adding file Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:44:13,825: 	 Adding file Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt to tarball
+DEBUG 2016-05-16 12:44:13,846: 	 Uploading archive /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p1_76x_Slim_V11/inputs/098c2917-ddb9-4674-a047-f28bb3dc1b1adefault.tgz to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2016-05-16 12:44:16,115: 	 Result uploading input files: 626a91c20f6f5c976c0061e06eba1d33b28131ec3bacdc550a60e7e2662d2913.tar.gz 
+INFO 2016-05-16 12:44:16,116: 	 Sending the request to the server
+DEBUG 2016-05-16 12:44:16,116: 	 Submitting {'maxjobruntime': 1250, 'ignorelocality': 1, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T3_US_FNALLPC', 'algoargs': 3, 'cachefilename': '626a91c20f6f5c976c0061e06eba1d33b28131ec3bacdc550a60e7e2662d2913.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_7_6_1', 'edmoutfiles': ['B2GEDMNtuple_slim.root'], 'userfiles': [], 'primarydataset': '', 'inputdata': '/QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/jkarancs-B2GAnaFW_76X_V1p1_RunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1-bf3ef703e3bdb5dcc5320cf3ff6ce74d/USER', 'dryrun': 0, 'workflow': 'crab_QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p1_76x_Slim_V11', 'adduserfiles': ['Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt', 'Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt', 'Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt', 'Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt'], 'nonprodsw': 0, 'tfileoutfiles': [], 'oneEventMode': 0, 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc493', 'totalunits': 0, 'splitalgo': 'FileBased', 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': ''} 
+DEBUG 2016-05-16 12:44:16,116: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=1&savelogsflag=1&useparent=0&asyncdest=T3_US_FNALLPC&algoargs=3&cachefilename=626a91c20f6f5c976c0061e06eba1d33b28131ec3bacdc550a60e7e2662d2913.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_7_6_1&primarydataset=&inputdata=%2FQCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8%2Fjkarancs-B2GAnaFW_76X_V1p1_RunIIFall15MiniAODv2-PU25nsData2015v1_76X_mcRun2_asymptotic_v12-v1-bf3ef703e3bdb5dcc5320cf3ff6ce74d%2FUSER&dryrun=0&workflow=crab_QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p1_76x_Slim_V11&nonprodsw=0&oneEventMode=0&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc493&totalunits=0&splitalgo=FileBased&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&adduserfiles=Fall15_25nsV2_DATA_L2Relative_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_DATA_L3Absolute_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_DATA_L2L3Residual_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_MC_L2Relative_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_MC_L3Absolute_AK8PFchs.txt&adduserfiles=Fall15_25nsV2_MC_Uncertainty_AK8PFchs.txt&edmoutfiles=B2GEDMNtuple_slim.root
+DEBUG 2016-05-16 12:44:18,179: 	 Result: {'result': [{'RequestName': '160516_174417:knash_crab_QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p1_76x_Slim_V11'}]}
+INFO 2016-05-16 12:44:18,181: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2016-05-16 12:44:18,181: 	 Task name: 160516_174417:knash_crab_QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p1_76x_Slim_V11
+INFO 2016-05-16 12:44:18,182: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2016-05-16 12:44:18,182: 	 About to return
+INFO 2016-05-16 12:44:18,187: 	 Log file is /uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/test76x/CMSSW_7_6_1/src/Analysis/B2GAnaFW/test/SlimTuples/crab_QCD_HT700to1000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8_V1p1_76x_Slim_V11/crab.log
