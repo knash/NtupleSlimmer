@@ -27,6 +27,7 @@ private:
 SlimUserData_Filter::SlimUserData_Filter(const edm::ParameterSet& iConfig)
  {   
    produces<std::vector<bool>>("HT800bit"); 
+   produces<std::vector<bool>>("HT475bit"); 
    produces<std::vector<bool>>("DijetBit"); 
    edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS","jetAK8CHSPt")));
 
@@ -44,7 +45,8 @@ SlimUserData_Filter::SlimUserData_Filter(const edm::ParameterSet& iConfig)
 
 
 bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSetup) {
-  std::auto_ptr<std::vector<bool>> HT800bit(new std::vector<bool>());    
+  std::auto_ptr<std::vector<bool>> HT800bit(new std::vector<bool>()); 
+  std::auto_ptr<std::vector<bool>> HT475bit(new std::vector<bool>());       
   std::auto_ptr<std::vector<bool>> DijetBit(new std::vector<bool>()); 
              
   std::auto_ptr<std::vector<float>> jetAK8Pt(new std::vector<float>()); 
@@ -112,15 +114,19 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
 		{
 
 		std::string tname = triggerNameTreeHandle->at(i);
-
-		if (tname.find("HLT_PFHT800") != std::string::npos || tname.find("HLT_AK8DiPFJet280_200_TrimMass30_BTagCSV0p45") != std::string::npos)
+		//std::cout<<tname <<std::endl;
+		if (tname.find("HLT_PFHT800") != std::string::npos || tname.find("HLT_AK8DiPFJet280_200_TrimMass30_BTagCSV_p20") != std::string::npos  || tname.find("HLT_PFHT475") != std::string::npos)
 			{
   			if (triggerBitTreeHandle->at(i)) trigpass=1;
 			if (tname.find("HLT_PFHT800") != std::string::npos)
 				{
   				HT800bit->push_back(triggerBitTreeHandle->at(i));    
 				}
-			if (tname.find("HLT_AK8DiPFJet280_200_TrimMass30_BTagCSV0p45") != std::string::npos)
+			if (tname.find("HLT_PFHT475") != std::string::npos)
+				{
+  				HT475bit->push_back(triggerBitTreeHandle->at(i));    
+				}
+			if (tname.find("HLT_AK8DiPFJet280_200_TrimMass30_BTagCSV_p20") != std::string::npos)
 				{
   				DijetBit->push_back(triggerBitTreeHandle->at(i)); 
 				}
@@ -133,6 +139,7 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
   if (jetAK8PtHandle->at(0)<300. || jetAK8PtHandle->at(1)<300. ) return 0;
   iEvent.put(DijetBit,"DijetBit");
   iEvent.put(HT800bit,"HT800bit");
+  iEvent.put(HT475bit,"HT475bit");
   return 1;
 
 
