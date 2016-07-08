@@ -13,7 +13,7 @@ options.register('sample',
 		#'/store/user/knash/WprimeToTB_TToHad_M-1200_RH_TuneCUETP8M1_13TeV-comphep-pythia8/crab_WPrime13TeV_B2GAnaFW_V8p4_M1200_RH_25ns/151113_172838/0000/B2GEDMNtuple_1.root',
 		#'/store/user/knash/JetHT/crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_25ns_JECv7_v2/160324_125554/0000/B2GEDMNtuple_482.root',
 		#'/store/user/lcorcodi/BstarToTW_M-1400_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/crab_BstarToTW_M-1400_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/160318_162851/0000/B2GEDMNtuple_2.root',#
-		'/store/user/lcorcodi/BstarToTW_M-3000_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/crab_BstarToTW_M-3000_RH_TuneCUETP8M1_13TeV-madgraph-pythia8_B2GAnaFW_76X_V2p1/160505_144638/0000/B2GEDMNtuple_4.root',
+		'/store/group/lpctlbsm/B2GAnaFW_80X_V1p0/TT_TuneCUETP8M1_13TeV-powheg-pythia8/RunIISpring16MiniAODv2_B2GAnaFW_80x_V1p0/160609_173944/0001/B2GEDMNtuple_1141.root',
 		#'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/CMSSW_7_6_3_patch2/src/Analysis/B2GAnaFW/test/B2GEDMNtuple.root',
                  opts.VarParsing.multiplicity.singleton,
                  opts.VarParsing.varType.string,
@@ -52,32 +52,30 @@ process.source = cms.Source("PoolSource",
 
 process.jetsAK8 = cms.EDProducer(
     	'SlimUserData_jetsAK8',
+   	reapplyjec = cms.bool(True),
+   	reapplyjer = cms.bool(True),
 	jes  = cms.string("nominal"),
 	jer  = cms.string("nominal"),
+	era  = cms.string("Spring16_25nsV6")
     )
 
-process.jetsAK8jesup = cms.EDProducer(
-    	'SlimUserData_jetsAK8',
+
+process.jetsAK8jesup = process.jetsAK8.clone(
 	jes  = cms.string("up"),
-	jer  = cms.string("nominal"),
-    )
-process.jetsAK8jesdown = cms.EDProducer(
-    	'SlimUserData_jetsAK8',
+      )
+
+process.jetsAK8jesdown = process.jetsAK8.clone(
 	jes  = cms.string("down"),
-	jer  = cms.string("nominal"),
-    )
+      )
 
-process.jetsAK8jerup = cms.EDProducer(
-    	'SlimUserData_jetsAK8',
-	jes  = cms.string("nominal"),
+
+process.jetsAK8jerup = process.jetsAK8.clone(
 	jer  = cms.string("up"),
-    )
-process.jetsAK8jerdown = cms.EDProducer(
-    	'SlimUserData_jetsAK8',
-	jes  = cms.string("nominal"),
-	jer  = cms.string("down"),
-    )
+      )
 
+process.jetsAK8jerdown = process.jetsAK8.clone(
+	jer  = cms.string("down"),
+      )
 
 
 
