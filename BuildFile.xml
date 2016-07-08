@@ -62,8 +62,6 @@
 <use   name="DataFormats/ParticleFlowReco"/>
 <use   name="TrackingTools/IPTools"/>
 <use   name="EgammaAnalysis/ElectronTools"/>
-<use   name="JetMETCorrections/Objects"/>
-<use   name="JetMETCorrections/Algorithms"/>
 <use   name="JetMETCorrections/JetCorrector"/>
 <!-- MUON -->
 <use name="DataFormats/PatCandidates"/>
