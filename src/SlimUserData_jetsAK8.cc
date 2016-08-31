@@ -440,12 +440,29 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 		JECcorr = fmaxf(0.0,jetAK8jecFactor0Handle->at(i)*JEC_Corr(uncorrpt,jetAK8EtaHandle->at(i),ISDATA,jetAK8jetAreaHandle->at(i),*RhoHandle.product(),era_));
 
 		}
+
+	//float prunedjes = 1.0;
+	//float prunedjer = 1.0;
+
+
+	//float prunedjerunc = 1.0;
+	
+	float prunedshift = 1.0;
+
+
    	if (jes_!="nominal")
 		{
 		shift = fmaxf(0.0,JES_Uncert(jetAK8PtHandle->at(i),jetAK8EtaHandle->at(i),jes_,era_));
 
+		float sign = (shift-1.0)/std::fabs(shift-1.0);
+		float prunedjesunc = 1.+sign*(std::sqrt( (1.-shift)*(1.-shift) + (0.002)*(0.002)));
+		
+
+		prunedshift=prunedshift*prunedjesunc;		
+
 		}
-	
+
+
         
 	if (not ISDATA) 
 		{
@@ -470,12 +487,11 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 					else if (jer_ == "up") SFapp = jetAK8CHSJERSFUpHandle->at(i);
  					else if (jer_ == "down") SFapp = jetAK8CHSJERSFDownHandle->at(i);
 				
-				}
-
+				}	
 
 			float ptJERCor = jetAK8GenJetPtHandle->at(i)+SFapp*(jetAK8PtHandle->at(i)-jetAK8GenJetPtHandle->at(i));
 			shift = shift*fmaxf(0.0,ptJERCor/jetAK8GenJetPtHandle->at(i));
-
+			prunedshift = prunedshift*fmaxf(0.0,ptJERCor/jetAK8GenJetPtHandle->at(i));
 
 
 		}		
@@ -488,10 +504,11 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 
 
 	float corrsdmass = Mass_Corr(uncorrpt,jetAK8EtaHandle->at(i),uncorrE,ISDATA,jetAK8jetAreaHandle->at(i),*RhoHandle.product(),*npvHandle.product(),era_);
+
 	jetAK8softDropMass->push_back(corrsdmass*jetAK8softDropMassHandle->at(i)*shift);  
 	jetAK8softDropMassuncorr->push_back(jetAK8softDropMassHandle->at(i)*shift);  
-	jetAK8prunedMass->push_back(corrsdmass*jetAK8prunedMassHandle->at(i)*shift);   
-	jetAK8prunedMassuncorr->push_back(jetAK8prunedMassHandle->at(i)*shift);   
+	jetAK8prunedMass->push_back(corrsdmass*0.99*jetAK8prunedMassHandle->at(i)*prunedshift);   
+	jetAK8prunedMassuncorr->push_back(jetAK8prunedMassHandle->at(i)*prunedshift);   
 
 
  
