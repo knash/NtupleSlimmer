@@ -52,6 +52,11 @@ SlimUserData_weights::SlimUserData_weights(const edm::ParameterSet& iConfig):
     edm::EDGetTokenT<GenEventInfoProduct>(consumes<GenEventInfoProduct>(edm::InputTag("generator")));
     edm::EDGetTokenT<LHEEventProduct>(consumes<LHEEventProduct>(edm::InputTag(lhe_label_, "")));   	
     produces<std::vector<float>>("pdfWeights");
+
+    produces<std::vector<float>>("Q2Weights");
+    produces<std::vector<float>>("alphasWeights");
+    produces<std::vector<float>>("evtWeights");
+
     produces<std::vector<float>>("pdfWeightsNNPDF");
   // produces<std::vector<float>>("pdfWeightsCT10");
    //produces<std::vector<float>>("pdfWeightsMSTW2008");
@@ -61,12 +66,12 @@ SlimUserData_weights::SlimUserData_weights(const edm::ParameterSet& iConfig):
 void SlimUserData_weights::produce( edm::Event& iEvent, const edm::EventSetup& iSetup) {
 	
   	std::auto_ptr<std::vector<float>> pdfWeights(new std::vector<float>());   
-  	std::auto_ptr<std::vector<float>> pdfWeights_temp(new std::vector<float>());    
-  	//std::auto_ptr<std::vector<float>> pdfWeights_NNPDF(new std::vector<float>());   
-  	//std::auto_ptr<std::vector<float>> pdfWeights_CT10(new std::vector<float>());  
-  	//std::auto_ptr<std::vector<float>> pdfWeights_MSTW2008(new std::vector<float>());   
 
-  	//int pdfId; 
+	std::auto_ptr<std::vector<float>> eweight(new std::vector<float>()); 
+  	std::auto_ptr<std::vector<float>> Q2Weights(new std::vector<float>()); 
+  	std::auto_ptr<std::vector<float>> alphasWeights (new std::vector<float>());    
+
+  	std::auto_ptr<std::vector<float>> pdfWeights_temp(new std::vector<float>());   
   	std::auto_ptr<std::vector<std::string>> names(new std::vector<std::string>({"pdfWeightsNNPDF"}));//,"pdfWeightsCT10","pdfWeightsMSTW2008"})) ;
 
 
@@ -84,8 +89,11 @@ void SlimUserData_weights::produce( edm::Event& iEvent, const edm::EventSetup& i
     		if (lheEvtInfo.isValid()) 
 			{
 
+
 			//pdfId = lha_pdf_id_;
       			double lheOrigWeight = lheEvtInfo->originalXWGTUP();
+      			if (lheEvtInfo->weights().size()>=9) for (size_t i=0; i<9; ++i) if (i!=0&&i!=5&&i!=7)
+        			Q2Weights->push_back(lheEvtInfo->weights()[i].wgt/lheOrigWeight);
       			size_t first = 9;
       			if (lha_pdf_id_ == 263000) first = 10;
       			if (lha_pdf_id_ == 263400) first = 111;
@@ -93,6 +101,8 @@ void SlimUserData_weights::produce( edm::Event& iEvent, const edm::EventSetup& i
 				{
         			pdfWeights->push_back(lheEvtInfo->weights()[i].wgt/lheOrigWeight);
      				}
+       			alphasWeights->push_back(lheEvtInfo->weights()[109].wgt/lheOrigWeight);
+        		alphasWeights->push_back(lheEvtInfo->weights()[110].wgt/lheOrigWeight);
     			}
 		}
 
@@ -104,7 +114,7 @@ void SlimUserData_weights::produce( edm::Event& iEvent, const edm::EventSetup& i
 
       		iEvent.getByToken(gen_token, pdfstuff);
 
-
+		eweight->push_back(pdfstuff->weight());
 
       		float q = pdfstuff->pdf()->scalePDF;
 
@@ -118,11 +128,7 @@ void SlimUserData_weights::produce( edm::Event& iEvent, const edm::EventSetup& i
 
 		for(int ipdf=1; ipdf <=1; ++ipdf)
 		{			
-			
-			
-
-
-
+		
 
 			LHAPDF::usePDFMember(ipdf,0);
 			double xpdf1 = LHAPDF::xfx(1, x1, q, id1);
@@ -145,10 +151,12 @@ void SlimUserData_weights::produce( edm::Event& iEvent, const edm::EventSetup& i
   			iEvent.put(pdfWeights_temp,names->at(ipdf-1));
 			pdfWeights_temp.reset();
 		}
-
-		
+  		iEvent.put(eweight,"evtWeights");		
+  		iEvent.put(Q2Weights,"Q2Weights");	
+  		iEvent.put(alphasWeights,"alphasWeights");			
   		iEvent.put(pdfWeights,"pdfWeights");
   		//iEvent.put(pdfId*,"pdfId");
+
 }
 
 

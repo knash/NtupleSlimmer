@@ -7,9 +7,6 @@ import copy
 options = opts.VarParsing ('analysis')
 
 options.register('sample',
-                 #'/store/user/knash/JetHT/crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_25ns_v1/151222_180124/0000/B2GEDMNtuple_59.root',
-              #   '/store/user/knash/JetHT/crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_25ns_v1/151222_180124/0000/B2GEDMNtuple_126.root',
-		# '/store/user/knash/JetHT/crab_JetHT_Run2015D-05Oct2015-v1_B2GAnaFW_V8p4_25ns/151210_174906/0000/B2GEDMNtuple_9.root',
 		#'/store/user/knash/WprimeToTB_TToHad_M-1200_RH_TuneCUETP8M1_13TeV-comphep-pythia8/crab_WPrime13TeV_B2GAnaFW_V8p4_M1200_RH_25ns/151113_172838/0000/B2GEDMNtuple_1.root',
 		#'/store/user/knash/JetHT/crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_25ns_JECv7_v2/160324_125554/0000/B2GEDMNtuple_482.root',
 		#'/store/user/lcorcodi/BstarToTW_M-1400_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/crab_BstarToTW_M-1400_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/160318_162851/0000/B2GEDMNtuple_2.root',#
@@ -39,7 +36,7 @@ options.register('outputlabel',
 options.parseArguments()
 process = cms.Process("slimntuple")
 
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(100) )
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(2000) )
 
 process.source = cms.Source("PoolSource",
         fileNames = cms.untracked.vstring(
@@ -77,6 +74,7 @@ process.jetsAK8jerup = process.jetsAK8.clone(
 process.jetsAK8jerdown = process.jetsAK8.clone(
 	jer  = cms.string("down"),
       )
+#process.EventCounter = cms.EDAnalyzer("EventCounter")
 
 
 
@@ -89,18 +87,11 @@ if options.type=='MC':
 		lhe_label = cms.string("externalLHEProducer"),
     		)
 
-    	#process.pdfWeights = cms.EDProducer("PdfWeightProducer",
-    	#	#  FixPOWHEG = cms.untracked.string(""),
-      	#	GenTag = cms.untracked.InputTag("genPart"),
-      	#	PdfInfoTag = cms.untracked.InputTag("generator"),
-      	#	PdfSetNames = cms.untracked.vstring( 	   "CT10.LHgrid" 
-	#						  ,"MSTW2008nnlo68cl.LHgrid"
-        #		                                  ,"NNPDF23_nnlo_as_0118.LHgrid"
-        #		                           )
-	#	)
+
 
 	process.p = cms.Path(
 		process.weights
+        	#process.EventCounter
 		*process.Filter
 		*process.jetsAK8
 		*process.jetsAK8jesup
@@ -111,6 +102,7 @@ if options.type=='MC':
 	    	)
 elif options.type=='DATA':
 	process.p = cms.Path(
+        	#process.EventCounter
 		process.Filter
 		*process.jetsAK8
 	    	)
@@ -119,6 +111,8 @@ else:
 
 process.load("FWCore.MessageService.MessageLogger_cfi")
 process.MessageLogger.cerr.FwkReport.reportEvery = 1000
+
+
 
 process.f1 = cms.Path(process.Filter)
 process.edmNtuplesOut = cms.OutputModule(
@@ -132,20 +126,36 @@ process.edmNtuplesOut = cms.OutputModule(
     "keep *_subjetsCmsTopTag_subjetCmsTopTagCSV_*",
     "keep *_subjetsAK8CHS_subjetAK8CHSCSV*_*",
     "keep *_subjetsAK8CHS_subjetAK8CHSCMVA*_*",
+    "keep *_subjetsAK8CHS_subjetAK8CHSPartonFlavour*_*",
+    "keep *_subjetsAK8CHS_subjetAK8CHSEta*_*",
+    "keep *_subjetsAK8CHS_subjetAK8CHSMass*_*",
+    "keep *_subjetsAK8CHS_subjetAK8CHSPhi*_*",
+    "keep *_subjetsAK8CHS_subjetAK8CHSPt*_*",
     "keep *_eventUserData_*_*",
     "drop *_eventUserData_v*_*",
     "keep *_generator_*_*",
     "keep *_eventInfo_*_*",
-   # "keep *_genPart_*Eta_*",
-   # "keep *_genPart_*Pt_*",
-   # "keep *_genPart_*Phi_*",
-   # "keep *_genPart_*Mass_*",
-   # "keep *_genPart_*ID_*",
-   # "keep *_genPart_*Status_*",
-    "keep *_met_*_*",
-    "drop *_met_Px_*",    
-    "drop *_met_Py_*",
-  #  "keep *_genJetsAK8_*_*",
+    "keep *_electrons_elEta_*",      
+    "keep *_electrons_elMass_*",      
+    "keep *_electrons_elPhi_*",    
+    "keep *_electrons_elPt_*",      
+    "keep *_electrons_elisLoose_*",      
+    "keep *_electrons_elisMedium_*",      
+    "keep *_electrons_elisTight_*",   
+    "keep *_electrons_elvidLoose_*",   
+    "keep *_electrons_elvidMedium_*",   
+    "keep *_electrons_elvidTight_*",   
+    "keep *_muons_muEta_*",   
+    "keep *_muons_muMass_*",   
+    "keep *_muons_muPhi_*",    
+    "keep *_muons_muPt_*",   
+    "keep *_muons_muIsLooseMuon_*",    
+    "keep *_muons_muIsMediumMuon_*",   
+    "keep *_muons_muIsTightMuon_*",   
+    "keep *_metFull_metFullPhi_*",   
+    "keep *_metFull_metFullPt_*",   
+    "keep *_metNoHF_metNoHFPhi_*",   
+    "keep *_metNoHF_metNoHFPt_*",  
     "keep *_pdfWeights*_*_*",
     ),
     dropMetaData = cms.untracked.string('ALL'),

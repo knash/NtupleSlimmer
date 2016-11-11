@@ -1,4 +1,4 @@
-foreach n (crab_*QCD_Pt*80*V2*)
+foreach n (crab_S*V3)
 crab status $n
 end
 
