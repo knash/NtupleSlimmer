@@ -10,9 +10,9 @@ options.register('sample',
 		#'/store/user/knash/WprimeToTB_TToHad_M-1200_RH_TuneCUETP8M1_13TeV-comphep-pythia8/crab_WPrime13TeV_B2GAnaFW_V8p4_M1200_RH_25ns/151113_172838/0000/B2GEDMNtuple_1.root',
 		#'/store/user/knash/JetHT/crab_JetHT_Run2015D-PromptReco-v4_B2GAnaFW_V8p4_25ns_JECv7_v2/160324_125554/0000/B2GEDMNtuple_482.root',
 		#'/store/user/lcorcodi/BstarToTW_M-1400_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/crab_BstarToTW_M-1400_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/160318_162851/0000/B2GEDMNtuple_2.root',#
-		'/store/group/lpctlbsm/B2GAnaFW_80X_V1p0/QCD_HT1500to2000_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring16MiniAODv2_B2GAnaFW_80x_V1p0_v2/160719_131643/0000/B2GEDMNtuple_63.root ',
-		#'/store/group/lpctlbsm/B2GAnaFW_80X_V1p0/JetHT/RunIISpring16MiniAODv2_B2GAnaFW_80x_V1p0/160707_205842/0000/B2GEDMNtuple_291.root',
+		#'/store/group/lpcrutgers/knash/WprimeToTB_TToHad_M-1500_RH_TuneCUETP8M1_13TeV-comphep-pythia8/RunIISpring16MiniAODv2_80X_reHLT_B2GAnaFW_80X_V2p1/161109_215328/0000/B2GEDMNtuple_47.root',
 		#'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/CMSSW_7_6_3_patch2/src/Analysis/B2GAnaFW/test/B2GEDMNtuple.root',
+		'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/CMSSW_8_0_20/src/Analysis/B2GAnaFW/test/B2GEDMNtuple.root',
                  opts.VarParsing.multiplicity.singleton,
                  opts.VarParsing.varType.string,
                  'Sample to analyze')
@@ -36,7 +36,7 @@ options.register('outputlabel',
 options.parseArguments()
 process = cms.Process("slimntuple")
 
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(2000) )
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1200) )
 
 process.source = cms.Source("PoolSource",
         fileNames = cms.untracked.vstring(
@@ -76,7 +76,7 @@ process.jetsAK8jerdown = process.jetsAK8.clone(
       )
 #process.EventCounter = cms.EDAnalyzer("EventCounter")
 
-
+process.counter = cms.EDProducer('SlimUserData_counter')
 
 process.Filter = cms.EDFilter('SlimUserData_Filter')
 if options.type=='MC':
@@ -87,10 +87,15 @@ if options.type=='MC':
 		lhe_label = cms.string("externalLHEProducer"),
     		)
 
+	process.Filter = cms.EDFilter(
+		'SlimUserData_Filter',
+		ISDATA  = cms.untracked.bool(False)
+		)
 
 
 	process.p = cms.Path(
 		process.weights
+		*process.counter
         	#process.EventCounter
 		*process.Filter
 		*process.jetsAK8
@@ -101,9 +106,14 @@ if options.type=='MC':
 
 	    	)
 elif options.type=='DATA':
+	process.Filter = cms.EDFilter(
+		'SlimUserData_Filter',
+		ISDATA  = cms.untracked.bool(True)
+		)
 	process.p = cms.Path(
         	#process.EventCounter
-		process.Filter
+		process.counter
+		*process.Filter
 		*process.jetsAK8
 	    	)
 else:

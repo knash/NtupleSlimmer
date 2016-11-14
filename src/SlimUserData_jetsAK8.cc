@@ -189,7 +189,7 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSPt"  )));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSPhi"    )));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSEta"    )));
-  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSMass"    )));
+//  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSMass"    )));
 
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSE"    )));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSjecFactor0"  )));
@@ -197,7 +197,7 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
 
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSGenJetPt" )));
 
-  edm::EDGetTokenT<int>(consumes<int>(edm::InputTag("eventUserData", "npv"    )));
+  edm::EDGetTokenT<int>(consumes<int>(edm::InputTag("vertexInfo", "npv"    )));
   edm::EDGetTokenT<double>(consumes<double>(edm::InputTag("fixedGridRhoFastjetAll", ""    )));
 
 
@@ -213,7 +213,6 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
 	{
 
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSCSVv2"     )));
-  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSCMVA"     )));  
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSCMVAv2"     )));  
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSPartonFlavour"  )));
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSfilteredMass")));
@@ -235,6 +234,7 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSneutralHadronEnergyFrac" )));
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSNumConstituents" )));
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSchargedMultiplicity" )));
+  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSneutralMultiplicity" )));
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSchargedEmEnergyFrac" )));
 
 
@@ -247,7 +247,6 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
 
 
    		produces<std::vector<float>>("jetAK8CSV"); 
-   		produces<std::vector<float>>("jetAK8CMVA"); 
    		produces<std::vector<float>>("jetAK8CMVAv2"); 
    		produces<std::vector<float>>("jetAK8PartonFlavour"); 
    		produces<std::vector<float>>("jetAK8filteredMass"); 
@@ -304,7 +303,6 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   std::auto_ptr<std::vector<float>> jetAK8GenJetPt(new std::vector<float>()); 
 
   std::auto_ptr<std::vector<float>> jetAK8CSV(new std::vector<float>());
-  std::auto_ptr<std::vector<float>> jetAK8CMVA(new std::vector<float>());  
   std::auto_ptr<std::vector<float>> jetAK8CMVAv2(new std::vector<float>());              
   std::auto_ptr<std::vector<float>> jetAK8PartonFlavour(new std::vector<float>());      
   std::auto_ptr<std::vector<float>> jetAK8filteredMass(new std::vector<float>());      
@@ -357,7 +355,6 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 
 
   edm::Handle<std::vector<float>> jetAK8CSVHandle;     
-  edm::Handle<std::vector<float>> jetAK8CMVAHandle;        
   edm::Handle<std::vector<float>> jetAK8CMVAv2Handle;           
   edm::Handle<std::vector<float>> jetAK8PartonFlavourHandle;    
   edm::Handle<std::vector<float>> jetAK8filteredMassHandle;    
@@ -382,6 +379,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   edm::Handle<std::vector<float>>  jetAK8CHSneutralHadronEnergyFracHandle;  
   edm::Handle<std::vector<float>>  jetAK8CHSNumConstituentsHandle;  
   edm::Handle<std::vector<float>>  jetAK8CHSchargedMultiplicityHandle;  
+  edm::Handle<std::vector<float>>  jetAK8CHSneutralMultiplicityHandle;  
   edm::Handle<std::vector<float>>  jetAK8CHSchargedEmEnergyFracHandle;  
 
 
@@ -398,7 +396,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSSmearedPt"        ,jetAK8SmearedPtHandle);
   iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSPhi"       ,jetAK8PhiHandle);  
   iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSEta"       ,jetAK8EtaHandle);  
-  iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSMass"      ,jetAK8MassHandle);
+ // iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSMass"      ,jetAK8MassHandle);
 
 
 
@@ -409,7 +407,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 
   if (not ISDATA) iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSGenJetPt"        ,jetAK8GenJetPtHandle);
 
-  iEvent.getByLabel("eventUserData", "npv"        ,npvHandle);
+  iEvent.getByLabel("vertexInfo", "npv"        ,npvHandle);
   iEvent.getByLabel("fixedGridRhoFastjetAll", ""        ,RhoHandle);
 
   iEvent.getByLabel( "jetsAK8CHS", "jetAK8CHSJERSF",  jetAK8CHSJERSFHandle);
@@ -427,6 +425,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSneutralHadronEnergyFrac"       ,jetAK8CHSneutralHadronEnergyFracHandle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSNumConstituents"       ,jetAK8CHSNumConstituentsHandle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSchargedMultiplicity"       ,jetAK8CHSchargedMultiplicityHandle);  
+  	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSneutralMultiplicity"       ,jetAK8CHSneutralMultiplicityHandle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSchargedEmEnergyFrac"       ,jetAK8CHSchargedEmEnergyFracHandle);  
 
 
@@ -435,7 +434,6 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 
 
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSCSVv2"       ,jetAK8CSVHandle);  
-  	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSCMVA"       ,jetAK8CMVAHandle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSCMVAv2"       ,jetAK8CMVAv2Handle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSPartonFlavour"   ,jetAK8PartonFlavourHandle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSfilteredMass"   ,jetAK8filteredMassHandle);  
@@ -472,7 +470,9 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 	float shift = 1.0;
 	float JECcorr = 1.0;
 
-
+        TLorentzVector v1;
+	v1.SetPtEtaPhiE(jetAK8PtHandle->at(i),jetAK8EtaHandle->at(i),jetAK8PhiHandle->at(i),jetAK8EHandle->at(i));
+	float calcmass =  v1.M();
 
 
 
@@ -545,7 +545,9 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 	jetAK8Pt->push_back(jetAK8PtHandle->at(i)*shift*JECcorr);      
 	jetAK8Phi->push_back(jetAK8PhiHandle->at(i));       
 	jetAK8Eta->push_back(jetAK8EtaHandle->at(i));       
-	jetAK8Mass->push_back(jetAK8MassHandle->at(i)*shift*JECcorr);  
+
+
+	jetAK8Mass->push_back(calcmass*shift*JECcorr);  
 
 
 
@@ -561,7 +563,6 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
    	if (jes_=="nominal"&&jer_=="nominal")
 		{
 		jetAK8CSV->push_back(jetAK8CSVHandle->at(i));
-		jetAK8CMVA->push_back(jetAK8CMVAHandle->at(i));       
 		jetAK8CMVAv2->push_back(jetAK8CMVAv2Handle->at(i));              
 		jetAK8PartonFlavour->push_back(jetAK8PartonFlavourHandle->at(i)); 
 		  
@@ -597,9 +598,11 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 	  	float CHF = jetAK8CHSchargedHadronEnergyFracHandle->at(i);
 	  	float NEMF = jetAK8CHSneutralEmEnergyFracHandle->at(i);
 	  	float NHF = jetAK8CHSneutralHadronEnergyFracHandle->at(i);
-	  	float NC = jetAK8CHSNumConstituentsHandle->at(i);
+	  	//float NC = jetAK8CHSNumConstituentsHandle->at(i);
 	  	float CM = jetAK8CHSchargedMultiplicityHandle->at(i);  
 	  	float CEMF = jetAK8CHSchargedEmEnergyFracHandle->at(i);
+
+		float NC = jetAK8CHSneutralMultiplicityHandle->at(i) + jetAK8CHSchargedMultiplicityHandle->at(i); 
 
 		float TJ = 0.0;
 		if ((NHF<0.9) and (NEMF<0.9) and (NC>1) and (CHF>0.) and (CM>0) and (CEMF<0.99)) TJ = 1.0;
@@ -634,7 +637,6 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 	{
 
   	iEvent.put(jetAK8CSV,"jetAK8CSV"); 
-  	iEvent.put(jetAK8CMVA,"jetAK8CMVA"); 
   	iEvent.put(jetAK8CMVAv2,"jetAK8CMVAv2"); 
   	iEvent.put(jetAK8PartonFlavour,"jetAK8PartonFlavour"); 
   	iEvent.put(jetAK8filteredMass,"jetAK8filteredMass"); 
