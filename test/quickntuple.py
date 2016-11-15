@@ -94,10 +94,11 @@ if options.type=='MC':
 
 
 	process.p = cms.Path(
-		process.weights
-		*process.counter
+
+		process.counter
         	#process.EventCounter
 		*process.Filter
+		*process.weights
 		*process.jetsAK8
 		*process.jetsAK8jesup
 		*process.jetsAK8jesdown

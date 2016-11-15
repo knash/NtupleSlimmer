@@ -1,4 +1,4 @@
-foreach n (crab_S*V3)
+foreach n (crab*V6*)
 crab status $n
 end
 
