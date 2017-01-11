@@ -37,7 +37,9 @@ SlimUserData_Filter::SlimUserData_Filter(const edm::ParameterSet& iConfig):
    ISDATA_ (iConfig.getUntrackedParameter<bool>("ISDATA", false))
  {   
    produces<std::vector<bool>>("HT800bit"); 
+   produces<std::vector<bool>>("HT900bit"); 
    produces<std::vector<bool>>("JET450bit"); 
+   produces<std::vector<bool>>("JET260bit"); 
    produces<std::vector<bool>>("HT475bit"); 
    produces<std::vector<bool>>("DijetBit"); 
    edm::EDGetTokenT<std::vector<std::string>>(mayConsume<std::vector<std::string>,edm::InRun>(edm::InputTag("TriggerUserData" , "triggerNameTree")));
@@ -53,9 +55,11 @@ SlimUserData_Filter::SlimUserData_Filter(const edm::ParameterSet& iConfig):
 
 bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSetup) {
   std::auto_ptr<std::vector<bool>> HT800bit(new std::vector<bool>()); 
+  std::auto_ptr<std::vector<bool>> HT900bit(new std::vector<bool>()); 
   std::auto_ptr<std::vector<bool>> HT475bit(new std::vector<bool>());       
   std::auto_ptr<std::vector<bool>> DijetBit(new std::vector<bool>()); 
-  std::auto_ptr<std::vector<bool>> JET450bit(new std::vector<bool>());          
+  std::auto_ptr<std::vector<bool>> JET450bit(new std::vector<bool>());       
+  std::auto_ptr<std::vector<bool>> JET260bit(new std::vector<bool>());             
 
 
   std::auto_ptr<std::vector<float>> jetAK8Pt(new std::vector<float>()); 
@@ -114,6 +118,10 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
 			{
   			HT800bit->push_back(triggerBitTreeHandle->at(tind));    
 			}
+		if (tname.find("HLT_PFHT900") != std::string::npos)
+			{
+  			HT900bit->push_back(triggerBitTreeHandle->at(tind));    
+			}
 		if (tname.find("HLT_PFHT475") != std::string::npos)
 			{
   			HT475bit->push_back(triggerBitTreeHandle->at(tind));    
@@ -128,19 +136,25 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
   			JET450bit->push_back(triggerBitTreeHandle->at(tind));    
 			}
 
+		if (tname.find("HLT_AK8PFJet260") != std::string::npos)
+			{
+  			JET260bit->push_back(triggerBitTreeHandle->at(tind));    
+			}
 		}
   	if (not trigpass) return 0;
 
   	iEvent.put(DijetBit,"DijetBit");
   	iEvent.put(HT800bit,"HT800bit");
+  	iEvent.put(HT900bit,"HT900bit");
   	iEvent.put(HT475bit,"HT475bit");
   	iEvent.put(JET450bit,"JET450bit");
+  	iEvent.put(JET260bit,"JET260bit");
 	
   }
   
 
   if (jetAK8PtHandle->size()<2 ) return 0;
-  if (jetAK8PtHandle->at(0)<350. || jetAK8PtHandle->at(1)<350. ) return 0;
+  if (jetAK8PtHandle->at(0)<250. || jetAK8PtHandle->at(1)<250. ) return 0;
   return 1;
 
 
@@ -164,7 +178,7 @@ SlimUserData_Filter::beginRun(edm::Run const& iRun, edm::EventSetup const& iSetu
 		  	for( size_t i=0; i<triggerNameTreeHandle->size(); i++ ) 
 				{
 				std::string tname = triggerNameTreeHandle->at(i);
-				if (tname.find("HLT_PFHT800") != std::string::npos || tname.find("HLT_AK8PFJet450") != std::string::npos  || tname.find("HLT_AK8DiPFJet280_200_TrimMass30_BTagCSV_p20") != std::string::npos  || tname.find("HLT_PFHT475") != std::string::npos)
+				if (tname.find("HLT_PFHT800") != std::string::npos || tname.find("HLT_AK8PFJet450") != std::string::npos  || tname.find("HLT_AK8PFJet260") != std::string::npos  || tname.find("HLT_AK8DiPFJet280_200_TrimMass30_BTagCSV_p20") != std::string::npos  || tname.find("HLT_PFHT475") != std::string::npos)
 					{		
 					TrigNames.push_back(tname);
 					TrigIndices.push_back(i);

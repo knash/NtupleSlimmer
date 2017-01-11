@@ -2249,3 +2249,250 @@ Traceback (most recent call last):
   File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1608/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
     raise ConfigurationException(msg)
 ConfigurationException: [91mError[0m: SlimTuples/crab_TT_TuneCUETP8M1_13TeV-powheg-pythia8_B2GAnaFW_V1p1_SmJo1_80x_Slim_V5 is not a valid CRAB project directory.
+DEBUG 2016-11-15 18:54:22,428: 	 Executing command: 'status'
+ERROR 2016-11-15 18:54:22,428: 	 Keyboard Interrupted
+DEBUG 2016-11-16 07:41:41,890: 	 Executing command: 'status'
+DEBUG 2016-11-16 07:41:41,891: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-11-16 07:41:41,902: 	 Checking credentials
+DEBUG 2016-11-16 07:41:41,902: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-11-16 07:41:41,902: 	 Getting proxy life time left
+DEBUG 2016-11-16 07:41:42,005: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-11-16 07:41:42,006: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-11-16 07:41:42,006: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-11-16 07:43:36,740: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 3
+DEBUG 2016-11-16 07:43:36,847: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-11-16 07:43:36,950: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u45849 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+ERROR 2016-11-16 07:43:36,951: 	 Problems creating proxy.
+ERROR 2016-11-16 07:43:36,951: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 292, in __init__
+    self.proxyCreated = self.proxy.createNewVomsProxySimple(timeLeftThreshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 152, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy.")
+ProxyCreationException: Problems creating proxy.
+DEBUG 2016-11-16 14:00:09,451: 	 Executing command: 'status'
+DEBUG 2016-11-16 14:00:09,452: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-11-16 14:00:09,456: 	 Checking credentials
+DEBUG 2016-11-16 14:00:09,456: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-11-16 14:00:09,456: 	 Getting proxy life time left
+DEBUG 2016-11-16 14:00:09,558: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 63837
+
+ error: 
+ retcode : 0
+ERROR 2016-11-16 14:00:09,588: 	 Keyboard Interrupted
+DEBUG 2016-11-16 17:50:30,433: 	 Executing command: 'status'
+DEBUG 2016-11-16 17:50:30,434: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-11-16 17:50:30,445: 	 Checking credentials
+DEBUG 2016-11-16 17:50:30,445: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-11-16 17:50:30,445: 	 Getting proxy life time left
+DEBUG 2016-11-16 17:50:30,548: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-11-16 17:50:30,548: 	 Proxy valid for 00:00:00 hours
+DEBUG 2016-11-16 17:50:30,548: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2016-11-16 17:50:30,651: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 3
+DEBUG 2016-11-16 17:50:30,754: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 0
+
+ error: 
+ retcode : 0
+DEBUG 2016-11-16 17:50:30,858: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u45849 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+ERROR 2016-11-16 17:50:30,858: 	 Problems creating proxy.
+ERROR 2016-11-16 17:50:30,859: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 292, in __init__
+    self.proxyCreated = self.proxy.createNewVomsProxySimple(timeLeftThreshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 152, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy.")
+ProxyCreationException: Problems creating proxy.
+DEBUG 2016-11-16 17:53:10,635: 	 Executing command: 'status'
+DEBUG 2016-11-16 17:53:10,636: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-11-16 17:53:10,649: 	 Checking credentials
+DEBUG 2016-11-16 17:53:10,649: 	 Found proxy file /tmp/x509up_u45849
+DEBUG 2016-11-16 17:53:10,649: 	 Getting proxy life time left
+ERROR 2016-11-16 17:53:10,710: 	 Keyboard Interrupted
+DEBUG 2016-11-17 07:40:36,391: 	 Executing command: 'status'
+DEBUG 2016-11-17 07:40:36,392: 	 Found CRAB cache file /uscms/home/knash/.crab3
+DEBUG 2016-11-17 07:40:36,413: 	 Checking credentials
+DEBUG 2016-11-17 07:40:36,414: 	 Proxy file /tmp/x509up_u45849 not found
+DEBUG 2016-11-17 07:40:36,414: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+ERROR 2016-11-17 08:00:36,499: 	 Timeout in voms-proxy-init -voms cms:/cms -valid 24:00 -rfc execution.
+DEBUG 2016-11-17 08:00:36,605: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u45849 -timeleft
+ output : 
+ error: 
+Couldn't find a valid proxy.
+
+
+ retcode : 1
+ERROR 2016-11-17 08:00:36,605: 	 Error while checking proxy timeleft for /tmp/x509up_u45849
+DEBUG 2016-11-17 08:00:36,708: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u45849 voms-proxy-info -fqan
+ output : 
+ error: 
+Couldn't find a valid proxy.
+
+
+ retcode : 1
+ERROR 2016-11-17 08:00:36,708: 	 Problems creating proxy.
+ERROR 2016-11-17 08:00:36,708: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 292, in __init__
+    self.proxyCreated = self.proxy.createNewVomsProxySimple(timeLeftThreshold = 720)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/CredentialInteractions.py", line 152, in createNewVomsProxySimple
+    raise ProxyCreationException("Problems creating proxy.")
+ProxyCreationException: Problems creating proxy.
+DEBUG 2016-11-21 10:18:07,097: 	 Executing command: 'report'
+DEBUG 2016-11-21 10:18:07,098: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-11-21 10:18:07,099: 	 Error: crab_JetHT_Run2016B-PromptReco-v2_B2GAnaFW_V2p1_80x_Slim_V6_v1.json is not a valid CRAB project directory.
+ERROR 2016-11-21 10:18:07,099: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/report.py", line 24, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/report.py", line 299, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_JetHT_Run2016B-PromptReco-v2_B2GAnaFW_V2p1_80x_Slim_V6_v1.json is not a valid CRAB project directory.
+DEBUG 2016-11-21 10:18:45,526: 	 Executing command: 'report'
+DEBUG 2016-11-21 10:18:45,526: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-11-21 10:18:45,528: 	 Error: crab_JetHT_Run2016C-PromptReco-v2_B2GAnaFW_V2p1_80x_Slim_V6_v1.json is not a valid CRAB project directory.
+ERROR 2016-11-21 10:18:45,528: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/report.py", line 24, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/report.py", line 299, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_JetHT_Run2016C-PromptReco-v2_B2GAnaFW_V2p1_80x_Slim_V6_v1.json is not a valid CRAB project directory.
+DEBUG 2016-11-21 10:19:20,632: 	 Executing command: 'report'
+DEBUG 2016-11-21 10:19:20,632: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-11-21 10:19:20,634: 	 Error: crab_JetHT_Run2016D-PromptReco-v2_B2GAnaFW_V2p1_80x_Slim_V6_v1.json is not a valid CRAB project directory.
+ERROR 2016-11-21 10:19:20,634: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/report.py", line 24, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/report.py", line 299, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_JetHT_Run2016D-PromptReco-v2_B2GAnaFW_V2p1_80x_Slim_V6_v1.json is not a valid CRAB project directory.
+DEBUG 2016-11-21 10:19:41,742: 	 Executing command: 'report'
+DEBUG 2016-11-21 10:19:41,743: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-11-21 10:19:41,744: 	 Error: crab_JetHT_Run2016E-PromptReco-v2_B2GAnaFW_V2p1_80x_Slim_V6_v1.json is not a valid CRAB project directory.
+ERROR 2016-11-21 10:19:41,745: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/report.py", line 24, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/report.py", line 299, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_JetHT_Run2016E-PromptReco-v2_B2GAnaFW_V2p1_80x_Slim_V6_v1.json is not a valid CRAB project directory.
+DEBUG 2016-11-21 10:20:01,517: 	 Executing command: 'report'
+DEBUG 2016-11-21 10:20:01,518: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-11-21 10:20:01,519: 	 Error: crab_JetHT_Run2016F-PromptReco-v2_B2GAnaFW_V2p1_80x_Slim_V6_v1.json is not a valid CRAB project directory.
+ERROR 2016-11-21 10:20:01,520: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/report.py", line 24, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/report.py", line 299, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_JetHT_Run2016F-PromptReco-v2_B2GAnaFW_V2p1_80x_Slim_V6_v1.json is not a valid CRAB project directory.
+DEBUG 2016-11-21 10:20:28,125: 	 Executing command: 'report'
+DEBUG 2016-11-21 10:20:28,126: 	 Found CRAB cache file /uscms/home/knash/.crab3
+ERROR 2016-11-21 10:20:28,128: 	 Error: crab_JetHT_Run2016G-PromptReco-v2_B2GAnaFW_V2p1_80x_Slim_V6_v1.json is not a valid CRAB project directory.
+ERROR 2016-11-21 10:20:28,128: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/report.py", line 24, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 257, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/report.py", line 299, in validateOptions
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1611/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 566, in validateOptions
+    raise ConfigurationException(msg)
+ConfigurationException: [91mError[0m: crab_JetHT_Run2016G-PromptReco-v2_B2GAnaFW_V2p1_80x_Slim_V6_v1.json is not a valid CRAB project directory.

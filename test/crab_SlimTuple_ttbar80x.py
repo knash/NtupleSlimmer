@@ -2,7 +2,7 @@ from WMCore.Configuration import Configuration
 config = Configuration()
 
 config.section_("General")
-config.General.requestName = 'TT_TuneCUETP8M1_13TeV-powheg-pythia8_B2GAnaFW_V2p1_80x_Slim_V6'
+config.General.requestName = 'TT_TuneCUETP8M1_13TeV-powheg-pythia8_B2GAnaFW_V2p1_80x_Slim_V6_v1'
 config.General.workArea = 'SlimTuples'
 config.General.transferLogs = True
 

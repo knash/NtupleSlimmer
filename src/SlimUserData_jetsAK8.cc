@@ -8,6 +8,7 @@
 #include "SimDataFormats/PileupSummaryInfo/interface/PileupSummaryInfo.h"
 #include "DataFormats/VertexReco/interface/Vertex.h"
 #include "DataFormats/Math/interface/LorentzVector.h"
+#include "DataFormats/Math/interface/deltaR.h"
 #include "JetMETCorrections/Modules/interface/JetResolution.h"
 
 #include "CondFormats/JetMETObjects/interface/JetCorrectionUncertainty.h"
@@ -15,16 +16,16 @@
 #include "CondFormats/JetMETObjects/interface/JetCorrectorParameters.h"
 //#include <errno.h>
 #include <Math/VectorUtil.h>
+#include <TRandom3.h>
+
 //#include <TLorentzVector.h>
 
 
 
 
-
-
-float JES_Uncert(float pt,float eta,std::string val,std::string era_)
+float JES_Uncert(float pt,float eta,std::string val,std::string era_, unsigned int runnum)
 	{
-        JetCorrectionUncertainty *jecUnc = new JetCorrectionUncertainty(era_+"_MC_Uncertainty_AK8PFchs.txt");
+        JetCorrectionUncertainty *jecUnc = new JetCorrectionUncertainty(era_+"V2_MC_Uncertainty_AK8PFchs.txt");
 	int sign = 0;
 	if (val=="up") sign = 1;
 	else if (val=="down") sign = -1;
@@ -38,24 +39,35 @@ float JES_Uncert(float pt,float eta,std::string val,std::string era_)
 	return  shift;
 	}
 
-float JEC_Corr(float  pt,float eta  , bool isdata,float Area,const double Rho,std::string era_)
+float JEC_Corr(float  pt,float eta  , bool isdata,float Area,const double Rho,std::string era_,unsigned int runnum)
 	{
         boost::shared_ptr<FactorizedJetCorrector> jecAK8_;
   	std::vector<std::string> jecAK8PayloadNames_;
-
+	std::string runtxt_;
   	if(isdata) 
 		{
- 		jecAK8PayloadNames_.push_back(era_+"_DATA_L1FastJet_AK8PFchs.txt");
-  		jecAK8PayloadNames_.push_back(era_+"_DATA_L2Relative_AK8PFchs.txt");
-  		jecAK8PayloadNames_.push_back(era_+"_DATA_L3Absolute_AK8PFchs.txt");
-  		jecAK8PayloadNames_.push_back(era_+"_DATA_L2L3Residual_AK8PFchs.txt");
+
+		if (runnum>=1 and runnum<=276811) runtxt_ = "BCDV2";  // IOV BCD:[1,276811]  (For Runs B/C/D)
+		if (runnum>=276831 and runnum<=278801) runtxt_ = "EFV2";  //IOV EF:[276831,278801]  (For Runs E/early F)
+		if (runnum>=278802 and runnum<=280385) runtxt_ = "GV2"; //IOV G:[278802,280385] (For Runs late F/G)
+		if (runnum>=280919) runtxt_ = "HV2"; //IOV H:[280919,Infinity] f
+
+
+
+ 		jecAK8PayloadNames_.push_back(era_+runtxt_+"_DATA_L1FastJet_AK8PFchs.txt");
+  		jecAK8PayloadNames_.push_back(era_+runtxt_+"_DATA_L2Relative_AK8PFchs.txt");
+  		jecAK8PayloadNames_.push_back(era_+runtxt_+"_DATA_L3Absolute_AK8PFchs.txt");
+  		jecAK8PayloadNames_.push_back(era_+runtxt_+"_DATA_L2L3Residual_AK8PFchs.txt");
 		}
   	else
 		{
-  		jecAK8PayloadNames_.push_back(era_+"_MC_L1FastJet_AK8PFchs.txt");
-  		jecAK8PayloadNames_.push_back(era_+"_MC_L2Relative_AK8PFchs.txt");
-  		jecAK8PayloadNames_.push_back(era_+"_MC_L3Absolute_AK8PFchs.txt");
+
+		runtxt_ = "V2";
+  		jecAK8PayloadNames_.push_back(era_+runtxt_+"_MC_L1FastJet_AK8PFchs.txt");
+  		jecAK8PayloadNames_.push_back(era_+runtxt_+"_MC_L2Relative_AK8PFchs.txt");
+  		jecAK8PayloadNames_.push_back(era_+runtxt_+"_MC_L3Absolute_AK8PFchs.txt");
 		}
+	//std::cout<<runtxt_<<std::endl;
   	std::vector<JetCorrectorParameters> vPar;
 
   	for ( std::vector<std::string>::const_iterator payloadBegin = jecAK8PayloadNames_.begin(), payloadEnd = jecAK8PayloadNames_.end(), ipayload = payloadBegin; ipayload != payloadEnd; ++ipayload ) 
@@ -86,24 +98,36 @@ float JEC_Corr(float  pt,float eta  , bool isdata,float Area,const double Rho,st
 
 
 
-float Mass_Corr(float  pt,float eta,float energy  , bool isdata,float Area,const double Rho,const int NPV,std::string era_)
+float Mass_Corr(float  pt,float eta,float energy  , bool isdata,float Area,const double Rho,const int NPV,std::string era_, unsigned int runnum)
 	{
         boost::shared_ptr<FactorizedJetCorrector> jecAK8_;
   	std::vector<std::string> jecAK8PayloadNames_;
-
+	std::string runtxt_;
   	if(isdata) 
 		{
-  		jecAK8PayloadNames_.push_back(era_+"_DATA_L2Relative_AK8PFchs.txt");
-  		jecAK8PayloadNames_.push_back(era_+"_DATA_L3Absolute_AK8PFchs.txt");
-  		jecAK8PayloadNames_.push_back(era_+"_DATA_L2L3Residual_AK8PFchs.txt");
+
+
+
+		if (runnum>=1 and runnum<=276811) runtxt_ = "BCDV2";  // IOV BCD:[1,276811]  (For Runs B/C/D)
+		if (runnum>=276831 and runnum<=278801) runtxt_ = "EFV2";  //IOV EF:[276831,278801]  (For Runs E/early F)
+		if (runnum>=278802 and runnum<=280385) runtxt_ = "GV2"; //IOV G:[278802,280385] (For Runs late F/G)
+		if (runnum>=280919) runtxt_ = "HV2"; //IOV H:[280919,Infinity] f
+
+
+
+
+  		jecAK8PayloadNames_.push_back(era_+runtxt_+"_DATA_L2Relative_AK8PFchs.txt");
+  		jecAK8PayloadNames_.push_back(era_+runtxt_+"_DATA_L3Absolute_AK8PFchs.txt");
+  		jecAK8PayloadNames_.push_back(era_+runtxt_+"_DATA_L2L3Residual_AK8PFchs.txt");
 		}
   	else
-		{
-  		jecAK8PayloadNames_.push_back(era_+"_MC_L2Relative_AK8PFchs.txt");
-  		jecAK8PayloadNames_.push_back(era_+"_MC_L3Absolute_AK8PFchs.txt");
+		{		
+		runtxt_ = "V2";
+  		jecAK8PayloadNames_.push_back(era_+runtxt_+"_MC_L2Relative_AK8PFchs.txt");
+  		jecAK8PayloadNames_.push_back(era_+runtxt_+"_MC_L3Absolute_AK8PFchs.txt");
 		}
   	std::vector<JetCorrectorParameters> vPar;
-
+	//std::cout<<runtxt_<<std::endl;
   	for ( std::vector<std::string>::const_iterator payloadBegin = jecAK8PayloadNames_.begin(), payloadEnd = jecAK8PayloadNames_.end(), ipayload = payloadBegin; ipayload != payloadEnd; ++ipayload ) 
 		{
   	  	JetCorrectorParameters pars(*ipayload);
@@ -181,6 +205,7 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
 
 
 
+  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS","jetAK8CHSPtResolution")));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS","jetAK8CHSJERSF")));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS","jetAK8CHSJERSFUp")));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS","jetAK8CHSJERSFDown")));  
@@ -196,6 +221,8 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSjetArea"    )));
 
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSGenJetPt" )));
+  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSGenJetEta" )));
+  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSGenJetPhi" )));
 
   edm::EDGetTokenT<int>(consumes<int>(edm::InputTag("vertexInfo", "npv"    )));
   edm::EDGetTokenT<double>(consumes<double>(edm::InputTag("fixedGridRhoFastjetAll", ""    )));
@@ -206,8 +233,9 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
   produces<std::vector<float>>("jetAK8softDropMassuncorr");
   produces<std::vector<float>>("jetAK8prunedMassuncorr");
 
-  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSprunedMass"  )));
-  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSsoftDropMass"  )));
+  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSprunedMassCHS"  )));
+  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSsoftDropMassCHS"  )));
+
 
   if (jes_=="nominal"&&jer_=="nominal")
 	{
@@ -215,16 +243,16 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSCSVv2"     )));
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSCMVAv2"     )));  
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSPartonFlavour"  )));
-  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSfilteredMass")));
+  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSfilteredMassCHS")));
 
   	   	//edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHStopMass"  )));
-  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHStrimmedMass"   )));  
+  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHStrimmedMassCHS"   )));  
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSjecFactor0"  )));
   	   	//edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSminmass"   )));
   	   	//edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSnSubJets" )));  
-  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHStau1"     )));
-  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHStau2"    )));
-  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHStau3"    )));
+  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHStau1CHS"     )));
+  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHStau2CHS"    )));
+  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHStau3CHS"    )));
 
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSvSubjetIndex0"  ))); 
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSvSubjetIndex1" )));
@@ -275,10 +303,10 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 
 
   bool ISDATA = iEvent.eventAuxiliary().isRealData();
+  unsigned int runnum = iEvent.eventAuxiliary().run();
 
 
-
-
+  //std::cout<<runnum<<std::endl;
 
 
 
@@ -301,6 +329,8 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   std::auto_ptr<int> npv(new int()); 
   std::auto_ptr<double> Rho(new double()); 
   std::auto_ptr<std::vector<float>> jetAK8GenJetPt(new std::vector<float>()); 
+  std::auto_ptr<std::vector<float>> jetAK8GenJetEta(new std::vector<float>()); 
+  std::auto_ptr<std::vector<float>> jetAK8GenJetPhi(new std::vector<float>()); 
 
   std::auto_ptr<std::vector<float>> jetAK8CSV(new std::vector<float>());
   std::auto_ptr<std::vector<float>> jetAK8CMVAv2(new std::vector<float>());              
@@ -337,6 +367,8 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   edm::Handle<std::vector<float>> jetAK8jecFactor0Handle;
   edm::Handle<std::vector<float>> jetAK8jetAreaHandle;
   edm::Handle<std::vector<float>> jetAK8GenJetPtHandle;
+  edm::Handle<std::vector<float>> jetAK8GenJetEtaHandle;
+  edm::Handle<std::vector<float>> jetAK8GenJetPhiHandle;
 
   edm::Handle<int> npvHandle;
   edm::Handle<double> RhoHandle;
@@ -353,6 +385,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   edm::Handle<std::vector<float>> jetAK8CHSJERSFUpHandle;
   edm::Handle<std::vector<float>> jetAK8CHSJERSFDownHandle;
 
+  edm::Handle<std::vector<float>> jetAK8CHSRESHandle;
 
   edm::Handle<std::vector<float>> jetAK8CSVHandle;     
   edm::Handle<std::vector<float>> jetAK8CMVAv2Handle;           
@@ -406,17 +439,23 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSjetArea"        ,jetAK8jetAreaHandle);
 
   if (not ISDATA) iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSGenJetPt"        ,jetAK8GenJetPtHandle);
+  if (not ISDATA) iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSGenJetEta"        ,jetAK8GenJetEtaHandle);
+  if (not ISDATA) iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSGenJetPhi"        ,jetAK8GenJetPhiHandle);
 
   iEvent.getByLabel("vertexInfo", "npv"        ,npvHandle);
   iEvent.getByLabel("fixedGridRhoFastjetAll", ""        ,RhoHandle);
+
+
+  iEvent.getByLabel( "jetsAK8CHS", "jetAK8CHSPtResolution",  jetAK8CHSRESHandle);
 
   iEvent.getByLabel( "jetsAK8CHS", "jetAK8CHSJERSF",  jetAK8CHSJERSFHandle);
   iEvent.getByLabel( "jetsAK8CHS", "jetAK8CHSJERSFUp",  jetAK8CHSJERSFUpHandle);
   iEvent.getByLabel( "jetsAK8CHS", "jetAK8CHSJERSFDown",  jetAK8CHSJERSFDownHandle);
 
 
-  iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSprunedMass"   ,jetAK8prunedMassHandle);  
-  iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSsoftDropMass"   ,jetAK8softDropMassHandle); 
+  iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSprunedMassCHS"   ,jetAK8prunedMassHandle);  
+  iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSsoftDropMassCHS"   ,jetAK8softDropMassHandle); 
+
   if (jes_=="nominal"&&jer_=="nominal")
 	{
 
@@ -436,16 +475,16 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSCSVv2"       ,jetAK8CSVHandle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSCMVAv2"       ,jetAK8CMVAv2Handle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSPartonFlavour"   ,jetAK8PartonFlavourHandle);  
-  	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSfilteredMass"   ,jetAK8filteredMassHandle);  
+  	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSfilteredMassCHS"   ,jetAK8filteredMassHandle);  
 
   	///iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStopMass"   ,jetAK8topMassHandle);  
-  	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStrimmedMass"   ,jetAK8trimmedMassHandle);   
+  	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStrimmedMassCHS"   ,jetAK8trimmedMassHandle);   
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSjecFactor0"   ,jetAK8jecFactor0Handle);  
   	//iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSminmass"   ,jetAK8minmassHandle);  
   	//iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSnSubJets"   ,jetAK8nSubJetsHandle);  
-  	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStau1"      ,jetAK8tau1Handle);  
-  	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStau2"      ,jetAK8tau2Handle);  
-  	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStau3"      ,jetAK8tau3Handle); 
+  	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStau1CHS"      ,jetAK8tau1Handle);  
+  	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStau2CHS"      ,jetAK8tau2Handle);  
+  	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStau3CHS"      ,jetAK8tau3Handle); 
 
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSvSubjetIndex0"   ,jetAK8vSubjetIndex0Handle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSvSubjetIndex1"   ,jetAK8vSubjetIndex1Handle);
@@ -457,8 +496,6 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   //	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStopSubjetIndex3"   ,jetAK8topSubjetIndex3Handle); 
  
 	}
-
-
 
 
 
@@ -477,14 +514,12 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 
 
 
-
 	float uncorrpt = fmaxf(1.0,jetAK8jecFactor0Handle->at(i)*jetAK8PtHandle->at(i));	
 	float uncorrE = fmaxf(1.0,jetAK8jecFactor0Handle->at(i)*jetAK8EHandle->at(i));	
 
    	if (reapplyjec_)
 		{
-		JECcorr = fmaxf(0.0,jetAK8jecFactor0Handle->at(i)*JEC_Corr(uncorrpt,jetAK8EtaHandle->at(i),ISDATA,jetAK8jetAreaHandle->at(i),*RhoHandle.product(),era_));
-
+		JECcorr = fmaxf(0.0,jetAK8jecFactor0Handle->at(i)*JEC_Corr(uncorrpt,jetAK8EtaHandle->at(i),ISDATA,jetAK8jetAreaHandle->at(i),*RhoHandle.product(),era_, runnum));
 		}
 
 	//float prunedjes = 1.0;
@@ -498,7 +533,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 
    	if (jes_!="nominal")
 		{
-		shift = fmaxf(0.0,JES_Uncert(jetAK8PtHandle->at(i),jetAK8EtaHandle->at(i),jes_,era_));
+		shift = fmaxf(0.0,JES_Uncert(jetAK8PtHandle->at(i),jetAK8EtaHandle->at(i),jes_,era_,runnum));
 
 		float sign = (shift-1.0)/std::fabs(shift-1.0);
 		float prunedjesunc = 1.+sign*(std::sqrt( (1.-shift)*(1.-shift) + (0.002)*(0.002)));
@@ -512,19 +547,39 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
         
 	if (not ISDATA) 
 		{
+
 			float SFapp=1.0;
+			float RESapp=1.0;
 			if (reapplyjer_)
 				{	
-					JME::JetResolutionScaleFactor res_sf;
-					std::string JERFile_ = era_+"_MC_SF_AK8PFchs.txt";
-					res_sf = JME::JetResolutionScaleFactor(JERFile_);
+					//JME::JetResolutionScaleFactor res_sf;
+					//JME::JetResolution reso;
+					//std::string JERFile_ = era_+"_MC_SF_AK8PFchs.txt";
+					
+
+
+
+/////////////////////////////////////////////////////TOUPDATE!	
+					//Spring16_25nsV10_MC_PtResolution_AK8PFchs.txt
+					//Spring16_25nsV10_MC_SF_AK8PFchs.txt			
+					std::string JERFile_ = "Spring16_25nsV10_MC_SF_AK8PFchs.txt";
+					std::string RESFile_ = "Spring16_25nsV10_MC_PtResolution_AK8PFchs.txt";
+/////////////////////////////////////////////////////TOUPDATE!	
+
+
+					JME::JetResolutionScaleFactor res_sf = JME::JetResolutionScaleFactor(JERFile_);
+
+					JME::JetResolution reso = JME::JetResolution(RESFile_);
+
 				  	JME::JetParameters jetParam;
 				    	jetParam.setJetPt(jetAK8PtHandle->at(i)).setJetEta(jetAK8EtaHandle->at(i)).setRho(*RhoHandle.product());
 
 					if (jer_ == "nominal") SFapp = res_sf.getScaleFactor(jetParam);
 					else if (jer_ == "up") SFapp = res_sf.getScaleFactor(jetParam, Variation::UP);
  					else if (jer_ == "down") SFapp = res_sf.getScaleFactor(jetParam, Variation::DOWN);
-  
+
+					RESapp = reso.getResolution(jetParam)*jetAK8PtHandle->at(i);
+
 				}
 			else
 				{
@@ -532,16 +587,39 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 					if (jer_ == "nominal") SFapp = jetAK8CHSJERSFHandle->at(i);
 					else if (jer_ == "up") SFapp = jetAK8CHSJERSFUpHandle->at(i);
  					else if (jer_ == "down") SFapp = jetAK8CHSJERSFDownHandle->at(i);
-				
+					RESapp = jetAK8CHSRESHandle->at(i)*jetAK8PtHandle->at(i);
+
 				}	
 
+			bool DRmatch =  deltaR(jetAK8EtaHandle->at(i), jetAK8PhiHandle->at(i), jetAK8GenJetEtaHandle->at(i), jetAK8GenJetPhiHandle->at(i))<0.4/2.0 ;
+			bool ptmatch = std::fabs(jetAK8PtHandle->at(i)-jetAK8GenJetPtHandle->at(i))<3.0*RESapp;
 			float ptJERCor = jetAK8GenJetPtHandle->at(i)+SFapp*(jetAK8PtHandle->at(i)-jetAK8GenJetPtHandle->at(i));
-			shift = shift*fmaxf(0.0,ptJERCor/jetAK8GenJetPtHandle->at(i));
-			prunedshift = prunedshift*fmaxf(0.0,ptJERCor/jetAK8GenJetPtHandle->at(i));
+
+			if (DRmatch and ptmatch)
+				{
+					shift = shift*fmaxf(0.0,ptJERCor/jetAK8GenJetPtHandle->at(i));
+					prunedshift = prunedshift*fmaxf(0.0,ptJERCor/jetAK8GenJetPtHandle->at(i));
+				}
+			else
+				{
+					//std::cout<<"Hybrid: "<<std::endl;
+					//std::cout<<"DeltaR match: "<<deltaR(jetAK8EtaHandle->at(i), jetAK8PhiHandle->at(i), jetAK8GenJetEtaHandle->at(i), jetAK8GenJetPhiHandle->at(i)) <<std::endl;
+					//std::cout<<"DeltaPt match: "<<std::fabs(jetAK8PtHandle->at(i)-jetAK8GenJetPtHandle->at(i)) <<std::endl;
+					//std::cout<<"RES: "<<RESapp<<std::endl;
+					//std::cout<<"RES threesig: "<<3.0*RESapp<<std::endl;
+					//std::cout<<"SF: "<<SFapp<<std::endl;
+					Double_t sigma =std::sqrt( SFapp*SFapp-1 ) * RESapp;// √(SF^2-1) * sigma_MC_PT.;
+					TRandom3 *r = new TRandom3(0); 
+					Double_t smearify = r->Gaus(0.0,sigma); 
+
+					shift = shift*fmaxf(0.0,(1.0+smearify/jetAK8PtHandle->at(i)));
+					prunedshift = prunedshift*fmaxf(0.0,(1.0+smearify/jetAK8PtHandle->at(i)));
+					
+				}
 
 
 		}		
-
+	
 	jetAK8Pt->push_back(jetAK8PtHandle->at(i)*shift*JECcorr);      
 	jetAK8Phi->push_back(jetAK8PhiHandle->at(i));       
 	jetAK8Eta->push_back(jetAK8EtaHandle->at(i));       
@@ -551,7 +629,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 
 
 
-	float corrsdmass = Mass_Corr(uncorrpt,jetAK8EtaHandle->at(i),uncorrE,ISDATA,jetAK8jetAreaHandle->at(i),*RhoHandle.product(),*npvHandle.product(),era_);
+	float corrsdmass = Mass_Corr(uncorrpt,jetAK8EtaHandle->at(i),uncorrE,ISDATA,jetAK8jetAreaHandle->at(i),*RhoHandle.product(),*npvHandle.product(),era_,runnum);
 
 	jetAK8softDropMass->push_back(corrsdmass*jetAK8softDropMassHandle->at(i)*shift);  
 	jetAK8softDropMassuncorr->push_back(jetAK8softDropMassHandle->at(i)*shift);  

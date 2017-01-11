@@ -12,7 +12,8 @@ options.register('sample',
 		#'/store/user/lcorcodi/BstarToTW_M-1400_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/crab_BstarToTW_M-1400_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/160318_162851/0000/B2GEDMNtuple_2.root',#
 		#'/store/group/lpcrutgers/knash/WprimeToTB_TToHad_M-1500_RH_TuneCUETP8M1_13TeV-comphep-pythia8/RunIISpring16MiniAODv2_80X_reHLT_B2GAnaFW_80X_V2p1/161109_215328/0000/B2GEDMNtuple_47.root',
 		#'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/CMSSW_7_6_3_patch2/src/Analysis/B2GAnaFW/test/B2GEDMNtuple.root',
-		'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/CMSSW_8_0_20/src/Analysis/B2GAnaFW/test/B2GEDMNtuple.root',
+		#'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_8_0_24_patch1/src/Analysis/NtupleSlimmer/test/B2GEDMNtuple_MC.root',
+		'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_8_0_24_patch1/src/Analysis/NtupleSlimmer/test/B2GEDMNtuple_DATA.root',
                  opts.VarParsing.multiplicity.singleton,
                  opts.VarParsing.varType.string,
                  'Sample to analyze')
@@ -54,7 +55,7 @@ process.jetsAK8 = cms.EDProducer(
    	reapplyjer = cms.bool(True),
 	jes  = cms.string("nominal"),
 	jer  = cms.string("nominal"),
-	era  = cms.string("Spring16_25nsV6")
+	era  = cms.string("Spring16_23Sep2016")
     )
 
 
@@ -142,6 +143,21 @@ process.edmNtuplesOut = cms.OutputModule(
     "keep *_subjetsAK8CHS_subjetAK8CHSMass*_*",
     "keep *_subjetsAK8CHS_subjetAK8CHSPhi*_*",
     "keep *_subjetsAK8CHS_subjetAK8CHSPt*_*",
+    "keep *_jetsAK4CHS_jetAK4CHSCSVv2*_*",
+    "keep *_jetsAK4CHS_jetAK4CHSEta*_*",
+    "keep *_jetsAK4CHS_jetAK4CHSMass*_*",
+    "keep *_jetsAK4CHS_jetAK4CHSPhi*_*",
+    "keep *_jetsAK4CHS_jetAK4CHSPt*_*", 
+    "keep *_genPart_genPartDau0ID*_*",  
+    "keep *_genPart_genPartDau1ID*_*",  
+    "keep *_genPart_genPartEta*_*",  
+    "keep *_genPart_genPartID*_*",  
+    "keep *_genPart_genPartMass*_*",  
+    "keep *_genPart_genPartMom0ID*_*",  
+    "keep *_genPart_genPartMom1ID*_*",  
+    "keep *_genPart_genPartPhi*_*",  
+    "keep *_genPart_genPartPt*_*",  
+    "keep *_genPart_genPartStatus*_*",  
     "keep *_eventUserData_*_*",
     "drop *_eventUserData_v*_*",
     "keep *_generator_*_*",
