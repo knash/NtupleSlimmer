@@ -159,9 +159,9 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
   }
   
 
-  if (jetAK8CHSPtHandle->size()<2 || jetAK8PuppiPtHandle->size()<2) return 0;
+  if (jetAK8CHSPtHandle->size()<2 && jetAK8PuppiPtHandle->size()<2) return 0;
 
-  if (jetAK8CHSPtHandle->at(0)<250. || jetAK8PuppiPtHandle->at(1)<250. ) return 0;
+  if ((jetAK8CHSPtHandle->at(0)<250. || jetAK8CHSPtHandle->at(1)<250.) && (jetAK8PuppiPtHandle->at(0)<250. || jetAK8PuppiPtHandle->at(1)<250.)) return 0;
   return 1;
 
 
