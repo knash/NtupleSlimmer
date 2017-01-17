@@ -125,7 +125,6 @@ float JEC_Corr_Puppi(float  pt,float eta  , bool isdata,float Area,const double 
 
 
 
- 		jecAK8PayloadNames_.push_back(era_+runtxt_+"_DATA_L1FastJet_AK8PFPuppi.txt");
   		jecAK8PayloadNames_.push_back(era_+runtxt_+"_DATA_L2Relative_AK8PFPuppi.txt");
   		jecAK8PayloadNames_.push_back(era_+runtxt_+"_DATA_L3Absolute_AK8PFPuppi.txt");
   		jecAK8PayloadNames_.push_back(era_+runtxt_+"_DATA_L2L3Residual_AK8PFPuppi.txt");
@@ -134,7 +133,6 @@ float JEC_Corr_Puppi(float  pt,float eta  , bool isdata,float Area,const double 
 		{
 
 		runtxt_ = "V2";
-  		jecAK8PayloadNames_.push_back(era_+runtxt_+"_MC_L1FastJet_AK8PFPuppi.txt");
   		jecAK8PayloadNames_.push_back(era_+runtxt_+"_MC_L2Relative_AK8PFPuppi.txt");
   		jecAK8PayloadNames_.push_back(era_+runtxt_+"_MC_L3Absolute_AK8PFPuppi.txt");
 		}
