@@ -45,6 +45,7 @@ SlimUserData_Filter::SlimUserData_Filter(const edm::ParameterSet& iConfig):
    edm::EDGetTokenT<std::vector<std::string>>(mayConsume<std::vector<std::string>,edm::InRun>(edm::InputTag("TriggerUserData" , "triggerNameTree")));
    edm::EDGetTokenT<std::vector<std::string>>(mayConsume<std::vector<std::string>,edm::InRun>(edm::InputTag("METUserData","triggerNameTree")));
    edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS","jetAK8CHSPt")));
+   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi","jetAK8PuppiPt")));
    edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("METUserData" , "triggerBitTree")));
    edm::EDGetTokenT<bool>(consumes<bool>(edm::InputTag("HBHENoiseFilterResultProducer" , "HBHENoiseFilterResult"))); 
    edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("TriggerUserData" , "triggerBitTree"))); 
@@ -62,9 +63,14 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
   std::auto_ptr<std::vector<bool>> JET260bit(new std::vector<bool>());             
 
 
-  std::auto_ptr<std::vector<float>> jetAK8Pt(new std::vector<float>()); 
-  edm::Handle<std::vector<float>> jetAK8PtHandle;
-  iEvent.getByLabel("jetsAK8CHS" , "jetAK8CHSPt", jetAK8PtHandle);
+  std::auto_ptr<std::vector<float>> jetAK8CHSPt(new std::vector<float>()); 
+  edm::Handle<std::vector<float>> jetAK8CHSPtHandle;
+  iEvent.getByLabel("jetsAK8CHS" , "jetAK8CHSPt", jetAK8CHSPtHandle);
+
+  std::auto_ptr<std::vector<float>> jetAK8PuppiPt(new std::vector<float>()); 
+  edm::Handle<std::vector<float>> jetAK8PuppiPtHandle;
+  iEvent.getByLabel("jetsAK8Puppi" , "jetAK8PuppiPt", jetAK8PuppiPtHandle);
+
   if (ISDATA_)
   {
  /*
@@ -153,8 +159,9 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
   }
   
 
-  if (jetAK8PtHandle->size()<2 ) return 0;
-  if (jetAK8PtHandle->at(0)<250. || jetAK8PtHandle->at(1)<250. ) return 0;
+  if (jetAK8CHSPtHandle->size()<2 || jetAK8PuppiPtHandle->size()<2) return 0;
+
+  if (jetAK8CHSPtHandle->at(0)<250. || jetAK8PuppiPtHandle->at(1)<250. ) return 0;
   return 1;
 
 
