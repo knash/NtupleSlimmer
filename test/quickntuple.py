@@ -20,7 +20,7 @@ options.register('sample',
 
 
 options.register('type',
-                 'DATA',
+                 'NONE',
                  opts.VarParsing.multiplicity.singleton,
                  opts.VarParsing.varType.string,
                  'Sample type (DATA or MC)')
