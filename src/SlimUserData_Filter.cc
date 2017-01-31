@@ -119,7 +119,7 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
 		//std::cout<<"tname "<< tname << std::endl;
 		//std::cout<<"ind "<< tind << std::endl<< std::endl;
 		
-  		if (triggerBitTreeHandle->at(i)) trigpass=1;
+  		if (triggerBitTreeHandle->at(tind)) trigpass=1;
 		if (tname.find("HLT_PFHT800") != std::string::npos)
 			{
   			HT800bit->push_back(triggerBitTreeHandle->at(tind));    
@@ -157,12 +157,25 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
   	iEvent.put(JET260bit,"JET260bit");
 	
   }
-  
+ 
 
   if (jetAK8CHSPtHandle->size()<2 && jetAK8PuppiPtHandle->size()<2) return 0;
 
-  if ((jetAK8CHSPtHandle->at(0)<250. || jetAK8CHSPtHandle->at(1)<250.) && (jetAK8PuppiPtHandle->at(0)<250. || jetAK8PuppiPtHandle->at(1)<250.)) return 0;
-  return 1;
+  else if (jetAK8CHSPtHandle->size()<2)
+	{
+	if (jetAK8PuppiPtHandle->at(0)<250. || jetAK8PuppiPtHandle->at(1)<250.) return 0;
+	else return 1;
+	}
+
+  else if (jetAK8PuppiPtHandle->size()<2)
+	{
+	if (jetAK8CHSPtHandle->at(0)<250. || jetAK8CHSPtHandle->at(1)<250.) return 0;
+	else return 1;
+	}
+
+  else if ((jetAK8CHSPtHandle->at(0)<250. || jetAK8CHSPtHandle->at(1)<250.) && (jetAK8PuppiPtHandle->at(0)<250. || jetAK8PuppiPtHandle->at(1)<250.)) return 0;
+
+  else return 1;
 
 
  }
@@ -185,7 +198,7 @@ SlimUserData_Filter::beginRun(edm::Run const& iRun, edm::EventSetup const& iSetu
 		  	for( size_t i=0; i<triggerNameTreeHandle->size(); i++ ) 
 				{
 				std::string tname = triggerNameTreeHandle->at(i);
-				if (tname.find("HLT_PFHT800") != std::string::npos || tname.find("HLT_AK8PFJet450") != std::string::npos  || tname.find("HLT_AK8PFJet260") != std::string::npos  || tname.find("HLT_AK8DiPFJet280_200_TrimMass30_BTagCSV_p20") != std::string::npos  || tname.find("HLT_PFHT475") != std::string::npos)
+				if (tname.find("HLT_PFHT800") != std::string::npos || tname.find("HLT_PFHT900") != std::string::npos   ||    tname.find("HLT_AK8PFJet450") != std::string::npos  || tname.find("HLT_AK8PFJet260") != std::string::npos  || tname.find("HLT_AK8DiPFJet280_200_TrimMass30_BTagCSV_p20") != std::string::npos  || tname.find("HLT_PFHT475") != std::string::npos)
 					{		
 					TrigNames.push_back(tname);
 					TrigIndices.push_back(i);
