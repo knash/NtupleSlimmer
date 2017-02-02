@@ -122,7 +122,7 @@ else:
 	sys.exit("Must be either DATA or MC for type")
 
 process.load("FWCore.MessageService.MessageLogger_cfi")
-process.MessageLogger.cerr.FwkReport.reportEvery = 1000
+process.MessageLogger.cerr.FwkReport.reportEvery = 100
 
 
 
