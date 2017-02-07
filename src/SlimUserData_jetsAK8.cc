@@ -893,10 +893,10 @@ std::string runtxt_;
 
 if(ISDATA) 
 		{
-		if (runnum>=1 and runnum<=276811) runtxt_ = "BCDV2";  // IOV BCD:[1,276811]  (For Runs B/C/D)
-		if (runnum>=276831 and runnum<=278801) runtxt_ = "EFV2";  //IOV EF:[276831,278801]  (For Runs E/early F)
-		if (runnum>=278802 and runnum<=280385) runtxt_ = "GV2"; //IOV G:[278802,280385] (For Runs late F/G)
-		if (runnum>=280919) runtxt_ = "HV2"; //IOV H:[280919,Infinity] f
+		if (runnum>=1 and runnum<=276811) runtxt_ = "BCDV4";  // IOV BCD:[1,276811]  (For Runs B/C/D)
+		if (runnum>=276831 and runnum<=278801) runtxt_ = "EFV4";  //IOV EF:[276831,278801]  (For Runs E/early F)
+		if (runnum>=278802 and runnum<=280385) runtxt_ = "GV4"; //IOV G:[278802,280385] (For Runs late F/G)
+		if (runnum>=280919) runtxt_ = "HV4"; //IOV H:[280919,Infinity] f
 
   		jecAK8CHSPayloadNames_.push_back(era_+runtxt_+"_DATA_L2Relative_AK8PFchs.txt");
   		jecAK8CHSPayloadNames_.push_back(era_+runtxt_+"_DATA_L3Absolute_AK8PFchs.txt");
@@ -904,14 +904,15 @@ if(ISDATA)
 		}
 else
 		{	
-		runtxt_ = "V2";
+		runtxt_ = "V4";
   		jecAK8CHSPayloadNames_.push_back(era_+runtxt_+"_MC_L2Relative_AK8PFchs.txt");
   		jecAK8CHSPayloadNames_.push_back(era_+runtxt_+"_MC_L3Absolute_AK8PFchs.txt");
 		}
+
 std::vector<JetCorrectorParameters> vParCHS;
 for ( std::vector<std::string>::const_iterator payloadBegin = jecAK8CHSPayloadNames_.begin(), payloadEnd = jecAK8CHSPayloadNames_.end(), ipayload = payloadBegin; ipayload != payloadEnd; ++ipayload ) 
 		{
-	
+
   	  	JetCorrectorParameters parsCHS(*ipayload);
  	   	vParCHS.push_back(parsCHS);
  		}
@@ -931,10 +932,10 @@ std::vector<std::string> jecAK8PUPPIPayloadNames_;
 if(ISDATA) 
 		{
 
-		if (runnum>=1 and runnum<=276811) runtxt_ = "BCDV2";  // IOV BCD:[1,276811]  (For Runs B/C/D)
-		if (runnum>=276831 and runnum<=278801) runtxt_ = "EFV2";  //IOV EF:[276831,278801]  (For Runs E/early F)
-		if (runnum>=278802 and runnum<=280385) runtxt_ = "GV2"; //IOV G:[278802,280385] (For Runs late F/G)
-		if (runnum>=280919) runtxt_ = "HV2"; //IOV H:[280919,Infinity] f
+		if (runnum>=1 and runnum<=276811) runtxt_ = "BCDV4";  // IOV BCD:[1,276811]  (For Runs B/C/D)
+		if (runnum>=276831 and runnum<=278801) runtxt_ = "EFV4";  //IOV EF:[276831,278801]  (For Runs E/early F)
+		if (runnum>=278802 and runnum<=280385) runtxt_ = "GV4"; //IOV G:[278802,280385] (For Runs late F/G)
+		if (runnum>=280919) runtxt_ = "HV4"; //IOV H:[280919,Infinity] f
 
 
 
@@ -945,10 +946,11 @@ if(ISDATA)
 else
 		{
 
-		runtxt_ = "V2";
+		runtxt_ = "V4";
   		jecAK8PUPPIPayloadNames_.push_back(era_+runtxt_+"_MC_L2Relative_AK8PFPuppi.txt");
   		jecAK8PUPPIPayloadNames_.push_back(era_+runtxt_+"_MC_L3Absolute_AK8PFPuppi.txt");
 		}
+
 //std::cout<<runtxt_<<std::endl;
 std::vector<JetCorrectorParameters> vParPUPPI;
 
@@ -962,8 +964,8 @@ jecAK8PUPPI_ = boost::shared_ptr<FactorizedJetCorrector> ( new FactorizedJetCorr
 
 
 
-JetCorrectionUncertainty *jecUncPUPPI = new JetCorrectionUncertainty(era_+"V2_MC_Uncertainty_AK8PFPuppi.txt");
-JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty(era_+"V2_MC_Uncertainty_AK8PFchs.txt");
+JetCorrectionUncertainty *jecUncPUPPI = new JetCorrectionUncertainty(era_+"V4_MC_Uncertainty_AK8PFPuppi.txt");
+JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty(era_+"V4_MC_Uncertainty_AK8PFchs.txt");
 
 
 

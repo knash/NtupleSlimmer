@@ -26,6 +26,8 @@ private:
   bool ISDATA_ ;
   std::vector<std::string> TrigNames;
   std::vector<int> TrigIndices;
+  std::vector<std::string> FiltNames;
+  std::vector<int> FiltIndices;
   bool filter( edm::Event &, const edm::EventSetup & );
   void beginRun(edm::Run const&, edm::EventSetup const&);
   void beginJob() ;
@@ -36,6 +38,7 @@ private:
 SlimUserData_Filter::SlimUserData_Filter(const edm::ParameterSet& iConfig):
    ISDATA_ (iConfig.getUntrackedParameter<bool>("ISDATA", false))
  {   
+   produces<std::vector<bool>>("filtersbit"); 
    produces<std::vector<bool>>("HT800bit"); 
    produces<std::vector<bool>>("HT900bit"); 
    produces<std::vector<bool>>("JET450bit"); 
@@ -49,12 +52,14 @@ SlimUserData_Filter::SlimUserData_Filter(const edm::ParameterSet& iConfig):
    edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("METUserData" , "triggerBitTree")));
    edm::EDGetTokenT<bool>(consumes<bool>(edm::InputTag("HBHENoiseFilterResultProducer" , "HBHENoiseFilterResult"))); 
    edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("TriggerUserData" , "triggerBitTree"))); 
-
+   edm::EDGetTokenT<bool>(consumes<bool>(edm::InputTag("BadChargedCandidateFilter" , ""))); 
+   edm::EDGetTokenT<bool>(consumes<bool>(edm::InputTag("BadPFMuonFilter" , ""))); 
 
  }
 
 
 bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSetup) {
+  std::auto_ptr<std::vector<bool>> filtersbit(new std::vector<bool>()); 
   std::auto_ptr<std::vector<bool>> HT800bit(new std::vector<bool>()); 
   std::auto_ptr<std::vector<bool>> HT900bit(new std::vector<bool>()); 
   std::auto_ptr<std::vector<bool>> HT475bit(new std::vector<bool>());       
@@ -71,41 +76,28 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
   edm::Handle<std::vector<float>> jetAK8PuppiPtHandle;
   iEvent.getByLabel("jetsAK8Puppi" , "jetAK8PuppiPt", jetAK8PuppiPtHandle);
 
+  edm::Handle<std::vector<float>> metBitTreeHandle;
+  iEvent.getByLabel("METUserData" , "triggerBitTree", metBitTreeHandle);
+
+  edm::Handle<bool> BadChargedCandidateFilterHandle;
+  edm::Handle<bool> BadPFMuonFilterHandle;
+  iEvent.getByLabel("BadPFMuonFilter" , "", BadPFMuonFilterHandle);
+  iEvent.getByLabel("BadChargedCandidateFilter" , "", BadChargedCandidateFilterHandle);
+  bool BPFmu = BadPFMuonFilterHandle.product();
+  bool BCCFmu = BadChargedCandidateFilterHandle.product();
+  for( size_t i=0; i<FiltNames.size(); i++ ) 
+	{
+
+	std::string filtname = FiltNames.at(i);
+	int filtind = FiltIndices.at(i);
+	filtersbit->push_back(metBitTreeHandle->at(filtind));
+	}
+  filtersbit->push_back(BPFmu);
+  filtersbit->push_back(BCCFmu);
   if (ISDATA_)
   {
- /*
-  edm::Handle<std::vector<float>> metBitTreeHandle;
+ 
 
-  std::auto_ptr<std::vector<std::string>> filters(new std::vector<std::string>({"Flag_goodVertices","Flag_CSCTightHaloFilter","Flag_eeBadScFilter"})) ;
-  for( size_t i=0; i<metNameTreeHandle->size(); i++ ) 
-		{
-  		for( size_t j=0; j<filters->size(); j++ ) 
-			{
-			if (filters->at(j)==metNameTreeHandle->at(i))
-
-				{
-				std::cout<<filters->at(j)<<std::endl;
-				std::cout<<metBitTreeHandle->at(i)<<std::endl;
-				if (not metBitTreeHandle->at(i))
-					{
-					//std::cout<<"Throw Away"<<std::endl;
-					return 0;
-					}
-				//std::cout<<std::endl;
-				}
-			}
-			
-		}
-	
-
-
-
-
-
-
-
-
-	*/
   	edm::Handle<std::vector<float>> triggerBitTreeHandle;
   	iEvent.getByLabel("TriggerUserData" , "triggerBitTree", triggerBitTreeHandle);
 
@@ -150,6 +142,7 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
   	if (not trigpass) return 0;
 
   	iEvent.put(DijetBit,"DijetBit");
+
   	iEvent.put(HT800bit,"HT800bit");
   	iEvent.put(HT900bit,"HT900bit");
   	iEvent.put(HT475bit,"HT475bit");
@@ -158,7 +151,7 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
 	
   }
  
-
+  iEvent.put(filtersbit,"filtersbit");
   if (jetAK8CHSPtHandle->size()<2 && jetAK8PuppiPtHandle->size()<2) return 0;
 
   else if (jetAK8CHSPtHandle->size()<2)
@@ -186,13 +179,13 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
 void 
 SlimUserData_Filter::beginRun(edm::Run const& iRun, edm::EventSetup const& iSetup)
 {
-
+ 	edm::Handle<std::vector<std::string>> metNameTreeHandle;
 
 	if (ISDATA_)
 		{
 
   			edm::Handle<std::vector<std::string>> triggerNameTreeHandle;
- 			edm::Handle<std::vector<std::string>> metNameTreeHandle;
+
   			iRun.getByLabel("TriggerUserData" , "triggerNameTree", triggerNameTreeHandle);
 
 		  	for( size_t i=0; i<triggerNameTreeHandle->size(); i++ ) 
@@ -204,26 +197,38 @@ SlimUserData_Filter::beginRun(edm::Run const& iRun, edm::EventSetup const& iSetu
 					TrigIndices.push_back(i);
 					}
 				}
+		}
 
-    			/*iRun.getByLabel("METUserData","triggerNameTree", metNameTreeHandle);
-  			std::auto_ptr<std::vector<std::string>> filters(new std::vector<std::string>({"Flag_HBHENoiseIsoFilter","Flag_HBHENoiseFilter","Flag_goodVertices","Flag_CSCTightHaloFilter","Flag_eeBadScFilter"})) ;
-  			for( size_t i=0; i<metNameTreeHandle->size(); i++ ) 
+
+
+
+
+
+
+
+    		iRun.getByLabel("METUserData","triggerNameTree", metNameTreeHandle);
+  		std::vector<std::string> filters ={"Flag_HBHENoiseFilter","Flag_HBHENoiseIsoFilter","Flag_EcalDeadCellTriggerPrimitiveFilter","Flag_globalTightHalo2016Filter","Flag_goodVertices"};
+		if (ISDATA_) filters.push_back("Flag_eeBadScFilter");
+  		for( size_t i=0; i<metNameTreeHandle->size(); i++ ) 
+			{
+			std::cout<<metNameTreeHandle->at(i)<<std::endl;
+			std::string fname = metNameTreeHandle->at(i);
+  			for( size_t j=0; j<filters.size(); j++ ) 
 				{
-  				for( size_t j=0; j<filters->size(); j++ ) 
-					{
-					std::cout<<metNameTreeHandle->at(i)<<std::endl;
-					if (filters->at(j)==metNameTreeHandle->at(i))
 
-						{
-							std::cout<<"Found at index "<< i << std::endl;
-							//std::cout<<metBitTreeHandle->at(i)<<std::endl;
-						}
+				if (filters[j]==metNameTreeHandle->at(i))
+					{
+						FiltNames.push_back(fname);
+						FiltIndices.push_back(i);
+						std::cout<<"Found at index "<< i << std::endl;
+						//std::cout<<metBitTreeHandle->at(i)<<std::endl;
 					}
 				}
-			*/
+			}
+			
 
 
-		}
+		
 }
 
 

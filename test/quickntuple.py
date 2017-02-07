@@ -37,7 +37,7 @@ options.register('outputlabel',
 options.parseArguments()
 process = cms.Process("slimntuple")
 
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(200) )
 
 process.source = cms.Source("PoolSource",
         fileNames = cms.untracked.vstring(
@@ -55,7 +55,7 @@ process.jetsAK8 = cms.EDProducer(
    	reapplyjer = cms.bool(True),
 	jes  = cms.string("nominal"),
 	jer  = cms.string("nominal"),
-	era  = cms.string("Spring16_23Sep2016")
+	era  = cms.string("Summer16_23Sep2016")
     )
 
 
@@ -162,14 +162,14 @@ process.edmNtuplesOut = cms.OutputModule(
     #"keep *_jetsAK4Puppi_jetAK4PuppiPt*_*",
     #"keep *_genPart_genPartDau0ID*_*",  
     #"keep *_genPart_genPartDau1ID*_*",  
-    #"keep *_genPart_genPartEta*_*",  
-    #"keep *_genPart_genPartID*_*",  
-    #"keep *_genPart_genPartMass*_*",  
+    "keep *_genPart_genPartEta*_*",  
+    "keep *_genPart_genPartID*_*",  
+    "keep *_genPart_genPartMass*_*",  
     #"keep *_genPart_genPartMom0ID*_*",  
     #"keep *_genPart_genPartMom1ID*_*",  
-    #"keep *_genPart_genPartPhi*_*",  
-    #"keep *_genPart_genPartPt*_*",  
-    #"keep *_genPart_genPartStatus*_*",  
+    "keep *_genPart_genPartPhi*_*",  
+    "keep *_genPart_genPartPt*_*",  
+    "keep *_genPart_genPartStatus*_*",  
     "keep *_eventUserData_*_*",
     "drop *_eventUserData_v*_*",
     "keep *_generator_*_*",
