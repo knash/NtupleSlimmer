@@ -867,16 +867,16 @@ JME::JetResolutionScaleFactor res_sfP;
 JME::JetResolution resoP;
 
 
-std::string JERFileC_ = "Spring16_25nsV10_MC_SF_AK8PFchs.txt";
-std::string RESFileC_ = "Spring16_25nsV10_MC_PtResolution_AK8PFchs.txt";
+std::string JERFileC_ = "jecfiles/Spring16_25nsV10_MC_SF_AK8PFchs.txt";
+std::string RESFileC_ = "jecfiles/Spring16_25nsV10_MC_PtResolution_AK8PFchs.txt";
 res_sfC = JME::JetResolutionScaleFactor(JERFileC_);
 resoC = JME::JetResolution(RESFileC_);
 //resoC.dump();
 
 
 
-std::string JERFileP_ = "Spring16_25nsV10_MC_SF_AK8PFPuppi.txt";
-std::string RESFileP_ = "Spring16_25nsV10_MC_PtResolution_AK8PFPuppi.txt";
+std::string JERFileP_ = "jecfiles/Spring16_25nsV10_MC_SF_AK8PFPuppi.txt";
+std::string RESFileP_ = "jecfiles/Spring16_25nsV10_MC_PtResolution_AK8PFPuppi.txt";
 res_sfP = JME::JetResolutionScaleFactor(JERFileP_);
 resoP = JME::JetResolution(RESFileP_);
 
@@ -898,15 +898,15 @@ if(ISDATA)
 		if (runnum>=278802 and runnum<=280385) runtxt_ = "GV4"; //IOV G:[278802,280385] (For Runs late F/G)
 		if (runnum>=280919) runtxt_ = "HV4"; //IOV H:[280919,Infinity] f
 
-  		jecAK8CHSPayloadNames_.push_back(era_+runtxt_+"_DATA_L2Relative_AK8PFchs.txt");
-  		jecAK8CHSPayloadNames_.push_back(era_+runtxt_+"_DATA_L3Absolute_AK8PFchs.txt");
-  		jecAK8CHSPayloadNames_.push_back(era_+runtxt_+"_DATA_L2L3Residual_AK8PFchs.txt");
+  		jecAK8CHSPayloadNames_.push_back("jecfiles/"+era_+runtxt_+"_DATA_L2Relative_AK8PFchs.txt");
+  		jecAK8CHSPayloadNames_.push_back("jecfiles/"+era_+runtxt_+"_DATA_L3Absolute_AK8PFchs.txt");
+  		jecAK8CHSPayloadNames_.push_back("jecfiles/"+era_+runtxt_+"_DATA_L2L3Residual_AK8PFchs.txt");
 		}
 else
 		{	
 		runtxt_ = "V4";
-  		jecAK8CHSPayloadNames_.push_back(era_+runtxt_+"_MC_L2Relative_AK8PFchs.txt");
-  		jecAK8CHSPayloadNames_.push_back(era_+runtxt_+"_MC_L3Absolute_AK8PFchs.txt");
+  		jecAK8CHSPayloadNames_.push_back("jecfiles/"+era_+runtxt_+"_MC_L2Relative_AK8PFchs.txt");
+  		jecAK8CHSPayloadNames_.push_back("jecfiles/"+era_+runtxt_+"_MC_L3Absolute_AK8PFchs.txt");
 		}
 
 std::vector<JetCorrectorParameters> vParCHS;
@@ -939,16 +939,16 @@ if(ISDATA)
 
 
 
-  		jecAK8PUPPIPayloadNames_.push_back(era_+runtxt_+"_DATA_L2Relative_AK8PFPuppi.txt");
-  		jecAK8PUPPIPayloadNames_.push_back(era_+runtxt_+"_DATA_L3Absolute_AK8PFPuppi.txt");
-  		jecAK8PUPPIPayloadNames_.push_back(era_+runtxt_+"_DATA_L2L3Residual_AK8PFPuppi.txt");
+  		jecAK8PUPPIPayloadNames_.push_back("jecfiles/"+era_+runtxt_+"_DATA_L2Relative_AK8PFPuppi.txt");
+  		jecAK8PUPPIPayloadNames_.push_back("jecfiles/"+era_+runtxt_+"_DATA_L3Absolute_AK8PFPuppi.txt");
+  		jecAK8PUPPIPayloadNames_.push_back("jecfiles/"+era_+runtxt_+"_DATA_L2L3Residual_AK8PFPuppi.txt");
 		}
 else
 		{
 
 		runtxt_ = "V4";
-  		jecAK8PUPPIPayloadNames_.push_back(era_+runtxt_+"_MC_L2Relative_AK8PFPuppi.txt");
-  		jecAK8PUPPIPayloadNames_.push_back(era_+runtxt_+"_MC_L3Absolute_AK8PFPuppi.txt");
+  		jecAK8PUPPIPayloadNames_.push_back("jecfiles/"+era_+runtxt_+"_MC_L2Relative_AK8PFPuppi.txt");
+  		jecAK8PUPPIPayloadNames_.push_back("jecfiles/"+era_+runtxt_+"_MC_L3Absolute_AK8PFPuppi.txt");
 		}
 
 //std::cout<<runtxt_<<std::endl;
@@ -964,8 +964,8 @@ jecAK8PUPPI_ = boost::shared_ptr<FactorizedJetCorrector> ( new FactorizedJetCorr
 
 
 
-JetCorrectionUncertainty *jecUncPUPPI = new JetCorrectionUncertainty(era_+"V4_MC_Uncertainty_AK8PFPuppi.txt");
-JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty(era_+"V4_MC_Uncertainty_AK8PFchs.txt");
+JetCorrectionUncertainty *jecUncPUPPI = new JetCorrectionUncertainty("jecfiles/"+era_+"V4_MC_Uncertainty_AK8PFPuppi.txt");
+JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+era_+"V4_MC_Uncertainty_AK8PFchs.txt");
 
 
 
