@@ -150,23 +150,25 @@ bool SlimUserData_Filter::filter( edm::Event& iEvent, const edm::EventSetup& iSe
   	iEvent.put(JET260bit,"JET260bit");
 	
   }
+
+  float ptcutoff = 200.0;
  
   iEvent.put(filtersbit,"filtersbit");
   if (jetAK8CHSPtHandle->size()<2 && jetAK8PuppiPtHandle->size()<2) return 0;
 
   else if (jetAK8CHSPtHandle->size()<2)
 	{
-	if (jetAK8PuppiPtHandle->at(0)<250. || jetAK8PuppiPtHandle->at(1)<250.) return 0;
+	if (jetAK8PuppiPtHandle->at(0)<ptcutoff || jetAK8PuppiPtHandle->at(1)<ptcutoff) return 0;
 	else return 1;
 	}
 
   else if (jetAK8PuppiPtHandle->size()<2)
 	{
-	if (jetAK8CHSPtHandle->at(0)<250. || jetAK8CHSPtHandle->at(1)<250.) return 0;
+	if (jetAK8CHSPtHandle->at(0)<ptcutoff || jetAK8CHSPtHandle->at(1)<ptcutoff) return 0;
 	else return 1;
 	}
 
-  else if ((jetAK8CHSPtHandle->at(0)<250. || jetAK8CHSPtHandle->at(1)<250.) && (jetAK8PuppiPtHandle->at(0)<250. || jetAK8PuppiPtHandle->at(1)<250.)) return 0;
+  else if ((jetAK8CHSPtHandle->at(0)<ptcutoff || jetAK8CHSPtHandle->at(1)<ptcutoff) && (jetAK8PuppiPtHandle->at(0)<ptcutoff || jetAK8PuppiPtHandle->at(1)<ptcutoff)) return 0;
 
   else return 1;
 
