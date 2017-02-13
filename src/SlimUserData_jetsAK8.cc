@@ -46,6 +46,9 @@ float getPUPPIweight(float puppipt, float puppieta ){
 
   totalWeight = genCorr * recoCorr;
   delete file;
+  delete puppisd_corrGEN;
+  delete puppisd_corrRECO_cen;
+  delete puppisd_corrRECO_for;
   return totalWeight;
 
 }
@@ -888,7 +891,8 @@ resoP = JME::JetResolution(RESFileP_);
 
 
 
-boost::shared_ptr<FactorizedJetCorrector> jecAK8CHS_(new FactorizedJetCorrector);std::vector<std::string> jecAK8CHSPayloadNames_;
+boost::shared_ptr<FactorizedJetCorrector> jecAK8CHS_(new FactorizedJetCorrector);
+std::vector<std::string> jecAK8CHSPayloadNames_;
 std::string runtxt_;
 
 if(ISDATA) 
@@ -1164,7 +1168,7 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 					prunedshift = prunedshift*fmaxf(0.0,(1.0+smearify/jetAK8CHSPtHandle->at(i)));
 					//if (GENSDMASS>0.0) smfac =fmaxf(0.0,SDsmearcorr);				
 					//SDshift = SDshift*smfac;
-
+					delete r;
 				}
 
 
@@ -1496,7 +1500,7 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 					//SDshift = SDshift*fmaxf(0.0,(1.0+smearify/jetAK8PuppiPtHandle->at(i)));
 					if (GENSDMASS>0.0) smfac =fmaxf(0.0,SDsmearcorr);				
 					SDshift = SDshift*smfac;
-
+					delete r;
 					
 				}
 
@@ -1612,7 +1616,8 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 	}
 
 
-
+  delete jecUncPUPPI;
+  delete jecUncCHS;
 
   iEvent.put(jetAK8CHSPt,"jetAK8CHSPt");
   iEvent.put(jetAK8CHSPhi,"jetAK8CHSPhi"); 
@@ -1705,9 +1710,9 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
   	//iEvent.put(jetAK8PuppitopSubjetIndex1,"jetAK8PuppitopSubjetIndex1");
   	//iEvent.put(jetAK8PuppitopSubjetIndex2,"jetAK8PuppitopSubjetIndex2");
   	//iEvent.put(jetAK8PuppitopSubjetIndex3,"jetAK8PuppitopSubjetIndex3");
-	delete jecUncPUPPI;
-	delete jecUncCHS;
 
+	//delete jecAK8CHS_
+	//delete jecAK8PUPPI_
 	}	
 
  }
