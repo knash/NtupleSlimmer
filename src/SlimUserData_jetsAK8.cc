@@ -150,12 +150,12 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
 
 
  {   
-
+/*
    produces<std::vector<float>>("jetAK8CHSPt");
    produces<std::vector<float>>("jetAK8CHSPhi"); 
    produces<std::vector<float>>("jetAK8CHSEta");  
    produces<std::vector<float>>("jetAK8CHSMass");
-
+*/
   // produces<std::vector<float>>("jetAK8CHSPtPuppi");
   // produces<std::vector<float>>("jetAK8CHSEtaPuppi");  
 
@@ -164,7 +164,7 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
    produces<std::vector<float>>("jetAK8PuppiEta");  
    produces<std::vector<float>>("jetAK8PuppiMass");
 
-   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS","jetAK8CHSSmearedPt")));
+   //edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS","jetAK8CHSSmearedPt")));
    edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi","jetAK8PuppiSmearedPt")));
 
 
@@ -177,7 +177,7 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
 
 
 
-
+/*
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS","jetAK8CHSPtResolution")));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS","jetAK8CHSJERSF")));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS","jetAK8CHSJERSFUp")));
@@ -201,7 +201,7 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSGenJetEta" )));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSGenJetPhi" )));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSGenJetE" )));
-
+*/
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi","jetAK8PuppiPtResolution")));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi","jetAK8PuppiJERSF")));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi","jetAK8PuppiJERSFUp")));
@@ -239,34 +239,35 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
   edm::EDGetTokenT<int>(consumes<int>(edm::InputTag("vertexInfo", "npv"    )));
   edm::EDGetTokenT<double>(consumes<double>(edm::InputTag("fixedGridRhoFastjetAll", ""    )));
 
-
+/*
   produces<std::vector<float>>("jetAK8CHSprunedMass");
   produces<std::vector<float>>("jetAK8CHSsoftDropMass");
  // produces<std::vector<float>>("jetAK8CHSsoftDropMassPuppi");
 
   produces<std::vector<float>>("jetAK8CHSsoftDropMassuncorr");
   produces<std::vector<float>>("jetAK8CHSprunedMassuncorr");
-
+*/
   produces<std::vector<float>>("jetAK8PuppiprunedMass");
   produces<std::vector<float>>("jetAK8PuppisoftDropMass");
   produces<std::vector<float>>("jetAK8PuppiCorrectedsoftDropMass");
-  produces<std::vector<float>>("jetAK8CHSCorrectedsoftDropMassPuppi");
+  //produces<std::vector<float>>("jetAK8CHSCorrectedsoftDropMassPuppi");
 
   produces<std::vector<float>>("jetAK8PuppiCorrectedsoftDropMassUnsmear");
-  produces<std::vector<float>>("jetAK8CHSCorrectedsoftDropMassUnsmearPuppi");
+ // produces<std::vector<float>>("jetAK8CHSCorrectedsoftDropMassUnsmearPuppi");
 
   produces<std::vector<float>>("jetAK8PuppisoftDropMassuncorr");
+  produces<std::vector<float>>("jetAK8PuppisoftDropMassForTopPUPPIAK8JEC");
   produces<std::vector<float>>("jetAK8PuppiprunedMassuncorr");
 
-  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSprunedMassCHS"  )));
-  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSsoftDropMassCHS"  )));
+  //edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSprunedMassCHS"  )));
+  //edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSsoftDropMassCHS"  )));
   //edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSsoftDropMassPuppi"  )));
 
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi", "jetAK8PuppiprunedMass"  )));
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi", "jetAK8PuppisoftDropMass"  )));
 
-  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSvSubjetIndex0"  ))); 
-  edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSvSubjetIndex1" )));
+  //edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSvSubjetIndex0"  ))); 
+  //edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSvSubjetIndex1" )));
 
  // edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSvSubjetPuppiIndex0"  ))); 
  // edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSvSubjetPuppiIndex1" )));
@@ -277,13 +278,19 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
   edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi", "jetAK8PuppivSubjetIndex1" )));
 
 
+ 
+
   produces<std::vector<float>>("jetAK8PuppivSubjetIndex0");
   produces<std::vector<float>>("jetAK8PuppivSubjetIndex1");
 
+
+
+
   if (jes_=="nominal"&&jer_=="nominal")
 	{
-
+/*
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSCSVv2"     )));
+
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSCMVAv2"     )));  
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSPartonFlavour"  )));
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSfilteredMassCHS")));
@@ -305,11 +312,14 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSneutralMultiplicity" )));
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8CHS", "jetAK8CHSchargedEmEnergyFrac" )));
 
+*/
 
 
 
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi", "jetAK8PuppiCSVv2"     )));
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi", "jetAK8PuppiCMVAv2"     )));  
+
+  	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi", "jetAK8PuppiDoubleBAK8"  ))); 
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi", "jetAK8PuppiPartonFlavour"  )));
   	   	edm::EDGetTokenT<std::vector<float>>(consumes<std::vector<float>>(edm::InputTag("jetsAK8Puppi", "jetAK8PuppifilteredMass")));
 
@@ -334,14 +344,14 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
 
 
 
-   		produces<std::vector<float>>("jetAK8CHSTight"); 
-   		produces<std::vector<float>>("jetAK8CHSLoose"); 
+   		//produces<std::vector<float>>("jetAK8CHSTight"); 
+   		//produces<std::vector<float>>("jetAK8CHSLoose"); 
 
   		produces<std::vector<float>>("jetAK8PuppiTight"); 
    		produces<std::vector<float>>("jetAK8PuppiLoose"); 
  
 
-
+/*
    		produces<std::vector<float>>("jetAK8CHSCSV"); 
    		produces<std::vector<float>>("jetAK8CHSCMVAv2"); 
    		produces<std::vector<float>>("jetAK8CHSPartonFlavour"); 
@@ -366,9 +376,12 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
    		//produces<std::vector<float>>("jetAK8CHStopSubjetIndex2");
    		//produces<std::vector<float>>("jetAK8CHStopSubjetIndex3");
 
-
+*/
    		produces<std::vector<float>>("jetAK8PuppiCSV"); 
    		produces<std::vector<float>>("jetAK8PuppiCMVAv2"); 
+
+   		produces<std::vector<float>>("jetAK8PuppiDoubleBAK8"); 
+
    		produces<std::vector<float>>("jetAK8PuppiPartonFlavour"); 
    		produces<std::vector<float>>("jetAK8PuppifilteredMass"); 
 
@@ -380,6 +393,16 @@ SlimUserData_jetsAK8::SlimUserData_jetsAK8(const edm::ParameterSet& iConfig):
    		produces<std::vector<float>>("jetAK8Puppitau1");
    		produces<std::vector<float>>("jetAK8Puppitau2");
    		produces<std::vector<float>>("jetAK8Puppitau3");
+
+
+
+  		produces<std::vector<float>>("jetAK8PuppisoftDropMassForTopRAW" );
+  		produces<std::vector<float>>("jetAK8PuppisoftDropMassForTopuncorr" );
+
+  		produces<std::vector<float>>("sM0" );
+  		produces<std::vector<float>>("sM1" );
+  		produces<std::vector<float>>("sSDM0" );
+
 
    		//produces<std::vector<float>>("jetAK8PuppitopSubjetIndex0");
    		//produces<std::vector<float>>("jetAK8PuppitopSubjetIndex1");
@@ -405,7 +428,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   //std::cout<<runnum<<std::endl;
 
 
-
+/*
   std::auto_ptr<std::vector<float>> jetAK8CHSPt(new std::vector<float>()); 
   std::auto_ptr<std::vector<float>> jetAK8CHSPtPuppi(new std::vector<float>()); 
 
@@ -425,8 +448,11 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   std::auto_ptr<std::vector<float>> jetAK8CHSjetArea(new std::vector<float>()); 
   std::auto_ptr<std::vector<float>> jetAK8CHSE(new std::vector<float>()); 
   std::auto_ptr<std::vector<float>> jetAK8CHSjecFactor0(new std::vector<float>()); 
+*/
   std::auto_ptr<int> npv(new int()); 
   std::auto_ptr<double> Rho(new double()); 
+
+/*
   std::auto_ptr<std::vector<float>> jetAK8CHSGenJetPt(new std::vector<float>()); 
   std::auto_ptr<std::vector<float>> jetAK8CHSGenJetEta(new std::vector<float>()); 
   std::auto_ptr<std::vector<float>> jetAK8CHSGenJetPhi(new std::vector<float>()); 
@@ -473,10 +499,10 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   edm::Handle<std::vector<float>> jetAK8CHSGenJetPtHandle;
   edm::Handle<std::vector<float>> jetAK8CHSGenJetEtaHandle;
   edm::Handle<std::vector<float>> jetAK8CHSGenJetPhiHandle;
-
+*/
   edm::Handle<int> npvHandle;
   edm::Handle<double> RhoHandle;
-
+/*
   edm::Handle<std::vector<float>> jetAK8CHSPtHandle; 
   edm::Handle<std::vector<float>> jetAK8CHSPtPuppiHandle; 
 
@@ -543,7 +569,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 
 
 
-
+*/
 
   std::auto_ptr<std::vector<float>> jetAK8PuppiPt(new std::vector<float>()); 
 
@@ -566,7 +592,10 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   std::auto_ptr<std::vector<float>> jetAK8PuppiGenJetPhi(new std::vector<float>()); 
 
   std::auto_ptr<std::vector<float>> jetAK8PuppiCSV(new std::vector<float>());
-  std::auto_ptr<std::vector<float>> jetAK8PuppiCMVAv2(new std::vector<float>());              
+  std::auto_ptr<std::vector<float>> jetAK8PuppiCMVAv2(new std::vector<float>());
+
+  std::auto_ptr<std::vector<float>> jetAK8PuppiDoubleBAK8(new std::vector<float>());
+              
   std::auto_ptr<std::vector<float>> jetAK8PuppiPartonFlavour(new std::vector<float>());      
   std::auto_ptr<std::vector<float>> jetAK8PuppifilteredMass(new std::vector<float>());      
   std::auto_ptr<std::vector<float>> jetAK8PuppiprunedMass(new std::vector<float>());      
@@ -580,6 +609,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   //std::auto_ptr<std::vector<float>> jetAK8PuppitopMass(new std::vector<float>());      
   std::auto_ptr<std::vector<float>> jetAK8PuppitrimmedMass(new std::vector<float>());       
   std::auto_ptr<std::vector<float>> jetAK8PuppisoftDropMassuncorr(new std::vector<float>());
+  std::auto_ptr<std::vector<float>> jetAK8PuppisoftDropMassForTopPUPPIAK8JEC(new std::vector<float>());
   std::auto_ptr<std::vector<float>> jetAK8PuppiprunedMassuncorr(new std::vector<float>());
 
  // std::auto_ptr<std::vector<float>> jetAK8PuppiJERSF(new std::vector<float>());
@@ -596,6 +626,16 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   std::auto_ptr<std::vector<float>> jetAK8Puppitau3(new std::vector<float>());    
   std::auto_ptr<std::vector<float>> jetAK8PuppivSubjetIndex0(new std::vector<float>());      
   std::auto_ptr<std::vector<float>> jetAK8PuppivSubjetIndex1(new std::vector<float>());   
+
+
+
+  std::auto_ptr<std::vector<float>> jetAK8PuppisoftDropMassForTopRAW(new std::vector<float>());
+  std::auto_ptr<std::vector<float>> jetAK8PuppisoftDropMassForTopuncorr(new std::vector<float>());
+
+
+  std::auto_ptr<std::vector<float>> sM0(new std::vector<float>());
+  std::auto_ptr<std::vector<float>> sM1(new std::vector<float>());
+  std::auto_ptr<std::vector<float>> sSDM0(new std::vector<float>());
 
 
        
@@ -626,7 +666,10 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   edm::Handle<std::vector<float>> jetAK8PuppiRESHandle;
 
   edm::Handle<std::vector<float>> jetAK8PuppiCSVHandle;     
-  edm::Handle<std::vector<float>> jetAK8PuppiCMVAv2Handle;           
+  edm::Handle<std::vector<float>> jetAK8PuppiCMVAv2Handle;
+
+  edm::Handle<std::vector<float>> jetAK8PuppiDoubleBAK8Handle;
+           
   edm::Handle<std::vector<float>> jetAK8PuppiPartonFlavourHandle;    
   edm::Handle<std::vector<float>> jetAK8PuppifilteredMassHandle;    
   edm::Handle<std::vector<float>> jetAK8PuppiprunedMassHandle;    
@@ -681,7 +724,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
  // edm::Handle<std::vector<float>> jetAK8PuppitopSubjetIndex3Handle;  
 
 
-  
+/*
   iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSPt"        ,jetAK8CHSPtHandle);
   iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSSmearedPt"        ,jetAK8CHSSmearedPtHandle);
   iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSPhi"       ,jetAK8CHSPhiHandle);  
@@ -700,7 +743,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   if (not ISDATA) iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSGenJetEta"        ,jetAK8CHSGenJetEtaHandle);
   if (not ISDATA) iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSGenJetPhi"        ,jetAK8CHSGenJetPhiHandle);
 
-
+*/
   iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppiPt"        ,jetAK8PuppiPtHandle);
   iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppiSmearedPt"        ,jetAK8PuppiSmearedPtHandle);
   iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppiPhi"       ,jetAK8PuppiPhiHandle);  
@@ -722,7 +765,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   iEvent.getByLabel("vertexInfo", "npv"        ,npvHandle);
   iEvent.getByLabel("fixedGridRhoFastjetAll", ""        ,RhoHandle);
 
-
+/*
   iEvent.getByLabel( "jetsAK8CHS", "jetAK8CHSPtResolution",  jetAK8CHSRESHandle);
 
   iEvent.getByLabel( "jetsAK8CHS", "jetAK8CHSJERSF",  jetAK8CHSJERSFHandle);
@@ -734,7 +777,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSsoftDropMassCHS"   ,jetAK8CHSsoftDropMassHandle); 
   //iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSsoftDropMassPuppi"   ,jetAK8CHSsoftDropMassPuppiHandle); 
 
-
+*/
   iEvent.getByLabel( "jetsAK8Puppi", "jetAK8PuppiPtResolution",  jetAK8PuppiRESHandle);
 
   iEvent.getByLabel( "jetsAK8Puppi", "jetAK8PuppiJERSF",  jetAK8PuppiJERSFHandle);
@@ -745,8 +788,8 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
   iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppiprunedMass"   ,jetAK8PuppiprunedMassHandle);  
   iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppisoftDropMass"   ,jetAK8PuppisoftDropMassHandle); 
 
-  iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSvSubjetIndex0"   ,jetAK8CHSvSubjetIndex0Handle);  
-  iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSvSubjetIndex1"   ,jetAK8CHSvSubjetIndex1Handle);
+  //iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSvSubjetIndex0"   ,jetAK8CHSvSubjetIndex0Handle);  
+  //iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSvSubjetIndex1"   ,jetAK8CHSvSubjetIndex1Handle);
 
 
   iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppivSubjetIndex0"   ,jetAK8PuppivSubjetIndex0Handle);  
@@ -773,7 +816,7 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 
   if (jes_=="nominal"&&jer_=="nominal")
 	{
-
+/*
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSchargedHadronEnergyFrac"       ,jetAK8CHSchargedHadronEnergyFracHandle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSneutralEmEnergyFrac"       ,jetAK8CHSneutralEmEnergyFracHandle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSneutralHadronEnergyFrac"       ,jetAK8CHSneutralHadronEnergyFracHandle);  
@@ -785,34 +828,22 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 
 
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSCSVv2"       ,jetAK8CHSCSVHandle);  
+
+
+
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSCMVAv2"       ,jetAK8CHSCMVAv2Handle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSPartonFlavour"   ,jetAK8CHSPartonFlavourHandle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSfilteredMassCHS"   ,jetAK8CHSfilteredMassHandle);  
 
-  	///iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStopMass"   ,jetAK8CHStopMassHandle);  
+
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStrimmedMassCHS"   ,jetAK8CHStrimmedMassHandle);   
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSjecFactor0"   ,jetAK8CHSjecFactor0Handle);  
-  	//iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSminmass"   ,jetAK8CHSminmassHandle);  
-  	//iEvent.getByLabel("jetsAK8CHS", "jetAK8CHSnSubJets"   ,jetAK8CHSnSubJetsHandle);  
+ 
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStau1CHS"      ,jetAK8CHStau1Handle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStau2CHS"      ,jetAK8CHStau2Handle);  
   	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStau3CHS"      ,jetAK8CHStau3Handle); 
 
-
-     	//iEvent.getByLabel("subjetsAK8CHS", "subjetAK8CHSjecFactor0"   ,subjetAK8CHSjecFactor0Handle);
-     	//iEvent.getByLabel("subjetsAK8CHS", "subjetAK8CHSPt"   ,subjetAK8CHSPtHandle);
-     	//iEvent.getByLabel("subjetsAK8CHS", "subjetAK8CHSPhi"   ,subjetAK8CHSPhiHandle);
-     	//iEvent.getByLabel("subjetsAK8CHS", "subjetAK8CHSEta"   ,subjetAK8CHSEtaHandle);
-     	//iEvent.getByLabel("subjetsAK8CHS", "subjetAK8CHSE"   ,subjetAK8CHSEHandle);
-
- 
-  //	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStopSubjetIndex0"   ,jetAK8CHStopSubjetIndex0Handle);  
-  //	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStopSubjetIndex1"   ,jetAK8CHStopSubjetIndex1Handle);  
-  //	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStopSubjetIndex2"   ,jetAK8CHStopSubjetIndex2Handle);  
-  //	iEvent.getByLabel("jetsAK8CHS", "jetAK8CHStopSubjetIndex3"   ,jetAK8CHStopSubjetIndex3Handle); 
-
-
-
+*/
   	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppichargedHadronEnergyFrac"       ,jetAK8PuppichargedHadronEnergyFracHandle);  
   	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppineutralEmEnergyFrac"       ,jetAK8PuppineutralEmEnergyFracHandle);  
   	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppineutralHadronEnergyFrac"       ,jetAK8PuppineutralHadronEnergyFracHandle);  
@@ -829,38 +860,32 @@ void SlimUserData_jetsAK8::produce( edm::Event& iEvent, const edm::EventSetup& i
 
 
   	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppiCSVv2"       ,jetAK8PuppiCSVHandle);  
+  	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppiDoubleBAK8"       ,jetAK8PuppiDoubleBAK8Handle);  
   	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppiCMVAv2"       ,jetAK8PuppiCMVAv2Handle);  
   	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppiPartonFlavour"   ,jetAK8PuppiPartonFlavourHandle);  
   	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppifilteredMass"   ,jetAK8PuppifilteredMassHandle);  
 
-  	///iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppitopMass"   ,jetAK8PuppitopMassHandle);  
   	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppitrimmedMass"   ,jetAK8PuppitrimmedMassHandle);   
   	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppijecFactor0"   ,jetAK8PuppijecFactor0Handle);  
-  	//iEvent.getByLabel("jetsAK8Puppi", "jetAK8Puppiminmass"   ,jetAK8PuppiminmassHandle);  
-  	//iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppinSubJets"   ,jetAK8PuppinSubJetsHandle);  
+  
   	iEvent.getByLabel("jetsAK8Puppi", "jetAK8Puppitau1"      ,jetAK8Puppitau1Handle);  
   	iEvent.getByLabel("jetsAK8Puppi", "jetAK8Puppitau2"      ,jetAK8Puppitau2Handle);  
   	iEvent.getByLabel("jetsAK8Puppi", "jetAK8Puppitau3"      ,jetAK8Puppitau3Handle); 
 
- 
-  //	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppitopSubjetIndex0"   ,jetAK8PuppitopSubjetIndex0Handle);  
-  //	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppitopSubjetIndex1"   ,jetAK8PuppitopSubjetIndex1Handle);  
-  //	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppitopSubjetIndex2"   ,jetAK8PuppitopSubjetIndex2Handle);  
-  //	iEvent.getByLabel("jetsAK8Puppi", "jetAK8PuppitopSubjetIndex3"   ,jetAK8PuppitopSubjetIndex3Handle); 
- 
+
 	}
 
   //float JMR_PRUNED = 1.07;
-  float JMS_PRUNED = 1.0;
+  //float JMS_PRUNED = 1.0;
 
   //float SIGMA_JMR_PRUNED_EX = 0.103;
-  float SIGMA_JMS_PRUNED_EX = 0.02;
+  //float SIGMA_JMS_PRUNED_EX = 0.02;
 
-  float JMR_PUPPISD = 1.08;
+  float JMR_PUPPISD = 1.0;
   float JMS_PUPPISD = 1.0;
 
-  float SIGMA_JMR_PUPPISD = 0.11;
-  float SIGMA_JMS_PUPPISD = 0.004;
+  float SIGMA_JMR_PUPPISD = 0.2;
+  float SIGMA_JMS_PUPPISD = 0.0094;
 
 ////TO UPDATE!
 
@@ -955,7 +980,6 @@ else
   		jecAK8PUPPIPayloadNames_.push_back("jecfiles/"+era_+runtxt_+"_MC_L3Absolute_AK8PFPuppi.txt");
 		}
 
-//std::cout<<runtxt_<<std::endl;
 std::vector<JetCorrectorParameters> vParPUPPI;
 
 for ( std::vector<std::string>::const_iterator payloadBegin = jecAK8PUPPIPayloadNames_.begin(), payloadEnd = jecAK8PUPPIPayloadNames_.end(), ipayload = payloadBegin; ipayload != payloadEnd; ++ipayload ) 
@@ -971,16 +995,22 @@ jecAK8PUPPI_ = boost::shared_ptr<FactorizedJetCorrector> ( new FactorizedJetCorr
 JetCorrectionUncertainty *jecUncPUPPI = new JetCorrectionUncertainty("jecfiles/"+era_+"V4_MC_Uncertainty_AK8PFPuppi.txt");
 JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+era_+"V4_MC_Uncertainty_AK8PFchs.txt");
 
+/*
+std::cout<<"- "<<std::endl;
+std::cout<<"- "<<std::endl;
+std::cout<<"- "<<std::endl;
+std::cout<<"newevent "<<std::endl;
+std::cout<<"JES "<<jes_<<std::endl;
+std::cout<<"JER "<<jer_<<std::endl;
+*/
 
 
 
-
-  //CHS
+  /*CHS
   for( size_t i=0; i<jetAK8CHSPtHandle->size(); i++ ) 
 	{
 	float shift = 1.0;
 	float JECcorr = 1.0;
-	float SDshift = 1.0;
 
 
         TLorentzVector v1;
@@ -998,44 +1028,28 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 		JECcorr = fmaxf(0.0,jetAK8CHSjecFactor0Handle->at(i)*JEC_Corr(jecAK8CHS_,uncorrpt,jetAK8CHSEtaHandle->at(i),ISDATA,jetAK8CHSjetAreaHandle->at(i),*RhoHandle.product()));
 		}
 
-	//float prunedjes = 1.0;
-	//float prunedjer = 1.0;
-
-
-	//float prunedjerunc = 1.0;
 	
+	float chscorrpt = jetAK8CHSPtHandle->at(i)*JECcorr;
+
 	float prunedshift = JMS_PRUNED;
 
 
    	if (jes_!="nominal")
 		{
-		shift = fmaxf(0.0,JES_Uncert(jecUncCHS,jetAK8CHSPtHandle->at(i),jetAK8CHSEtaHandle->at(i),jes_));
+		shift = fmaxf(0.0,JES_Uncert(jecUncCHS,chscorrpt,jetAK8CHSEtaHandle->at(i),jes_));
 
 		float sign = (shift-1.0)/std::fabs(shift-1.0);
 		float prunedjesunc = 1.+sign*(std::sqrt( (1.-shift)*(1.-shift) + (SIGMA_JMS_PRUNED_EX)*(SIGMA_JMS_PRUNED_EX)));
 
 
-		float SDjesunc = 1.0;
-		if (jes_=="up") SDjesunc = 1.+SIGMA_JMS_PUPPISD;
-		else if (jes_=="down") SDjesunc = 1.-SIGMA_JMS_PUPPISD;
-		SDshift=SDshift*SDjesunc;			
-
-
-
-
 		prunedshift=prunedshift*prunedjesunc;		
 
 		}
-	//float puppiPt = jetAK8CHSPtPuppiHandle->at(i);
-	//float puppiEta = jetAK8CHSEtaPuppiHandle->at(i);
-	//float puppiCorr = getPUPPIweight(puppiPt,puppiEta);
-	//float puppicorrsdmass = 0.0;
- 
-	//float smfac = 1.0;
+	
 
 	if (not ISDATA) 
 		{
-			//float SFSDMASS = 1.0;
+
 
 			float SFapp=1.0;
 			float RESapp=1.0;
@@ -1049,25 +1063,25 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 				{	
 					
 				  	JME::JetParameters jetParam;
-				    	jetParam.setJetPt(jetAK8CHSPtHandle->at(i)).setJetEta(jetAK8CHSEtaHandle->at(i)).setRho(*RhoHandle.product());
+				    	jetParam.setJetPt(chscorrpt).setJetEta(jetAK8CHSEtaHandle->at(i)).setRho(*RhoHandle.product());
 
 					if (jer_ == "nominal") 
 						{
 						SFapp = res_sfC.getScaleFactor(jetParam);
-						//SFSDMASS = JMR_PUPPISD;
+
 						}
 					else if (jer_ == "up")
 						{ 
 						SFapp = res_sfC.getScaleFactor(jetParam, Variation::UP);	
-						//SFSDMASS = JMR_PUPPISD+SIGMA_JMR_PUPPISD;
+
 						}
  					else if (jer_ == "down") 
 						{
 						SFapp = res_sfC.getScaleFactor(jetParam, Variation::DOWN);
-						//SFSDMASS = JMR_PUPPISD-SIGMA_JMR_PUPPISD;
+
 						}
 
-					RESapp = resoC.getResolution(jetParam)*jetAK8CHSPtHandle->at(i);
+					RESapp = resoC.getResolution(jetParam)*chscorrpt;
 
 				}
 			else
@@ -1079,77 +1093,37 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 					if (jer_ == "nominal") 
 						{
 						SFapp = jetAK8CHSJERSFHandle->at(i);
-						//SFSDMASS = JMR_PUPPISD;
 						}
 					else if (jer_ == "up")
 						{
 						SFapp = jetAK8CHSJERSFUpHandle->at(i);
-						//SFSDMASS = JMR_PUPPISD+SIGMA_JMR_PUPPISD;
 						}
  					else if (jer_ == "down")
 						{
 						SFapp = jetAK8CHSJERSFDownHandle->at(i);
-						//SFSDMASS = JMR_PUPPISD-SIGMA_JMR_PUPPISD;
 						}
-					RESapp = jetAK8CHSRESHandle->at(i)*jetAK8CHSPtHandle->at(i);
+					RESapp = jetAK8CHSRESHandle->at(i)*chscorrpt;
 
 
 
 
 				}	
 
-			bool DRmatch =  deltaR(jetAK8CHSEtaHandle->at(i), jetAK8CHSPhiHandle->at(i), jetAK8CHSGenJetEtaHandle->at(i), jetAK8CHSGenJetPhiHandle->at(i))<0.4/2.0 ;
-			bool ptmatch = std::fabs(jetAK8CHSPtHandle->at(i)-jetAK8CHSGenJetPtHandle->at(i))<3.0*RESapp;
+			bool DRmatch =  deltaR(jetAK8CHSEtaHandle->at(i), jetAK8CHSPhiHandle->at(i), jetAK8CHSGenJetEtaHandle->at(i), jetAK8CHSGenJetPhiHandle->at(i))<0.4 ;
+			bool ptmatch = std::fabs(chscorrpt-jetAK8CHSGenJetPtHandle->at(i))<3.0*RESapp;
 
 
-
-
-			//float SJ0index = jetAK8CHSvSubjetPuppiIndex0Handle->at(i);
-			//float SJ1index = jetAK8CHSvSubjetPuppiIndex1Handle->at(i);
-
-        		TLorentzVector vgen1;
-			/*
-			float GENSDMASS = -1.0;
-			float calcSDMASS = -1.0;
-			std::cout<<SJ0index<<std::endl;
-			if (SJ0index>=0 && SJ1index>=0)
-				{
-				
-				vgen1.SetPtEtaPhiE(subjetAK8PuppiGenJetPtHandle->at(SJ1index),subjetAK8PuppiGenJetEtaHandle->at(SJ1index),subjetAK8PuppiGenJetPhiHandle->at(SJ1index),subjetAK8PuppiGenJetEHandle->at(SJ1index));
-
-				TLorentzVector vgen0;
-				vgen0.SetPtEtaPhiE(subjetAK8PuppiGenJetPtHandle->at(SJ0index),subjetAK8PuppiGenJetEtaHandle->at(SJ0index),subjetAK8PuppiGenJetPhiHandle->at(SJ0index),subjetAK8PuppiGenJetEHandle->at(SJ0index));
-
-
-				TLorentzVector vSJ1;
-				vSJ1.SetPtEtaPhiE(subjetAK8PuppiPtHandle->at(SJ1index),subjetAK8PuppiEtaHandle->at(SJ1index),subjetAK8PuppiPhiHandle->at(SJ1index),subjetAK8PuppiEHandle->at(SJ1index));
-
-				TLorentzVector vSJ0;
-				vSJ0.SetPtEtaPhiE(subjetAK8PuppiPtHandle->at(SJ0index),subjetAK8PuppiEtaHandle->at(SJ0index),subjetAK8PuppiPhiHandle->at(SJ0index),subjetAK8PuppiEHandle->at(SJ0index));
-				GENSDMASS = (vgen0+vgen1).M();
-
-				calcSDMASS = (vSJ1*(subjetAK8PuppijecFactor0Handle->at(SJ1index))+vSJ0*(subjetAK8PuppijecFactor0Handle->at(SJ0index))).M();
-
-				}
-			puppicorrsdmass = JMS_PUPPISD*calcSDMASS*puppiCorr;
-			std::cout<<puppicorrsdmass<<std::endl;
-			std::cout<<jetAK8CHSsoftDropMassPuppiHandle->at(i)*JMS_PUPPISD*puppiCorr<<std::endl<<std::endl;
-			float SDsmearcorr = 1+(SFSDMASS-1)*((puppicorrsdmass-GENSDMASS)/puppicorrsdmass);
-			*/
-			//float ptJERCor = jetAK8CHSGenJetPtHandle->at(i)+SFapp*(jetAK8CHSPtHandle->at(i)-jetAK8CHSGenJetPtHandle->at(i));
-			float ptcorrunsmear = jetAK8CHSPtHandle->at(i)*JECcorr;
+			float ptcorrunsmear = chscorrpt;
 			float ptgen =jetAK8CHSGenJetPtHandle->at(i);
 
-			float smearcorr = 1+(SFapp-1)*((ptcorrunsmear-ptgen)/ptcorrunsmear);
+			float smearcorr = 1.0+(SFapp-1.0)*((ptcorrunsmear-ptgen)/ptcorrunsmear);
 
 
 			
 			if (DRmatch and ptmatch)
 				{
 					shift = shift*fmaxf(0.0,smearcorr);
-					//if (GENSDMASS>0.0) smfac =fmaxf(0.0,SDsmearcorr);				
-					//SDshift = SDshift*smfac;
-
+					
 					prunedshift = prunedshift*fmaxf(0.0,smearcorr);
 				}
 			else
@@ -1160,14 +1134,13 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 					//std::cout<<"RES: "<<RESapp<<std::endl;
 					//std::cout<<"RES threesig: "<<3.0*RESapp<<std::endl;
 					//std::cout<<"SF: "<<SFapp<<std::endl;
-					Double_t sigma =std::sqrt( SFapp*SFapp-1 ) * RESapp;// √(SF^2-1) * sigma_MC_PT.;
+					Double_t sigma =std::sqrt( SFapp*SFapp-1.0 ) * RESapp;// √(SF^2-1) * sigma_MC_PT.;
 					TRandom3 *r = new TRandom3(0); 
 					Double_t smearify = r->Gaus(0.0,sigma); 
 
-					shift = shift*fmaxf(0.0,(1.0+smearify/jetAK8CHSPtHandle->at(i)));
-					prunedshift = prunedshift*fmaxf(0.0,(1.0+smearify/jetAK8CHSPtHandle->at(i)));
-					//if (GENSDMASS>0.0) smfac =fmaxf(0.0,SDsmearcorr);				
-					//SDshift = SDshift*smfac;
+					shift = shift*fmaxf(0.0,(1.0+smearify/chscorrpt));
+					prunedshift = prunedshift*fmaxf(0.0,(1.0+smearify/chscorrpt));
+				
 					delete r;
 				}
 
@@ -1177,19 +1150,7 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 		}		
 	
 
-
-
-	//int jetAK8CHSSJ0ind = jetAK8CHSvSubjetIndex0Handle->at(i); 
-	//int jetAK8CHSSJ1ind = jetAK8CHSvSubjetIndex1Handle->at(i); 
-  
-        //TLorentzVector SJ0;
-        //TLorentzVector SJ1;
-
-	//SJ0.SetPtEtaPhiE(subjetAK8CHSPtHandle->at(jetAK8CHSSJ0ind),subjetAK8CHSEtaHandle->at(jetAK8CHSSJ0ind),subjetAK8CHSPhiHandle->at(jetAK8CHSSJ0ind),subjetAK8CHSEHandle->at(jetAK8CHSSJ0ind));
-	//SJ1.SetPtEtaPhiE(subjetAK8CHSPtHandle->at(jetAK8CHSSJ1ind),subjetAK8CHSEtaHandle->at(jetAK8CHSSJ1ind),subjetAK8CHSPhiHandle->at(jetAK8CHSSJ1ind),subjetAK8CHSEHandle->at(jetAK8CHSSJ1ind));
-
-
-	jetAK8CHSPt->push_back(jetAK8CHSPtHandle->at(i)*shift*JECcorr);      
+	jetAK8CHSPt->push_back(chscorrpt*shift);      
 	jetAK8CHSPhi->push_back(jetAK8CHSPhiHandle->at(i));       
 	jetAK8CHSEta->push_back(jetAK8CHSEtaHandle->at(i));       
 
@@ -1200,23 +1161,10 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 	//Here we recalculate the SD mass and eliminate all corrections
 	 
 
-
-
-
-
 	float corrsdmass = Mass_Corr(jecAK8CHS_,uncorrpt,jetAK8CHSEtaHandle->at(i),uncorrE,ISDATA,jetAK8CHSjetAreaHandle->at(i),*RhoHandle.product(),*npvHandle.product());
 
 
-
-
-	//uncorrsdmass = (jetAK8CHSsoftDropMassHandle->at(i))*;
-
 	jetAK8CHSsoftDropMass->push_back(corrsdmass*jetAK8CHSsoftDropMassHandle->at(i)*shift); 
-
-	//jetAK8CHSCorrectedsoftDropMassPuppi->push_back(puppicorrsdmass*SDshift);  
-	//jetAK8CHSCorrectedsoftDropMassUnsmearPuppi->push_back(puppicorrsdmass*SDshift*(1.0/smfac));      
-
-	//jetAK8CHSsoftDropMassPuppi->push_back(corrsdmass*jetAK8CHSsoftDropMassHandle->at(i)*shift); 
 
 	jetAK8CHSsoftDropMassuncorr->push_back(jetAK8CHSsoftDropMassHandle->at(i)*shift);  
 	jetAK8CHSprunedMass->push_back(corrsdmass*jetAK8CHSprunedMassHandle->at(i)*prunedshift);   
@@ -1231,30 +1179,18 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 		jetAK8CHSPartonFlavour->push_back(jetAK8CHSPartonFlavourHandle->at(i)); 
 		  
 
-		//TLV.SetPtEtaPhiM(ptcorr1,jetAK8EtaHandle->at(i),jetAK8PhiHandle->at(i),jetAK8MassHandle->at(i));
-		
-
-
 		jetAK8CHSfilteredMass->push_back(jetAK8CHSfilteredMassHandle->at(i));   
-		//jetAK8CHStopMass->push_back(jetAK8CHStopMassHandle->at(i));   
+
 		jetAK8CHStrimmedMass->push_back(jetAK8CHStrimmedMassHandle->at(i));    
 		jetAK8CHSjecFactor0->push_back(jetAK8CHSjecFactor0Handle->at(i));   
-		//jetAK8CHSminmass->push_back(jetAK8CHSminmassHandle->at(i));   
-		//jetAK8CHSnSubJets->push_back(jetAK8CHSnSubJetsHandle->at(i));   
+	 
 		jetAK8CHStau1->push_back(jetAK8CHStau1Handle->at(i));      
 		jetAK8CHStau2->push_back(jetAK8CHStau2Handle->at(i));      
 		jetAK8CHStau3->push_back(jetAK8CHStau3Handle->at(i));    
 
 		jetAK8CHSvSubjetIndex0->push_back(jetAK8CHSvSubjetIndex0Handle->at(i));   
 		jetAK8CHSvSubjetIndex1->push_back(jetAK8CHSvSubjetIndex1Handle->at(i)); 
-  
-		//jetAK8CHStopSubjetIndex0->push_back(jetAK8CHStopSubjetIndex0Handle->at(i));   
-		//jetAK8CHStopSubjetIndex1->push_back(jetAK8CHStopSubjetIndex1Handle->at(i));   
-		//jetAK8CHStopSubjetIndex2->push_back(jetAK8CHStopSubjetIndex2Handle->at(i));   
-		//jetAK8CHStopSubjetIndex3->push_back(jetAK8CHStopSubjetIndex3Handle->at(i)); 
-
-
-
+ 
 
 
 
@@ -1262,7 +1198,6 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 	  	float CHF = jetAK8CHSchargedHadronEnergyFracHandle->at(i);
 	  	float NEMF = jetAK8CHSneutralEmEnergyFracHandle->at(i);
 	  	float NHF = jetAK8CHSneutralHadronEnergyFracHandle->at(i);
-	  	//float NC = jetAK8CHSNumConstituentsHandle->at(i);
 	  	float CM = jetAK8CHSchargedMultiplicityHandle->at(i);  
 	  	float CEMF = jetAK8CHSchargedEmEnergyFracHandle->at(i);
 
@@ -1284,7 +1219,7 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 		}
 
 	}
-
+  */
   //Puppi
   for( size_t i=0; i<jetAK8PuppiPtHandle->size(); i++ ) 
 	{
@@ -1307,40 +1242,31 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 		JECcorr = fmaxf(0.0,jetAK8PuppijecFactor0Handle->at(i)*JEC_Corr(jecAK8PUPPI_,uncorrpt,jetAK8PuppiEtaHandle->at(i),ISDATA,jetAK8PuppijetAreaHandle->at(i),*RhoHandle.product()));
 		}
 
-	//float prunedjes = 1.0;
-	//float prunedjer = 1.0;
 
-
-	//float prunedjerunc = 1.0;
-	
-	//float prunedshift = 1.0;
-
-
+	float puppicorrpt = jetAK8PuppiPtHandle->at(i)*JECcorr;
    	if (jes_!="nominal")
 		{
-		shift = fmaxf(0.0,JES_Uncert(jecUncPUPPI,jetAK8PuppiPtHandle->at(i),jetAK8PuppiEtaHandle->at(i),jes_));
+		shift = fmaxf(0.0,JES_Uncert(jecUncPUPPI,puppicorrpt,jetAK8PuppiEtaHandle->at(i),jes_));
 
 
-		//float sign = (shift-1.0)/std::fabs(shift-1.0);
-		//float jesunc = 1.+sign*(std::sqrt( (1.-shift)*(1.-shift) + (0.002)*(0.002)));
+		//float SDjesunc = 1.0;
+		if (jes_=="up") JMS_PUPPISD += SIGMA_JMS_PUPPISD;
+		else if (jes_=="down") JMS_PUPPISD -= SIGMA_JMS_PUPPISD;
+		SDshift=SDshift*JMS_PUPPISD;		
+		//std::cout<<"sdjes "<<SDjesunc<<std::endl;
 
-
-		float SDjesunc = 1.0;
-		if (jes_=="up") SDjesunc = 1.+SIGMA_JMS_PUPPISD;
-		else if (jes_=="down") SDjesunc = 1.-SIGMA_JMS_PUPPISD;
-		SDshift=SDshift*SDjesunc;		
-		//prunedshift=prunedshift*prunedjesunc;		
 
 		}
+	//std::cout<<"JECUPDATE "<<JECcorr*shift<<std::endl;
 
 
-	float puppiPt = jetAK8PuppiPtHandle->at(i)*JECcorr;
 	float puppiEta = jetAK8PuppiEtaHandle->at(i);
 
-	float puppiCorr = getPUPPIweight(puppiPt,puppiEta);
-	float puppicorrsdmass = JMS_PUPPISD*jetAK8PuppisoftDropMassHandle->at(i)*puppiCorr;
- 
+	float puppiCorr = getPUPPIweight(puppicorrpt,puppiEta);
 
+ 
+	float ptsmfacM0 = 0.0;
+	float ptsmfacM1 = 0.0;
 	float smfac = 1.0;
 	if (not ISDATA) 
 		{
@@ -1351,13 +1277,9 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 			float RESapp=1.0;
 			if (reapplyjer_)
 				{	
-					//JME::JetResolutionScaleFactor res_sfC;
-					//JME::JetResolution resoC;
-					//std::string JERFile_ = era_+"_MC_SF_AK8PFPuppi.txt";
 					
-
 				  	JME::JetParameters jetParam;
-				    	jetParam.setJetPt(jetAK8PuppiPtHandle->at(i)).setJetEta(jetAK8PuppiEtaHandle->at(i)).setRho(*RhoHandle.product());
+				    	jetParam.setJetPt(puppicorrpt).setJetEta(jetAK8PuppiEtaHandle->at(i)).setRho(*RhoHandle.product());
 
 					if (jer_ == "nominal") 
 						{
@@ -1376,7 +1298,7 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 						}
 
 				
-					RESapp = resoP.getResolution(jetParam)*jetAK8PuppiPtHandle->at(i);
+					RESapp = resoP.getResolution(jetParam)*puppicorrpt;
 
 				}
 			else
@@ -1397,53 +1319,17 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 						SFapp = jetAK8PuppiJERSFDownHandle->at(i);
 						SFSDMASS = JMR_PUPPISD-SIGMA_JMR_PUPPISD;
 						}
-					RESapp = jetAK8PuppiRESHandle->at(i)*jetAK8PuppiPtHandle->at(i);
+					RESapp = jetAK8PuppiRESHandle->at(i)*puppicorrpt;
 
 				}	
 
-			bool DRmatch =  deltaR(jetAK8PuppiEtaHandle->at(i), jetAK8PuppiPhiHandle->at(i), jetAK8PuppiGenJetEtaHandle->at(i), jetAK8PuppiGenJetPhiHandle->at(i))<0.4/2.0 ;
-			bool ptmatch = std::fabs(jetAK8PuppiPtHandle->at(i)-jetAK8PuppiGenJetPtHandle->at(i))<3.0*RESapp;
+
+			float DRval =  deltaR(jetAK8PuppiEtaHandle->at(i), jetAK8PuppiPhiHandle->at(i), jetAK8PuppiGenJetEtaHandle->at(i), jetAK8PuppiGenJetPhiHandle->at(i)) ;
+			float ptval = std::fabs(puppicorrpt-jetAK8PuppiGenJetPtHandle->at(i));
 
 
-        		//TLorentzVector vgen;
-			//vgen.SetPtEtaPhiE(jetAK8CHSPtHandle->at(i),jetAK8CHSEtaHandle->at(i),jetAK8CHSPhiHandle->at(i),jetAK8CHSEHandle->at(i));
-			
-
-			//std::cout<<jetAK8PuppivSubjetIndex0Handle->size()<<std::endl;
-
-
-			float SJ0index = jetAK8PuppivSubjetIndex0Handle->at(i);
-			float SJ1index = jetAK8PuppivSubjetIndex1Handle->at(i);
-
-        		TLorentzVector vgen1;
-
-
-			float GENSDMASS = -1.0;
-			if (SJ0index>=0 && SJ1index>=0)
-				{
-
-				vgen1.SetPtEtaPhiE(subjetAK8PuppiGenJetPtHandle->at(SJ1index),subjetAK8PuppiGenJetEtaHandle->at(SJ1index),subjetAK8PuppiGenJetPhiHandle->at(SJ1index),subjetAK8PuppiGenJetEHandle->at(SJ1index));
-
-				TLorentzVector vgen0;
-				vgen0.SetPtEtaPhiE(subjetAK8PuppiGenJetPtHandle->at(SJ0index),subjetAK8PuppiGenJetEtaHandle->at(SJ0index),subjetAK8PuppiGenJetPhiHandle->at(SJ0index),subjetAK8PuppiGenJetEHandle->at(SJ0index));
-
-
-				//TLorentzVector vSJ1;
-				//vSJ1.SetPtEtaPhiE(subjetAK8PuppiPtHandle->at(SJ1index),subjetAK8PuppiEtaHandle->at(SJ1index),subjetAK8PuppiPhiHandle->at(SJ1index),subjetAK8PuppiEHandle->at(SJ1index));
-
-				//TLorentzVector vSJ0;
-				//vSJ0.SetPtEtaPhiE(subjetAK8PuppiPtHandle->at(SJ0index),subjetAK8PuppiEtaHandle->at(SJ0index),subjetAK8PuppiPhiHandle->at(SJ0index),subjetAK8PuppiEHandle->at(SJ0index));
-				GENSDMASS = (vgen0+vgen1).M();
-
-
-				//std::cout<<"SDFromNtuple "<<jetAK8PuppisoftDropMassHandle->at(i)<<std::endl;
-				//std::cout<<"SDFromCALCUNCORR "<<(vSJ1*(subjetAK8PuppijecFactor0Handle->at(SJ1index))+vSJ0*(subjetAK8PuppijecFactor0Handle->at(SJ0index))).M()<<std::endl;
-				//std::cout<<"SDFromCALC "<<(vSJ1+vSJ0).M()<<std::endl;
-
-				}
-
-
-
+			bool DRmatch = DRval<0.4 ;
+			bool ptmatch = ptval<3.0*RESapp;
 
 
 
@@ -1451,67 +1337,81 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 			//std::cout<<"GENSDMASS "<<GENSDMASS<<std::endl;
 			
 			//std::cout<<"PT SMEAR FACTOR "<<SFapp<<std::endl;
-			//std::cout<<"PRE "<<jetAK8PuppiPtHandle->at(i)<<std::endl;
-			//float ptJERCor = jetAK8PuppiGenJetPtHandle->at(i)+SFapp*(jetAK8PuppiPtHandle->at(i)-jetAK8PuppiGenJetPtHandle->at(i));
+			//std::cout<<"PRE "<<puppicorrpt<<std::endl;
+			//float ptJERCor = jetAK8PuppiGenJetPtHandle->at(i)+SFapp*(puppicorrpt-jetAK8PuppiGenJetPtHandle->at(i));
 			//float SDmassJERCor = GENSDMASS+SFSDMASS*(puppicorrsdmass-GENSDMASS);
 
-			float ptcorrunsmear = jetAK8PuppiPtHandle->at(i)*JECcorr;
+			float ptcorrunsmear = puppicorrpt;
 			float ptgen =jetAK8PuppiGenJetPtHandle->at(i);
 
-			float smearcorr = 1+(SFapp-1)*((ptcorrunsmear-ptgen)/ptcorrunsmear);
-			float SDsmearcorr = 1+(SFSDMASS-1)*((puppicorrsdmass-GENSDMASS)/puppicorrsdmass);
-			//float SDsmearcorrPT = 1+(SFSDMASS-1)*((ptcorrunsmear-ptgen)/ptcorrunsmear);
+			float smearcorr = 1.0+(SFapp-1.0)*((ptcorrunsmear-ptgen)/ptcorrunsmear);
+
+			//Currently debugging
+			
+
+			Double_t massresfac =std::sqrt(fmaxf(0.0,(SFSDMASS*SFSDMASS-1.0)));// √(SF^2-1) * sigma_MC_PT.;
+			TRandom3 *massr = new TRandom3(0); 
+			float SFSDRESO =  10.1/80.4; 
+			
+			Double_t masssmearify = massr->Gaus(0.0,SFSDRESO)*massresfac; 
+			//std::cout<<"massresfac "<<massresfac<<std::endl;
+			//std::cout<<"masssmearify "<<masssmearify<<std::endl;
+			smfac = smfac*fmaxf(0.0,(1.0+masssmearify));
+			//std::cout<<"puppicorrsdmass "<<SDshift*jetAK8PuppisoftDropMassHandle->at(i)*puppiCorr<<std::endl;
+			//std::cout<<"sdsmear "<<smfac<<std::endl;
+			SDshift = SDshift*smfac;
+
+			delete massr;
 
 
 			if (DRmatch and ptmatch)
 				{
 					shift = shift*fmaxf(0.0,smearcorr);
-					if (GENSDMASS>0.0) smfac =fmaxf(0.0,SDsmearcorr);				
-					SDshift = SDshift*smfac;
-
-					//SDshift = SDshift*fmaxf(0.0,SDsmearcorrPT);
-					//prunedshift = prunedshift*fmaxf(0.0,smearcorr);
-
 					
 						
 				}
 			else
 				{
+
+
 					//std::cout<<"Hybrid: "<<std::endl;
-					//std::cout<<"DeltaR match: "<<deltaR(jetAK8EtaHandle->at(i), jetAK8PhiHandle->at(i), jetAK8GenJetEtaHandle->at(i), jetAK8GenJetPhiHandle->at(i)) <<std::endl;
-					//std::cout<<"DeltaPt match: "<<std::fabs(jetAK8PtHandle->at(i)-jetAK8GenJetPtHandle->at(i)) <<std::endl;
+					//std::cout<<"DeltaR match: "<<DRval<<std::endl;
+					//std::cout<<"DeltaPt match: "<<ptval <<std::endl;
 					//std::cout<<"RES: "<<RESapp<<std::endl;
 					//std::cout<<"RES threesig: "<<3.0*RESapp<<std::endl;
-					//std::cout<<"SF: "<<SFapp<<std::endl;
-					Double_t sigma =std::sqrt( SFapp*SFapp-1 ) * RESapp;// √(SF^2-1) * sigma_MC_PT.;
-					TRandom3 *r = new TRandom3(0); 
-					Double_t smearify = r->Gaus(0.0,sigma); 
-
-
-					shift = shift*fmaxf(0.0,(1.0+smearify/jetAK8PuppiPtHandle->at(i)));
-					//prunedshift = prunedshift*fmaxf(0.0,(1.0+smearify/jetAK8PuppiPtHandle->at(i)));
+				        //std::cout<<"SF: "<<SFapp<<std::endl;
+					//Double_t sigma =std::sqrt( SFapp*SFapp-1.0 ) * RESapp;// √(SF^2-1) * sigma_MC_PT.;
+					//TRandom3 *r = new TRandom3(0); 
+					//Double_t smearify = r->Gaus(0.0,sigma); 
 
 
 
-					//Double_t sigmaSD =std::sqrt( SFSDMASS*SFSDMASS-1 ) * RESapp;// √(SF^2-1) * sigma_MC_PT.;
-					//TRandom3 *r1 = new TRandom3(0); 
-					//Double_t smearifySD = r1->Gaus(0.0,sigmaSD); 
-
-					//SDshift = SDshift*fmaxf(0.0,(1.0+smearify/jetAK8PuppiPtHandle->at(i)));
-					if (GENSDMASS>0.0) smfac =fmaxf(0.0,SDsmearcorr);				
-					SDshift = SDshift*smfac;
-					delete r;
 					
+					//delete r;
+
+
+
+
+					Double_t ptresfac =std::sqrt(SFapp*SFapp-1.0 );// √(SF^2-1) * sigma_MC_PT.;
+					TRandom3 *r1 = new TRandom3(0); 
+					Double_t ptsmearify = r1->Gaus(0.0,RESapp/puppicorrpt)*ptresfac; 
+					shift = shift*fmaxf(0.0,(1.0+ptsmearify));
+					//std::cout<<"Mehtod0 "<<fmaxf(0.0,(1.0+ptsmearify))<<std::endl;
+					//std::cout<<"Mehtod1 "<<fmaxf(0.0,(1.0+smearify/puppicorrpt))<<std::endl;
+					ptsmfacM0 = fmaxf(0.0,(1.0+ptsmearify));
+
+					delete r1;
+
 				}
 
 	/*
 	std::cout<<"JER = "<<jer_<<std::endl;
 	std::cout<<"JES = "<<jes_<<std::endl;
 
-	std::cout<<"PUPPTRAW = "<<jetAK8PuppiPtHandle->at(i)<<std::endl;
+	std::cout<<"PUPPTRAW = "<<puppicorrpt<<std::endl;
 	std::cout<<"SHIFT = "<<shift<<std::endl;
 	std::cout<<"JECCORR = "<<JECcorr<<std::endl;
-	std::cout<<"PTcor = "<<jetAK8PuppiPtHandle->at(i)*shift*JECcorr<<std::endl;
+	std::cout<<"PTcor = "<<puppicorrpt*shift*JECcorr<<std::endl;
 
 	std::cout<<"PUPSDMASSRAW = "<<jetAK8PuppisoftDropMassHandle->at(i)<<std::endl;
 	std::cout<<"PUPSDsdcorr = "<<puppiCorr<<std::endl;
@@ -1529,7 +1429,58 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 		}		
 
 
-	jetAK8PuppiPt->push_back(jetAK8PuppiPtHandle->at(i)*shift*JECcorr);      
+
+	float SJ0index = jetAK8PuppivSubjetIndex0Handle->at(i);
+	float SJ1index = jetAK8PuppivSubjetIndex1Handle->at(i);
+
+	float SDFromCALC = -1.0;
+	float SDFromCALCuncorr = -1.0;
+	float SDFromCALCPUPPIAK8JEC  = -1.0;
+
+
+	if (SJ0index>=0)
+		{
+
+		TLorentzVector vSJ;
+		vSJ.SetPtEtaPhiE(subjetAK8PuppiPtHandle->at(SJ0index),subjetAK8PuppiEtaHandle->at(SJ0index),subjetAK8PuppiPhiHandle->at(SJ0index),subjetAK8PuppiEHandle->at(SJ0index));
+
+
+		TLorentzVector vSJuncorr;
+		vSJuncorr = vSJ*(subjetAK8PuppijecFactor0Handle->at(SJ0index));
+
+
+
+		if (SJ1index>=0)
+			{
+				TLorentzVector vSJ1;
+				vSJ1.SetPtEtaPhiE(subjetAK8PuppiPtHandle->at(SJ1index),subjetAK8PuppiEtaHandle->at(SJ1index),subjetAK8PuppiPhiHandle->at(SJ1index),subjetAK8PuppiEHandle->at(SJ1index));
+
+				vSJuncorr += vSJ1*(subjetAK8PuppijecFactor0Handle->at(SJ1index));
+				vSJ+=vSJ1;
+
+
+			}
+		//GENSDMASS = (vgen0+vgen1).M();
+
+		SDFromCALC = vSJ.M();
+		SDFromCALCuncorr = vSJuncorr.M();
+
+		float JECcorrFull = JECcorr/jetAK8PuppijecFactor0Handle->at(i);
+		
+		//Here, use the L2L3 just as the fat jet.  Need to eliminate the subjet corrections first.  Currently only apply and vary JES
+		SDFromCALCPUPPIAK8JEC = vSJuncorr.M()*JECcorrFull*shift;	
+
+
+		}
+
+	//std::cout<<"SDFromCALC "<<SDFromCALC<<std::endl;
+	//std::cout<<"SDFromCALCuncorr "<<SDFromCALCuncorr<<std::endl;
+	//std::cout<<"SDFromCALCPUPPIAK8JEC "<<SDFromCALCPUPPIAK8JEC<<std::endl;
+
+
+
+	float puppicorrsdmass = SDshift*jetAK8PuppisoftDropMassHandle->at(i)*puppiCorr;
+	jetAK8PuppiPt->push_back(puppicorrpt*shift);      
 	jetAK8PuppiPhi->push_back(jetAK8PuppiPhiHandle->at(i));       
 	jetAK8PuppiEta->push_back(jetAK8PuppiEtaHandle->at(i));       
 
@@ -1545,32 +1496,32 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 
 	jetAK8PuppisoftDropMass->push_back(corrsdmass*jetAK8PuppisoftDropMassHandle->at(i)*shift);
 
-	jetAK8PuppiCorrectedsoftDropMass->push_back(puppicorrsdmass*SDshift);    
-	jetAK8PuppiCorrectedsoftDropMassUnsmear->push_back(puppicorrsdmass*SDshift*(1.0/smfac));    
+	//std::cout<<"sdshift "<<SDshift<<std::endl;
+
+	jetAK8PuppisoftDropMassForTopPUPPIAK8JEC->push_back(SDFromCALCPUPPIAK8JEC);
+
+	jetAK8PuppiCorrectedsoftDropMass->push_back(puppicorrsdmass);    
+	jetAK8PuppiCorrectedsoftDropMassUnsmear->push_back(puppicorrsdmass*(1.0/smfac));    
 	jetAK8PuppisoftDropMassuncorr->push_back(jetAK8PuppisoftDropMassHandle->at(i)*shift);  
 
-	//jetAK8PuppiprunedMass->push_back(corrsdmass*jetAK8PuppiprunedMassHandle->at(i)*prunedshift);   
-	//jetAK8PuppiprunedMassuncorr->push_back(jetAK8PuppiprunedMassHandle->at(i)*prunedshift);   
-
-
- 
    	if (jes_=="nominal"&&jer_=="nominal")
 		{
 		jetAK8PuppiCSV->push_back(jetAK8PuppiCSVHandle->at(i));
+		jetAK8PuppiDoubleBAK8->push_back(jetAK8PuppiDoubleBAK8Handle->at(i));
+
+
+
 		jetAK8PuppiCMVAv2->push_back(jetAK8PuppiCMVAv2Handle->at(i));              
 		jetAK8PuppiPartonFlavour->push_back(jetAK8PuppiPartonFlavourHandle->at(i)); 
 		  
-
-		//TLV.SetPtEtaPhiM(ptcorr1,jetAK8EtaHandle->at(i),jetAK8PhiHandle->at(i),jetAK8MassHandle->at(i));
 		
 
 
 		jetAK8PuppifilteredMass->push_back(jetAK8PuppifilteredMassHandle->at(i));   
-		//jetAK8PuppitopMass->push_back(jetAK8PuppitopMassHandle->at(i));   
+
 		jetAK8PuppitrimmedMass->push_back(jetAK8PuppitrimmedMassHandle->at(i));    
 		jetAK8PuppijecFactor0->push_back(jetAK8PuppijecFactor0Handle->at(i));   
-		//jetAK8Puppiminmass->push_back(jetAK8PuppiminmassHandle->at(i));   
-		//jetAK8PuppinSubJets->push_back(jetAK8PuppinSubJetsHandle->at(i));   
+   
 		jetAK8Puppitau1->push_back(jetAK8Puppitau1Handle->at(i));      
 		jetAK8Puppitau2->push_back(jetAK8Puppitau2Handle->at(i));      
 		jetAK8Puppitau3->push_back(jetAK8Puppitau3Handle->at(i));    
@@ -1578,21 +1529,20 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 		jetAK8PuppivSubjetIndex0->push_back(jetAK8PuppivSubjetIndex0Handle->at(i));   
 		jetAK8PuppivSubjetIndex1->push_back(jetAK8PuppivSubjetIndex1Handle->at(i)); 
   
-		//jetAK8PuppitopSubjetIndex0->push_back(jetAK8PuppitopSubjetIndex0Handle->at(i));   
-		//jetAK8PuppitopSubjetIndex1->push_back(jetAK8PuppitopSubjetIndex1Handle->at(i));   
-		//jetAK8PuppitopSubjetIndex2->push_back(jetAK8PuppitopSubjetIndex2Handle->at(i));   
-		//jetAK8PuppitopSubjetIndex3->push_back(jetAK8PuppitopSubjetIndex3Handle->at(i)); 
 
 
 
+		jetAK8PuppisoftDropMassForTopRAW->push_back(SDFromCALC);
+		jetAK8PuppisoftDropMassForTopuncorr->push_back(SDFromCALCuncorr);
 
 
-
+		sM0->push_back(ptsmfacM0);
+		sM1->push_back(ptsmfacM1);
+		sSDM0->push_back(smfac);
 
 	  	float CHF = jetAK8PuppichargedHadronEnergyFracHandle->at(i);
 	  	float NEMF = jetAK8PuppineutralEmEnergyFracHandle->at(i);
 	  	float NHF = jetAK8PuppineutralHadronEnergyFracHandle->at(i);
-	  	//float NC = jetAK8PuppiNumConstituentsHandle->at(i);
 	  	float CM = jetAK8PuppichargedMultiplicityHandle->at(i);  
 	  	float CEMF = jetAK8PuppichargedEmEnergyFracHandle->at(i);
 
@@ -1618,7 +1568,7 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 
   delete jecUncPUPPI;
   delete jecUncCHS;
-
+  /*
   iEvent.put(jetAK8CHSPt,"jetAK8CHSPt");
   iEvent.put(jetAK8CHSPhi,"jetAK8CHSPhi"); 
   iEvent.put(jetAK8CHSEta,"jetAK8CHSEta");  
@@ -1629,7 +1579,7 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
   iEvent.put(jetAK8CHSsoftDropMass,"jetAK8CHSsoftDropMass");
   iEvent.put(jetAK8CHSsoftDropMassuncorr,"jetAK8CHSsoftDropMassuncorr");
   iEvent.put(jetAK8CHSprunedMassuncorr,"jetAK8CHSprunedMassuncorr");
-
+  */
 
   iEvent.put(jetAK8PuppiPt,"jetAK8PuppiPt");
   iEvent.put(jetAK8PuppiPhi,"jetAK8PuppiPhi"); 
@@ -1649,13 +1599,11 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 
   iEvent.put(jetAK8PuppisoftDropMassuncorr,"jetAK8PuppisoftDropMassuncorr");
   //iEvent.put(jetAK8PuppiprunedMassuncorr,"jetAK8PuppiprunedMassuncorr");
-
-
-
+  iEvent.put(jetAK8PuppisoftDropMassForTopPUPPIAK8JEC,"jetAK8PuppisoftDropMassForTopPUPPIAK8JEC");
 
    if (jes_=="nominal"&&jer_=="nominal")
 	{
-
+	/*
   	iEvent.put(jetAK8CHSCSV,"jetAK8CHSCSV"); 
   	iEvent.put(jetAK8CHSCMVAv2,"jetAK8CHSCMVAv2"); 
   	iEvent.put(jetAK8CHSPartonFlavour,"jetAK8CHSPartonFlavour"); 
@@ -1684,18 +1632,21 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
   	//iEvent.put(jetAK8CHStopSubjetIndex1,"jetAK8CHStopSubjetIndex1");
   	//iEvent.put(jetAK8CHStopSubjetIndex2,"jetAK8CHStopSubjetIndex2");
   	//iEvent.put(jetAK8CHStopSubjetIndex3,"jetAK8CHStopSubjetIndex3");
-
+	*/
   	iEvent.put(jetAK8PuppiCSV,"jetAK8PuppiCSV"); 
-  	iEvent.put(jetAK8PuppiCMVAv2,"jetAK8PuppiCMVAv2"); 
+  	iEvent.put(jetAK8PuppiCMVAv2,"jetAK8PuppiCMVAv2");
+
+  	iEvent.put(jetAK8PuppiDoubleBAK8,"jetAK8PuppiDoubleBAK8"); 
+ 
   	iEvent.put(jetAK8PuppiPartonFlavour,"jetAK8PuppiPartonFlavour"); 
-  	iEvent.put(jetAK8PuppifilteredMass,"jetAK8PuppifilteredMass"); 
+  	//iEvent.put(jetAK8PuppifilteredMass,"jetAK8PuppifilteredMass"); 
 
   	iEvent.put(jetAK8PuppiTight,"jetAK8PuppiTight"); 
   	iEvent.put(jetAK8PuppiLoose,"jetAK8PuppiLoose");
 
 
   	//iEvent.put(jetAK8PuppitopMass,"jetAK8PuppitopMass");
-  	iEvent.put(jetAK8PuppitrimmedMass,"jetAK8PuppitrimmedMass");
+  	//iEvent.put(jetAK8PuppitrimmedMass,"jetAK8PuppitrimmedMass");
   	iEvent.put(jetAK8PuppijecFactor0,"jetAK8PuppijecFactor0");
   	///iEvent.put(jetAK8Puppiminmass,"jetAK8Puppiminmass"); 
   	//iEvent.put(jetAK8PuppinSubJets,"jetAK8PuppinSubJets"); 
@@ -1713,6 +1664,15 @@ JetCorrectionUncertainty *jecUncCHS = new JetCorrectionUncertainty("jecfiles/"+e
 
 	//delete jecAK8CHS_
 	//delete jecAK8PUPPI_
+
+	iEvent.put(jetAK8PuppisoftDropMassForTopRAW,"jetAK8PuppisoftDropMassForTopRAW");
+	iEvent.put(jetAK8PuppisoftDropMassForTopuncorr,"jetAK8PuppisoftDropMassForTopuncorr");
+
+
+	iEvent.put(sM0,"sM0");
+	iEvent.put(sM1,"sM1");
+	iEvent.put(sSDM0,"sSDM0");
+
 	}	
 
  }

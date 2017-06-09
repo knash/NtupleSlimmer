@@ -1,5 +1,5 @@
-foreach n (crab_JetHT*V6_v1)
-#crab report $n
-cp $n/results/processedLumis.json ./$n.json
+foreach n (crab_JetHT*V9)
+crab status $n
+crab resubmit $n --siteblacklist=T1_RU_JINR,T2_RU_JINR,T3_US_UCR,T2_US_Florida
 end
 

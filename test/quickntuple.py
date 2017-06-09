@@ -14,7 +14,12 @@ options.register('sample',
 		#'/store/group/lpcrutgers/knash/WprimeToTB_TToHad_M-1500_RH_TuneCUETP8M1_13TeV-comphep-pythia8/RunIISpring16MiniAODv2_80X_reHLT_B2GAnaFW_80X_V2p1/161109_215328/0000/B2GEDMNtuple_47.root',
 		#'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/CMSSW_7_6_3_patch2/src/Analysis/B2GAnaFW/test/B2GEDMNtuple.root',
 		#'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/CMSSW_8_0_24_patch1/src/Analysis/NtupleSlimmer/test/B2GEDMNtuple_MC.root',
-		'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/WithPUPPI/CMSSW_8_0_24_patch1/src/Analysis/NtupleSlimmer/test/B2GEDMNtuple_74.root',
+		#'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/WithPUPPI/CMSSW_8_0_24_patch1/src/Analysis/NtupleSlimmer/test/B2GEDMNtuple_74.root',
+		#'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/WithPUPPI/CMSSW_8_0_24_patch1/src/Analysis/NtupleSlimmer/test/B2GEDMNtuple_40.root',
+		#'/store/group/phys_b2g/B2GAnaFW_80X_V2p3/JetHT/Run2016F/JetHT/Run2016F-23Sep2016-v1_B2GAnaFW_80X_V2p3/161216_222052/0000/B2GEDMNtuple_103.root',
+		#'/store/group/lpcrutgers/knash/SMS-T7WgStealth_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring16MiniAODv2_B2GAnaFW_80x_V2p4/170221_164255/0001/B2GEDMNtuple_1399.root',
+		#'/store/user/lcorcodi/BstarToTW_M-2000_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/RunIISummer16MiniAODv2_PUMoriond17_B2GAnaFW_80X_V2p4/170212_044129/0000/B2GEDMNtuple_20.root',
+		'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/WithPUPPI/CMSSW_8_0_24_patch1/src/Analysis/NtupleSlimmer/test/B2GEDMNtuple_103.root',
                  opts.VarParsing.multiplicity.singleton,
                  opts.VarParsing.varType.string,
                  'Sample to analyze')
@@ -25,6 +30,12 @@ options.register('type',
                  opts.VarParsing.multiplicity.singleton,
                  opts.VarParsing.varType.string,
                  'Sample type (DATA or MC)')
+
+options.register('genfilter',
+                 'OFF',
+                 opts.VarParsing.multiplicity.singleton,
+                 opts.VarParsing.varType.string,
+                 'cut out non chargino')
 
 
 options.register('outputlabel',
@@ -46,12 +57,12 @@ process = cms.Process("slimntuple")
 
 
 
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(300) )
 
 process.source = cms.Source("PoolSource",
         fileNames = cms.untracked.vstring(
         options.sample
-        )
+        ),
 )
 
 #process.TriggerUserData = cms.EDProducer('SlimUserData_TriggerUserData')
@@ -90,6 +101,19 @@ process.counter = cms.EDProducer('SlimUserData_counter')
 
 process.Filter = cms.EDFilter('SlimUserData_Filter')
 if options.type=='MC':
+	process.p = cms.Path(process.counter)
+
+	if options.genfilter == 'ON':
+
+		print "GENFILTER ON"
+		process.GENFilter = cms.EDFilter(
+			'SlimUserData_GENFilter',
+			ISDATA  = cms.untracked.bool(False)
+			)
+
+
+		process.p*=process.GENFilter
+
 
 	process.weights = cms.EDProducer(
     		'SlimUserData_weights',
@@ -101,20 +125,9 @@ if options.type=='MC':
 		'SlimUserData_Filter',
 		ISDATA  = cms.untracked.bool(False)
 		)
+	process.p*=process.Filter*process.weights*process.jetsAK8*process.jetsAK8jesup*process.jetsAK8jesdown*process.jetsAK8jerup*process.jetsAK8jerdown	
 
-
-	process.p = cms.Path(
-
-		process.counter
-		*process.Filter
-		*process.weights
-		*process.jetsAK8
-		*process.jetsAK8jesup
-		*process.jetsAK8jesdown
-		*process.jetsAK8jerup
-		*process.jetsAK8jerdown	
-
-	    	)
+	
 elif options.type=='DATA':
 	process.Filter = cms.EDFilter(
 		'SlimUserData_Filter',
@@ -132,9 +145,9 @@ else:
 process.load("FWCore.MessageService.MessageLogger_cfi")
 process.MessageLogger.cerr.FwkReport.reportEvery = 100
 
-
-
 process.f1 = cms.Path(process.Filter)
+if options.genfilter == 'ON':
+	process.f1 *= process.GENFilter
 process.edmNtuplesOut = cms.OutputModule(
     "PoolOutputModule",
     fileName = cms.untracked.string('B2GEDMNtuple_slim'+options.outputlabel+'.root'),
@@ -148,19 +161,19 @@ process.edmNtuplesOut = cms.OutputModule(
     "keep *_subjetsAK8CHS_subjetAK8CHSCMVA*_*",
     "keep *_subjetsAK8CHS_subjetAK8CHSPartonFlavour*_*",
     "keep *_subjetsAK8CHS_subjetAK8CHSEta*_*",
-    "keep *_subjetsAK8CHS_subjetAK8CHSMass*_*",
+    "keep *_subjetsAK8CHS_subjetAK8CHSE*_*",
     "keep *_subjetsAK8CHS_subjetAK8CHSPhi*_*",
     "keep *_subjetsAK8CHS_subjetAK8CHSPt*_*",
     #"keep *_jetsAK4CHS_jetAK4CHSCSVv2*_*",
     "keep *_jetsAK4CHS_jetAK4CHSEta*_*",
-    "keep *_jetsAK4CHS_jetAK4CHSMass*_*",
+    "keep *_jetsAK4CHS_jetAK4CHSE*_*",
     "keep *_jetsAK4CHS_jetAK4CHSPhi*_*",
-    "keep *_jetsAK4CHS_jetAK4CHSPt*_*", 
+    "keep *_jetsAK4CHS_jetAK4CHSPt_*", 
     "keep *_subjetsAK8Puppi_subjetAK8PuppiCSV*_*",
     "keep *_subjetsAK8Puppi_subjetAK8PuppiCMVA*_*",
     "keep *_subjetsAK8Puppi_subjetAK8PuppiPartonFlavour*_*",
     "keep *_subjetsAK8Puppi_subjetAK8PuppiEta*_*",
-    "keep *_subjetsAK8Puppi_subjetAK8PuppiMass*_*",
+    "keep *_subjetsAK8Puppi_subjetAK8PuppiE*_*",
     "keep *_subjetsAK8Puppi_subjetAK8PuppiPhi*_*",
     "keep *_subjetsAK8Puppi_subjetAK8PuppiPt*_*",
     #"keep *_jetsAK4Puppi_jetAK4PuppiCSVv2*_*",
@@ -172,7 +185,7 @@ process.edmNtuplesOut = cms.OutputModule(
     #"keep *_genPart_genPartDau1ID*_*",  
     "keep *_genPart_genPartEta*_*",  
     "keep *_genPart_genPartID*_*",  
-    "keep *_genPart_genPartMass*_*",  
+    "keep *_genPart_genPartE*_*",  
     #"keep *_genPart_genPartMom0ID*_*",  
     #"keep *_genPart_genPartMom1ID*_*",  
     "keep *_genPart_genPartPhi*_*",  
@@ -183,7 +196,7 @@ process.edmNtuplesOut = cms.OutputModule(
     "keep *_generator_*_*",
     "keep *_eventInfo_*_*",
     "keep *_electrons_elEta_*",      
-    "keep *_electrons_elMass_*",      
+    "keep *_electrons_elE_*",      
     "keep *_electrons_elPhi_*",    
     "keep *_electrons_elPt_*",      
     #"keep *_electrons_elisLoose_*",      
@@ -193,7 +206,7 @@ process.edmNtuplesOut = cms.OutputModule(
     "keep *_electrons_elvidMedium_*",   
    # "keep *_electrons_elvidTight_*",   
     "keep *_muons_muEta_*",   
-    "keep *_muons_muMass_*",   
+    "keep *_muons_muE_*",   
     "keep *_muons_muPhi_*",    
     "keep *_muons_muPt_*",   
     #"keep *_muons_muIsLooseMuon_*",    
@@ -204,9 +217,14 @@ process.edmNtuplesOut = cms.OutputModule(
     "keep *_metNoHF_metNoHFPhi_*",   
     "keep *_metNoHF_metNoHFPt_*",  
     "keep *_pdfWeights*_*_*",
+    "keep *_filteredPrunedGenParticles_*_*"
     ),
     dropMetaData = cms.untracked.string('ALL'),
     )
+
+   
+
+
 #process.Timing = cms.Service("Timing", summaryOnly=cms.untracked.bool(True))
 #process.SimpleMemoryCheck = cms.Service("SimpleMemoryCheck",ignoreTotal = cms.untracked.int32(1) )
 process.endPath = cms.EndPath(process.edmNtuplesOut)
