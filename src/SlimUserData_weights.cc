@@ -77,6 +77,7 @@ void SlimUserData_weights::produce( edm::Event& iEvent, const edm::EventSetup& i
 
 	//std::cout<<"PDFID"<<std::endl;
 	//std::cout<<pdfId<<std::endl;
+	//std::cout<<1<<std::endl;
   	if (!ISDATA_) 
 		{
     		edm::Handle<LHEEventProduct> lheEvtInfo;
@@ -86,10 +87,10 @@ void SlimUserData_weights::produce( edm::Event& iEvent, const edm::EventSetup& i
     		//std::cout<<  lheEvtInfo.isValid() << std::endl;
 		//std::cout<< lha_pdf_id_ << std::endl << std::endl;
 
-    		if (lheEvtInfo.isValid()) 
+    		if (lheEvtInfo.isValid() and lha_pdf_id_!=-1) 
 			{
 
-
+			//std::cout<<2<<std::endl;
 			//pdfId = lha_pdf_id_;
       			double lheOrigWeight = lheEvtInfo->originalXWGTUP();
       			if (lheEvtInfo->weights().size()>=9) for (size_t i=0; i<9; ++i) if (i!=0&&i!=5&&i!=7)
@@ -105,7 +106,7 @@ void SlimUserData_weights::produce( edm::Event& iEvent, const edm::EventSetup& i
         		alphasWeights->push_back(lheEvtInfo->weights()[110].wgt/lheOrigWeight);
     			}
 		}
-
+		//std::cout<<3<<std::endl;
 
       		edm::Handle<GenEventInfoProduct> pdfstuff;
       		//gen_token = consumes<GenEventInfoProduct>(edm::InputTag("generator"));
@@ -125,7 +126,7 @@ void SlimUserData_weights::produce( edm::Event& iEvent, const edm::EventSetup& i
       		int id2 = pdfstuff->pdf()->id.second;
       		double x2 = pdfstuff->pdf()->x.second;
       		//double pdf2 = pdfstuff->pdf()->xPDF.second;
-
+		//std::cout<<4<<std::endl;
 		for(int ipdf=1; ipdf <=1; ++ipdf)
 		{			
 		
@@ -156,6 +157,7 @@ void SlimUserData_weights::produce( edm::Event& iEvent, const edm::EventSetup& i
   		iEvent.put(alphasWeights,"alphasWeights");			
   		iEvent.put(pdfWeights,"pdfWeights");
   		//iEvent.put(pdfId*,"pdfId");
+		//std::cout<<5<<std::endl;
 
 }
 

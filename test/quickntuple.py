@@ -19,7 +19,7 @@ options.register('sample',
 		#'/store/group/phys_b2g/B2GAnaFW_80X_V2p3/JetHT/Run2016F/JetHT/Run2016F-23Sep2016-v1_B2GAnaFW_80X_V2p3/161216_222052/0000/B2GEDMNtuple_103.root',
 		#'/store/group/lpcrutgers/knash/SMS-T7WgStealth_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring16MiniAODv2_B2GAnaFW_80x_V2p4/170221_164255/0001/B2GEDMNtuple_1399.root',
 		#'/store/user/lcorcodi/BstarToTW_M-2000_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/RunIISummer16MiniAODv2_PUMoriond17_B2GAnaFW_80X_V2p4/170212_044129/0000/B2GEDMNtuple_20.root',
-		'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/WithPUPPI/CMSSW_8_0_24_patch1/src/Analysis/NtupleSlimmer/test/B2GEDMNtuple_103.root',
+		'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/WithPUPPI/CMSSW_8_0_24_patch1/src/Analysis/NtupleSlimmer/test/B2GEDMNtuple_8TWFAIL.root',
                  opts.VarParsing.multiplicity.singleton,
                  opts.VarParsing.varType.string,
                  'Sample to analyze')
