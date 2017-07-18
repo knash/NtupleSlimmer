@@ -57,7 +57,7 @@ process = cms.Process("slimntuple")
 
 
 
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(300) )
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(500) )
 
 process.source = cms.Source("PoolSource",
         fileNames = cms.untracked.vstring(
@@ -104,8 +104,8 @@ if options.type=='MC':
 	process.p = cms.Path(process.counter)
 
 	if options.genfilter == 'ON':
-
-		print "GENFILTER ON"
+		print "WARNING"
+		print "GENFILTER ON - Only for use with SMS signal!"
 		process.GENFilter = cms.EDFilter(
 			'SlimUserData_GENFilter',
 			ISDATA  = cms.untracked.bool(False)
@@ -164,11 +164,11 @@ process.edmNtuplesOut = cms.OutputModule(
     "keep *_subjetsAK8CHS_subjetAK8CHSE*_*",
     "keep *_subjetsAK8CHS_subjetAK8CHSPhi*_*",
     "keep *_subjetsAK8CHS_subjetAK8CHSPt*_*",
-    #"keep *_jetsAK4CHS_jetAK4CHSCSVv2*_*",
-    "keep *_jetsAK4CHS_jetAK4CHSEta*_*",
-    "keep *_jetsAK4CHS_jetAK4CHSE*_*",
-    "keep *_jetsAK4CHS_jetAK4CHSPhi*_*",
-    "keep *_jetsAK4CHS_jetAK4CHSPt_*", 
+    "keep *_jetsAK4Puppi_jetAK4CHSCSVv2*_*",
+    "keep *_jetsAK4Puppi_jetAK4CHSEta*_*",
+    "keep *_jetsAK4Puppi_jetAK4CHSE_*",
+    "keep *_jetsAK4Puppi_jetAK4CHSPhi*_*",
+    "keep *_jetsAK4Puppi_jetAK4CHSPt_*", 
     "keep *_subjetsAK8Puppi_subjetAK8PuppiCSV*_*",
     "keep *_subjetsAK8Puppi_subjetAK8PuppiCMVA*_*",
     "keep *_subjetsAK8Puppi_subjetAK8PuppiPartonFlavour*_*",
