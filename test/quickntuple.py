@@ -19,7 +19,8 @@ options.register('sample',
 		#'/store/group/phys_b2g/B2GAnaFW_80X_V2p3/JetHT/Run2016F/JetHT/Run2016F-23Sep2016-v1_B2GAnaFW_80X_V2p3/161216_222052/0000/B2GEDMNtuple_103.root',
 		#'/store/group/lpcrutgers/knash/SMS-T7WgStealth_TuneCUETP8M1_13TeV-madgraphMLM-pythia8/RunIISpring16MiniAODv2_B2GAnaFW_80x_V2p4/170221_164255/0001/B2GEDMNtuple_1399.root',
 		#'/store/user/lcorcodi/BstarToTW_M-2000_RH_TuneCUETP8M1_13TeV-madgraph-pythia8/RunIISummer16MiniAODv2_PUMoriond17_B2GAnaFW_80X_V2p4/170212_044129/0000/B2GEDMNtuple_20.root',
-		'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/WithPUPPI/CMSSW_8_0_24_patch1/src/Analysis/NtupleSlimmer/test/B2GEDMNtuple_8TWFAIL.root',
+		#'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/WithPUPPI/CMSSW_8_0_24_patch1/src/Analysis/NtupleSlimmer/test/B2GEDMNtuple_30.root',
+		'file:///uscms_data/d3/knash/WPrime13TeV/B2GAnaFW/SlimNtuples_test/WithPUPPI/CMSSW_8_0_24_patch1/src/Analysis/NtupleSlimmer/test/B2GEDMNtuple_100.root',
                  opts.VarParsing.multiplicity.singleton,
                  opts.VarParsing.varType.string,
                  'Sample to analyze')
@@ -95,6 +96,48 @@ process.jetsAK8jerup = process.jetsAK8.clone(
 process.jetsAK8jerdown = process.jetsAK8.clone(
 	jer  = cms.string("down"),
       )
+
+
+
+
+
+
+
+
+
+process.jetsAK4 = cms.EDProducer(
+    	'SlimUserData_jetsAK4',
+   	reapplyjec = cms.bool(True),
+   	reapplyjer = cms.bool(True),
+	jes  = cms.string("nominal"),
+	jer  = cms.string("nominal"),
+	era  = cms.string("Summer16_23Sep2016")
+    )
+
+
+process.jetsAK4jesup = process.jetsAK4.clone(
+	jes  = cms.string("up"),
+      )
+
+process.jetsAK4jesdown = process.jetsAK4.clone(
+	jes  = cms.string("down"),
+      )
+
+
+process.jetsAK4jerup = process.jetsAK4.clone(
+	jer  = cms.string("up"),
+      )
+
+process.jetsAK4jerdown = process.jetsAK4.clone(
+	jer  = cms.string("down"),
+      )
+
+
+
+
+
+
+
 #process.EventCounter = cms.EDAnalyzer("EventCounter")
 
 process.counter = cms.EDProducer('SlimUserData_counter')
@@ -125,7 +168,7 @@ if options.type=='MC':
 		'SlimUserData_Filter',
 		ISDATA  = cms.untracked.bool(False)
 		)
-	process.p*=process.Filter*process.weights*process.jetsAK8*process.jetsAK8jesup*process.jetsAK8jesdown*process.jetsAK8jerup*process.jetsAK8jerdown	
+	process.p*=process.Filter*process.weights*process.jetsAK8*process.jetsAK8jesup*process.jetsAK8jesdown*process.jetsAK8jerup*process.jetsAK8jerdown*process.jetsAK4*process.jetsAK4jesup*process.jetsAK4jesdown*process.jetsAK4jerup*process.jetsAK4jerdown		
 
 	
 elif options.type=='DATA':
@@ -138,6 +181,7 @@ elif options.type=='DATA':
 		process.counter
 		*process.Filter
 		*process.jetsAK8
+		*process.jetsAK4
 	    	)
 else:
 	sys.exit("Must be either DATA or MC for type")
@@ -164,11 +208,11 @@ process.edmNtuplesOut = cms.OutputModule(
     "keep *_subjetsAK8CHS_subjetAK8CHSE*_*",
     "keep *_subjetsAK8CHS_subjetAK8CHSPhi*_*",
     "keep *_subjetsAK8CHS_subjetAK8CHSPt*_*",
-    "keep *_jetsAK4Puppi_jetAK4CHSCSVv2*_*",
-    "keep *_jetsAK4Puppi_jetAK4CHSEta*_*",
-    "keep *_jetsAK4Puppi_jetAK4CHSE_*",
-    "keep *_jetsAK4Puppi_jetAK4CHSPhi*_*",
-    "keep *_jetsAK4Puppi_jetAK4CHSPt_*", 
+    #"keep *_jetsAK4Puppi_jetAK4CHSCSVv2*_*",
+    #"keep *_jetsAK4Puppi_jetAK4CHSEta*_*",
+    #"keep *_jetsAK4Puppi_jetAK4CHSE_*",
+    #"keep *_jetsAK4Puppi_jetAK4CHSPhi*_*",
+    #"keep *_jetsAK4Puppi_jetAK4CHSPt_*", 
     "keep *_subjetsAK8Puppi_subjetAK8PuppiCSV*_*",
     "keep *_subjetsAK8Puppi_subjetAK8PuppiCMVA*_*",
     "keep *_subjetsAK8Puppi_subjetAK8PuppiPartonFlavour*_*",
